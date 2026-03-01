@@ -34,7 +34,7 @@ export default function Servicios() {
             title: "Anticelulitis Xcell Intense",
             description: "Transformación estructural de la piel. Pulveriza los nódulos celulíticos y tensa el tejido superficial para lograr unas piernas visiblemente lisas, firmes y luminosas.",
             category: "Alisamiento Dérmico",
-            imageUrl: "https://images.unsplash.com/photo-1517159098160-ad38084c93de?auto=format&fit=crop&q=80&w=1200", // Clinical: Aesthetic body massage clinic
+            imageUrl: "https://dermatricia.com/wp-content/uploads/2023/10/Radiofrecuencia-piernas-768x768.jpg", // Clinical: Radiofrequency treatment on legs
             modalImageUrl: "https://nwzimg.wezhan.net/contents/sitefiles3607/18037120/images/8093701.png", // Technical: Velashape 3
             href: "/contacto"
         },
@@ -50,7 +50,7 @@ export default function Servicios() {
             title: "Push Up Glúteos Perfecto",
             description: "Elevación y proyección anatómica. Protocolo especializado que tensa las fibras y realza el volumen natural del glúteo para un perfil corporal armónico y atractivo.",
             category: "Modelado Localizado",
-            imageUrl: "https://images.unsplash.com/photo-1570174006382-148305ce4972?auto=format&fit=crop&q=80&w=1200", // Clinical: Medical aesthetic body treatment
+            imageUrl: "https://luxurclinic.es/wp-content/uploads/2024/05/Vacumterapia-e1716212167959.jpg", // Clinical: Vacuum therapy clinic
             modalImageUrl: "https://lolesbodysculpting.com/wp-content/uploads/2024/01/IMG_1681-1024x844.jpg", // Technical: Vacuum therapy hardware
             href: "/contacto"
         },
@@ -116,7 +116,7 @@ export default function Servicios() {
             title: "Terapia Piernas Cansadas (Vascular Revival)",
             description: "Protocolo médico estético para reactivar el flujo venoso profundo. Combate la pesadez extrema y oxigena los tejidos inferiores generando una sensación de alivio y frescura inmediata.",
             category: "Microcirculación",
-            imageUrl: "https://images.unsplash.com/photo-1624716346730-078ba4654d9e?auto=format&fit=crop&q=80&w=1200", // Clinical: Leg vein medical treatment
+            imageUrl: "https://www.clinicapremiumestetica.com/wp-content/uploads/2022/07/Presoterapia-en-Clinica-Premium-Marbella.jpg", // Clinical: Presotherapy treatment
             modalImageUrl: "https://m.media-amazon.com/images/I/71wL+t+vIEL._AC_SX679_.jpg", // Technical: Air compression leg pump
             href: "/contacto"
         }
@@ -181,7 +181,7 @@ export default function Servicios() {
                 <div className={`container ${styles.ctaContainer} animate-fade-up`}>
                     <h2 className={styles.ctaTitle}>¿Necesitas orientación biomédica?</h2>
                     <p className={styles.ctaSubtitle}>Agenda una evaluación preliminar para diseñar tu estrategia de recuperación.</p>
-                    <Link href="/contacto" className="btn btn-primary">Reservar Diagnóstico Integral</Link>
+                    <Link href="/contacto" className="btn" style={{ backgroundColor: 'var(--color-primary-gold)', color: '#fff', border: 'none', padding: '1.2rem 3rem' }}>Reservar Diagnóstico Integral</Link>
                 </div>
             </section>
 
