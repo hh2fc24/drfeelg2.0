@@ -1,0 +1,150 @@
+.sliderContainer {
+    background: var(--color-bg-light);
+    /* Removed harsh pink gradient */
+    border-radius: 0;
+    /* Removing bubbles */
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 3rem;
+    /* Larger */
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.highlight {
+    font-style: italic;
+    /* Use italic instead of gold color */
+    position: relative;
+    color: var(--color-primary-gold-dark);
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.slider {
+    position: relative;
+    min-height: 450px;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s var(--ease-editorial);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    opacity: 1;
+}
+
+.quoteMark {
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--color-primary-gold-light);
+    margin-bottom: 0;
+    font-family: var(--font-serif);
+}
+
+.text {
+    font-size: 1.8rem;
+    /* Editorial pull-quote size */
+    color: var(--color-text-dark);
+    font-family: var(--font-serif);
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.author::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-primary-gold);
+    margin-bottom: 1.5rem;
+}
+
+.name {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-text-dark);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.service {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.dot {
+    width: 40px;
+    height: 1px;
+    background-color: rgba(44, 42, 41, 0.1);
+    transition: all 0.4s var(--ease-editorial);
+    padding: 0;
+}
+
+.activeDot {
+    background-color: var(--color-text-dark);
+}
+
+@media (max-width: 768px) {
+    .sliderContainer {
+        padding: 4rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .text {
+        font-size: 1.25rem;
+    }
+
+    .slider {
+        min-height: 500px;
+    }
+}

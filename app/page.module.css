@@ -1,0 +1,284 @@
+.homeContainer {
+    width: 100%;
+}
+
+.eyebrow {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-primary-gold-dark);
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.eyebrow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1px;
+    background-color: var(--color-primary-gold-dark);
+}
+
+.eyebrowDark {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.2em;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 3.5rem;
+    /* Larger, editorial */
+    margin-bottom: 2.5rem;
+    color: var(--color-text-dark);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.highlight {
+    font-style: italic;
+    font-family: var(--font-serif);
+    color: var(--color-primary-gold-dark);
+}
+
+.textBlock {
+    margin-bottom: 3rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(44, 42, 41, 0.1);
+}
+
+.text {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.text:last-child {
+    margin-bottom: 0;
+}
+
+/* Philosophy Section - Editorial Layout */
+.philosophySection {
+    background-color: var(--color-bg-white);
+    overflow: hidden;
+}
+
+.philosophyGrid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.philosophyImageWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 130%;
+    /* Portrait aspect ratio */
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transform: translateY(40px);
+}
+
+.philosophyImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800');
+    /* Yoga/wellness elegant placeholder */
+    background-size: cover;
+    background-position: center;
+    transition: transform 1.5s var(--ease-editorial);
+}
+
+.philosophyImageWrapper:hover .philosophyImage {
+    transform: scale(1.05);
+}
+
+/* Disruptive Parallax Section */
+.parallaxSection {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background-image: url('https://images.unsplash.com/photo-1532926381893-7542290edf1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.parallaxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.45);
+    display: flex;
+    align-items: center;
+}
+
+.parallaxTitle {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    color: var(--color-bg-white);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.parallaxDesc {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 600px;
+    line-height: 1.6;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Services Section */
+.servicesSection {
+    background-color: var(--color-bg-light);
+}
+
+.servicesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 5rem;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+    background-color: var(--color-bg-light);
+    padding: 0;
+    /* padding handled inside slider component */
+}
+
+/* CTA Section - Minimalist Elegant */
+.ctaSection {
+    background-color: var(--color-bg-white);
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+}
+
+.ctaBox {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5rem 2rem;
+    position: relative;
+}
+
+.ctaBox::before,
+.ctaBox::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 40px;
+    background-color: var(--color-primary-gold);
+}
+
+.ctaBox::before {
+    top: 0;
+}
+
+.ctaBox::after {
+    bottom: 0;
+}
+
+.ctaContent {
+    padding: 3rem 0;
+}
+
+.ctaTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+    color: var(--color-text-dark);
+}
+
+.ctaText {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .sectionTitle {
+        font-size: 3rem;
+    }
+
+    .philosophyGrid {
+        gap: 4rem;
+    }
+
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2.5rem;
+    }
+
+    .philosophyGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .philosophyImageWrapper {
+        grid-row: 2;
+        /* Move image below text on mobile */
+        padding-top: 100%;
+    }
+
+    .servicesHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .ctaTitle {
+        font-size: 2.5rem;
+    }
+}

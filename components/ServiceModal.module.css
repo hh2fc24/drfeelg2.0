@@ -1,0 +1,182 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(44, 42, 41, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s var(--ease-editorial);
+}
+
+.overlay.fadeIn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    width: 100%;
+    max-width: 1100px;
+    max-height: 90vh;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(40px) scale(0.98);
+    transition: all 0.6s var(--ease-editorial);
+}
+
+.modal.slideUp {
+    transform: translateY(0) scale(1);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+    z-index: 10;
+    transition: opacity 0.3s;
+}
+
+.closeBtn:hover {
+    opacity: 0.6;
+}
+
+.modalContent {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    height: 100%;
+}
+
+.imageColumn {
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+}
+
+.modalImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.textColumn {
+    padding: 5rem 4rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--color-primary-gold-dark);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    line-height: 1.1;
+    color: var(--color-text-dark);
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+.benefitsTitle {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(44, 42, 41, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.benefits ul {
+    margin-bottom: 3rem;
+}
+
+.benefits li {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.benefits li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-primary-gold);
+}
+
+.ctaBtn {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .modalContent {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imageColumn {
+        min-height: 300px;
+        flex-shrink: 0;
+    }
+
+    .textColumn {
+        padding: 3rem 2rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .closeBtn {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        top: 1rem;
+        right: 1rem;
+    }
+}

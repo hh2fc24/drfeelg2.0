@@ -1,0 +1,116 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    transition: all 0.5s var(--ease-editorial);
+    cursor: pointer;
+}
+
+.imageWrapper {
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    /* Subtle corners */
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 1.2s var(--ease-editorial);
+    background-color: var(--color-bg-white);
+    /* Important for png transparency rendering safely */
+}
+
+/* Modifier class if the element has an image URL specifically */
+.imageContainer[style*="url"] {
+    background-size: cover;
+}
+
+.card:hover .imageContainer {
+    transform: scale(1.05);
+}
+
+.categoryBadge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--color-bg-white);
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+    font-family: var(--font-serif);
+}
+
+.description {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    flex-grow: 1;
+}
+
+.linkWrapper {
+    margin-top: auto;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-text-dark);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s var(--ease-editorial);
+}
+
+.card:hover .link::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.4s var(--ease-editorial);
+}
+
+.card:hover .arrow {
+    transform: translateX(5px);
+}

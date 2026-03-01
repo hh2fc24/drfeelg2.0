@@ -1,0 +1,131 @@
+.footer {
+    background: var(--gradient-brand);
+    padding: 8rem 0 0;
+    border-top: 1px solid rgba(44, 42, 41, 0.05);
+    /* Very subtle line */
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+.footerBrand {
+    padding-right: 4rem;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-text-dark);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.logoLink {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logoImage {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
+}
+
+.tagline {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-primary-gold-dark);
+    margin-bottom: 2rem;
+}
+
+.description {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 400px;
+}
+
+.footerTitle {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    color: var(--color-text-dark);
+}
+
+.footerLinks ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footerLinks a {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    transition: color 0.4s var(--ease-editorial);
+}
+
+.footerLinks a:hover {
+    color: var(--color-text-dark);
+}
+
+.address {
+    font-style: normal;
+}
+
+.address p {
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.address strong {
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+.phone {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--color-text-dark) !important;
+    margin: 2rem 0 1rem !important;
+}
+
+.footerBottom {
+    background: var(--gradient-brand);
+    /* Off-white bottom */
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .footerBrand {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 5rem;
+    }
+
+    .footerGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+}
