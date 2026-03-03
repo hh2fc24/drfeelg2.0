@@ -31,9 +31,10 @@
 }
 
 .logoImage {
-    height: 140px;
+    height: 165px;
     width: auto;
     object-fit: contain;
+    filter: brightness(1.25) contrast(1.15);
 }
 
 .tagline {

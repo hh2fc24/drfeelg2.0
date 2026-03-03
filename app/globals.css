@@ -24,6 +24,7 @@
 
   --gradient-brand: linear-gradient(110deg, #d5d5cd 0%, #b8b1ab 50%, #998e88 100%);
   --gradient-brand-trans: linear-gradient(110deg, rgba(213, 213, 205, 0.95) 0%, rgba(184, 177, 171, 0.95) 50%, rgba(153, 142, 136, 0.95) 100%);
+  --gradient-nav-light: linear-gradient(110deg, rgba(250, 249, 247, 0.95) 0%, rgba(237, 234, 231, 0.95) 50%, rgba(224, 218, 213, 0.95) 100%);
 
   --color-text-dark: #2c2a29;
   /* Charcoal, not pure black (softer on the eyes) */
