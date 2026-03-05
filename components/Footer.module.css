@@ -1,8 +1,35 @@
 .footer {
+    position: relative;
+    overflow: hidden;
     background: var(--color-bg-white);
     padding: 5.5rem 0 0;
-    border-top: 1px solid rgba(44, 42, 41, 0.05);
-    /* Very subtle line */
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            rgba(194, 167, 125, 0),
+            rgba(194, 167, 125, 0.28),
+            rgba(230, 211, 166, 0.9),
+            rgba(194, 167, 125, 0.28),
+            rgba(194, 167, 125, 0));
+    animation: goldLineShift 7s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes goldLineShift {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
 }
 
 .footerGrid {
