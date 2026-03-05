@@ -13,7 +13,7 @@ export default function QuienesSomos() {
                         Una Nueva Visión de la <span className={styles.highlight}>Estética</span>.
                     </h1>
                     <p className={`${styles.subtitle} animate-fade-up delay-2`}>
-                        Rechazamos las transformaciones invasivas. Celeramos la elevación de tu belleza natural a través de la ciencia, la empatía y la precisión médica.
+                        Rechazamos las transformaciones invasivas. Celebramos la elevación de tu belleza natural a través de la ciencia, la empatía y la precisión médica.
                     </p>
                 </div>
             </header>
@@ -36,6 +36,42 @@ export default function QuienesSomos() {
 
                     <div className={`${styles.imageWrapper} animate-fade-up delay-2 mask-arch`}>
                         <div className={styles.imagePlaceholder} style={{ backgroundImage: "url('https://images.unsplash.com/photo-1512413914488-dc1e102f9e41?auto=format&fit=crop&q=80&w=800')" }}></div>
+                    </div>
+                </div>
+            </section>
+
+            <section className={styles.missionVisionSection}>
+                <div className="container">
+                    <div className={styles.mvHeader}>
+                        <span className={`${styles.chapterNumber} animate-fade-up`}>Capítulo II</span>
+                        <h2 className={`${styles.sectionTitle} animate-fade-up delay-1`}>Misión y <span className={styles.highlight}>Visión</span></h2>
+                        <p className={`${styles.text} animate-fade-up delay-2`}>
+                            Nuestro compromiso institucional integra excelencia clínica, selección rigurosa de marcas y un acompañamiento permanente para resultados sostenibles y seguros.
+                        </p>
+                    </div>
+
+                    <div className={styles.mvGrid}>
+                        <article className={`${styles.mvCard} animate-fade-up delay-1`}>
+                            <span className={styles.mvLabel}>Misión</span>
+                            <h3 className={styles.mvTitle}>Cuidado integral con estándar superior</h3>
+                            <p className={styles.mvText}>
+                                Entregar protocolos personalizados basados en evidencia, utilizando productos y aparatología de marcas reconocidas internacionalmente, para proteger la salud de nuestros pacientes y potenciar resultados estéticos naturales.
+                            </p>
+                            <p className={styles.mvText}>
+                                Asesoramos de forma honesta y completa en cada decisión terapéutica, desde la evaluación inicial hasta el seguimiento final.
+                            </p>
+                        </article>
+
+                        <article className={`${styles.mvCard} animate-fade-up delay-2`}>
+                            <span className={styles.mvLabel}>Visión</span>
+                            <h3 className={styles.mvTitle}>Ser referencia en estética médica responsable</h3>
+                            <p className={styles.mvText}>
+                                Consolidarnos como una clínica líder en bienestar estético-clínico, distinguida por la calidad de sus tratamientos, la curaduría de las mejores marcas y una experiencia profesional profundamente humana.
+                            </p>
+                            <p className={styles.mvText}>
+                                Aspiramos a acompañar a cada cliente durante todo su proceso de transformación, construyendo confianza, adherencia y resultados consistentes en el tiempo.
+                            </p>
+                        </article>
                     </div>
                 </div>
             </section>
