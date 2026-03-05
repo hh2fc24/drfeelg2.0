@@ -14,9 +14,9 @@
   --color-primary-gold-dark: #9c835c;
   --color-primary-gold-light: #e5dccb;
 
-  --color-bg-light: #faf9f7;
-  /* Slightly warm off-white, editorial feel */
-  --color-bg-white: #ffffff;
+  --color-bg-light: #f6eaee;
+  /* Soft palo rosa for the global site background */
+  --color-bg-white: #fdf7f9;
 
   --color-brand-bg: #d5d5cd;
   /* Exact background color of logoclinica.jpeg */

@@ -113,6 +113,11 @@
     gap: 3rem 4rem;
 }
 
+.gridCompact {
+    grid-template-columns: repeat(2, minmax(280px, 420px));
+    justify-content: center;
+}
+
 .ctaSection {
     position: relative;
     padding: 12rem 0;
@@ -206,5 +211,9 @@
     .grid {
         grid-template-columns: 1fr;
         gap: 4rem;
+    }
+
+    .gridCompact {
+        grid-template-columns: 1fr;
     }
 }
