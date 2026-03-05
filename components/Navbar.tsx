@@ -24,8 +24,8 @@ export default function Navbar() {
                     <Image
                         src="/ll2.png"
                         alt="Dr. Feelgood"
-                        width={200}
-                        height={60}
+                        width={220}
+                        height={110}
                         className={styles.logoImage}
                         priority
                         unoptimized

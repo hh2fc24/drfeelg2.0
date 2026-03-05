@@ -12,8 +12,8 @@ export default function Footer() {
                             <Image
                                 src="/ll2.png"
                                 alt="Dr. Feelgood"
-                                width={240}
-                                height={80}
+                                width={320}
+                                height={160}
                                 className={styles.logoImage}
                                 unoptimized
                             />

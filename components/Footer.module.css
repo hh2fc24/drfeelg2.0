@@ -1,6 +1,6 @@
 .footer {
-    background: var(--gradient-brand);
-    padding: 8rem 0 0;
+    background: var(--color-bg-white);
+    padding: 5.5rem 0 0;
     border-top: 1px solid rgba(44, 42, 41, 0.05);
     /* Very subtle line */
 }
@@ -9,7 +9,8 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 4rem;
-    margin-bottom: 6rem;
+    margin: 0 auto 4.5rem;
+    max-width: 1120px;
 }
 
 .footerBrand {
@@ -31,7 +32,7 @@
 }
 
 .logoImage {
-    height: 165px;
+    height: 110px;
     width: auto;
     object-fit: contain;
     filter: brightness(1.25) contrast(1.15);
@@ -102,7 +103,7 @@
 }
 
 .footerBottom {
-    background: var(--gradient-brand);
+    background: var(--color-bg-white);
     /* Off-white bottom */
     padding: 2rem 0;
     text-align: center;
@@ -121,12 +122,16 @@
 
 @media (max-width: 768px) {
     .footer {
-        padding-top: 5rem;
+        padding-top: 4rem;
     }
 
     .footerGrid {
         grid-template-columns: 1fr;
         gap: 3rem;
         margin-bottom: 4rem;
+    }
+
+    .logoImage {
+        height: 86px;
     }
 }

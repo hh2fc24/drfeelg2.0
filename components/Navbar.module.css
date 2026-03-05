@@ -5,15 +5,13 @@
     width: 100%;
     z-index: 1000;
     transition: all 0.6s var(--ease-editorial);
-    padding: 2.5rem 0;
-    background: var(--gradient-nav-light);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    padding: 1.4rem 0;
+    background: var(--color-bg-white);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
 }
 
 .scrolled {
-    padding: 1.25rem 0;
+    padding: 0.9rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -21,6 +19,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1120px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .logo {
@@ -36,11 +37,15 @@
 }
 
 .logoImage {
-    height: 95px;
+    height: 70px;
     width: auto;
     object-fit: contain;
     transition: transform 0.4s var(--ease-editorial);
     filter: brightness(1.25) contrast(1.15);
+}
+
+.scrolled .logoImage {
+    height: 58px;
 }
 
 .logo:hover .logoImage {
@@ -142,11 +147,15 @@
 
 @media (max-width: 768px) {
     .header {
-        padding: 1.5rem 0;
+        padding: 1rem 0;
     }
 
     .scrolled {
-        padding: 1rem 0;
+        padding: 0.8rem 0;
+    }
+
+    .logoImage {
+        height: 58px;
     }
 
     .menuToggle {
@@ -159,7 +168,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: var(--gradient-brand);
+        background: var(--color-bg-white);
         flex-direction: column;
         justify-content: center;
         padding: 2rem;
