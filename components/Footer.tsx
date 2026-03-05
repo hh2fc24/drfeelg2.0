@@ -10,7 +10,7 @@ export default function Footer() {
                     <Link href="/" className={styles.logoLink}>
                         <div className={styles.logo}>
                             <Image
-                                src="/ll2.png"
+                                src="/ll2.png?v=20260305"
                                 alt="Dr. Feelgood"
                                 width={320}
                                 height={160}
