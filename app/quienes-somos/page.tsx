@@ -113,6 +113,92 @@ export default function QuienesSomos() {
                 </div>
             </section>
 
+            <section className={styles.teamSection}>
+                <div className="container">
+                    <div className={styles.teamHeader}>
+                        <h2 className={`${styles.sectionTitle} animate-fade-up`}>Nuestro <span className={styles.highlight}>Equipo</span></h2>
+                        <p className={`${styles.text} animate-fade-up delay-1`}>
+                            Conoce a los profesionales de la salud detrás de cada transformación. 
+                        </p>
+                    </div>
+
+                    <div className={styles.teamGrid}>
+                        <article className={`${styles.teamCard} animate-fade-up delay-1`}>
+                            <div className={styles.teamImageWrapper}>
+                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/monica_leon.jpg')" }}></div>
+                            </div>
+                            <h3 className={styles.teamName}>Dra. Mónica León</h3>
+                            <span className={styles.teamRole}>Medicina Integrativa</span>
+                        </article>
+
+                        <article className={`${styles.teamCard} animate-fade-up delay-2`}>
+                            <div className={styles.teamImageWrapper}>
+                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/maria_paz.jpg')" }}></div>
+                            </div>
+                            <h3 className={styles.teamName}>María Paz</h3>
+                            <span className={styles.teamRole}>Podóloga</span>
+                        </article>
+
+                        <article className={`${styles.teamCard} animate-fade-up delay-3`}>
+                            <div className={styles.teamImageWrapper}>
+                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/miriam_roman.jpg')" }}></div>
+                            </div>
+                            <h3 className={styles.teamName}>Miriam Román</h3>
+                            <span className={styles.teamRole}>Enfermera</span>
+                        </article>
+
+                        <article className={`${styles.teamCard} animate-fade-up delay-1`}>
+                            <div className={styles.teamImageWrapper}>
+                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/nicole.jpg')" }}></div>
+                            </div>
+                            <h3 className={styles.teamName}>Nicole</h3>
+                            <span className={styles.teamRole}>Enfermera y Administradora</span>
+                        </article>
+
+                        <article className={`${styles.teamCard} animate-fade-up delay-2`}>
+                            <div className={styles.teamImageWrapper}>
+                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/almendra_villesca.jpg')" }}></div>
+                            </div>
+                            <h3 className={styles.teamName}>Almendra Villesca</h3>
+                            <span className={styles.teamRole}>Nutricionista</span>
+                        </article>
+
+                        <article className={`${styles.teamCard} animate-fade-up delay-3`}>
+                            <div className={styles.teamImageWrapper}>
+                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/paulina_munoz.jpg')" }}></div>
+                            </div>
+                            <h3 className={styles.teamName}>Paulina Muñoz</h3>
+                            <span className={styles.teamRole}>Enfermera</span>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section className={styles.facilitiesSection}>
+                <div className="container">
+                    <div className={styles.teamHeader}>
+                        <h2 className={`${styles.sectionTitle} animate-fade-up`}>Nuestras <span className={styles.highlight}>Instalaciones</span></h2>
+                    </div>
+                    <div className={styles.facilitiesGrid}>
+                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.1s' }}>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinicaII.jpg')" }}></div>
+                        </div>
+                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.2s' }}>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/marca.jpg')" }}></div>
+                        </div>
+                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.3s' }}>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica2.jpg')" }}></div>
+                        </div>
+                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.4s' }}>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica4.jpg')" }}></div>
+                        </div>
+                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.5s' }}>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica1.jpg')" }}></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className={styles.ctaSection}>
                 <div className={`container text-center animate-fade-up`}>
                     <span className={styles.eyebrowDark}>Evaluación Clínica</span>

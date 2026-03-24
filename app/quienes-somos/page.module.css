@@ -266,6 +266,108 @@
     font-weight: 300;
 }
 
+/* Team Section */
+.teamSection {
+    padding: 8rem 0;
+    background-color: var(--color-bg-white);
+    border-top: 1px solid rgba(44, 42, 41, 0.05);
+}
+
+.teamHeader {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 4.5rem;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.teamCard {
+    text-align: center;
+}
+
+.teamImageWrapper {
+    width: 100%;
+    padding-top: 120%; /* 5:6 aspect ratio */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.teamImagePlaceholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    transition: transform 0.6s var(--ease-editorial);
+}
+
+.teamCard:hover .teamImagePlaceholder {
+    transform: scale(1.03);
+}
+
+.teamName {
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.teamRole {
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary-gold-dark);
+}
+
+/* Facilities Gallery */
+.facilitiesSection {
+    padding: 8rem 0;
+    background-color: var(--color-bg-light);
+}
+
+.facilitiesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+    gap: 1.5rem;
+}
+
+.facilitiesGrid_item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.facilitiesGrid_item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.facilitiesGrid_item:nth-child(2) { grid-column: span 1; grid-row: span 1; }
+.facilitiesGrid_item:nth-child(3) { grid-column: span 1; grid-row: span 2; }
+.facilitiesGrid_item:nth-child(4) { grid-column: span 1; grid-row: span 1; }
+.facilitiesGrid_item:nth-child(5) { grid-column: span 2; grid-row: span 1; }
+
+.facilitiesImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s var(--ease-editorial);
+}
+
+.facilitiesGrid_item:hover .facilitiesImage {
+    transform: scale(1.05);
+}
+
 @media (max-width: 1024px) {
     .title {
         font-size: 3.5rem;
@@ -281,6 +383,13 @@
 
     .mvTitle {
         font-size: 1.7rem;
+    }
+
+    .teamGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .facilitiesGrid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -334,5 +443,17 @@
 
     .ctaTitle {
         font-size: 2.5rem;
+    }
+
+    .teamGrid {
+        grid-template-columns: 1fr;
+    }
+    .facilitiesGrid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+    .facilitiesGrid_item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }

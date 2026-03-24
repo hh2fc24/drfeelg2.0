@@ -10,6 +10,7 @@ interface ServiceModalProps {
         category: string;
         imageUrl?: string;
         modalImageUrl?: string;
+        videoUrl?: string;
     } | null;
 }
 
@@ -46,11 +47,24 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
 
                 <div className={styles.modalContent}>
                     <div className={styles.imageColumn}>
-                        <div
-                            className={styles.modalImage}
-                            style={{ backgroundImage: `url(${service.modalImageUrl || service.imageUrl || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'})` }}
-                        >
-                        </div>
+                        {service.videoUrl ? (
+                            <div className={styles.modalImage} style={{ backgroundColor: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                                <video 
+                                    src={service.videoUrl} 
+                                    autoPlay 
+                                    muted 
+                                    loop 
+                                    playsInline 
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                />
+                            </div>
+                        ) : (
+                            <div
+                                className={styles.modalImage}
+                                style={{ backgroundImage: `url(${service.modalImageUrl || service.imageUrl || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'})` }}
+                            >
+                            </div>
+                        )}
                     </div>
 
                     <div className={styles.textColumn}>

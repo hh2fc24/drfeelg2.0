@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Servicios() {
-    type ServiceType = { title: string; description: string; category: string; imageUrl?: string; modalImageUrl?: string; href?: string; };
+    type ServiceType = { title: string; description: string; category: string; imageUrl?: string; modalImageUrl?: string; videoUrl?: string; href?: string; };
     const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -26,24 +26,25 @@ export default function Servicios() {
             title: "Lipoláser Sin Cirugía",
             description: "Reducción adiposa de alto impacto. Modela tu figura y reduce de 1 a 2 tallas mediante tecnología láser no invasiva, eliminando la flacidez con resultados evidentes desde la primera sesión.",
             category: "Escultura Corporal",
-            imageUrl: "https://images.unsplash.com/photo-1584292181255-43ff30735fbc?auto=format&fit=crop&q=80&w=1200", // Aspirational: Body shape
-            modalImageUrl: "https://alisa.shop/cdn/shop/products/smart-lipo-laser-machine-weight-loss-diode-lipo-lase-lipolysisslimming-machine-635nm-650nm-body-sculpting-beauty-spa-5120-73599054-3f6166c1674e47784ab63739eb85369a_1024x.jpg?v=1700312432", // Technical: Lipolaser machine
+            imageUrl: "/images/tratamientos/tratamiento1.jpg", 
+            modalImageUrl: "/images/tratamientos/tratamiento1.jpg", 
             href: "/contacto"
         },
         {
             title: "Anticelulitis Xcell Intense",
             description: "Transformación estructural de la piel. Pulveriza los nódulos celulíticos y tensa el tejido superficial para lograr unas piernas visiblemente lisas, firmes y luminosas.",
             category: "Alisamiento Dérmico",
-            imageUrl: "https://dermatricia.com/wp-content/uploads/2023/10/Radiofrecuencia-piernas-768x768.jpg", // Clinical: Radiofrequency treatment on legs
-            modalImageUrl: "https://nwzimg.wezhan.net/contents/sitefiles3607/18037120/images/8093701.png", // Technical: Velashape 3
+            imageUrl: "/images/tratamientos/tratamiento2.jpg",
+            modalImageUrl: "/images/tratamientos/tratamiento2.jpg",
             href: "/contacto"
         },
         {
             title: "Colección Facial: Derm & Antiage",
             description: "Desde LIMPIEZA PROFUNDA HYDROMAX hasta prevención ANTIAGE y reversión de edad AGEBACK. Protocolos faciales que devuelven la hidratación suprema, la luz espectacular y la juventud celular a tu rostro.",
             category: "Luminosidad Facial Premium",
-            imageUrl: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200", // Aspirational: Glowing aesthetic face
-            modalImageUrl: "https://www.elitelaser.es/media/ELITE-LASER-45-scaled.jpg", // Technical: Hydrafacial elite
+            imageUrl: "/images/tratamientos/hydromax.jpg",
+            modalImageUrl: "/images/tratamientos/hydromax2.jpg",
+            videoUrl: "/videos/hidromax.MOV",
         }
     ];
 
@@ -52,8 +53,8 @@ export default function Servicios() {
             title: "Sistema A.R.C. Láser Alemán (Onicomicosis)",
             description: "Erradicación clínica de precisión. Recupera la salud y estética absoluta de tus uñas mediante la tecnología láser europea más avanzada, asegurando resultados impecables sin medicamentos.",
             category: "Podología Clínica Láser",
-            imageUrl: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=80&w=1200", // Aspirational: Aesthetic clean feet / spa environment
-            modalImageUrl: "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/3673496/settings_images/bgSYyJY1RsSBZjKIZpnX_imagen_aplied.jpg", // Technical: ARC Laser FOX
+            imageUrl: "/images/tratamientos/podologia.jpg",
+            modalImageUrl: "/images/tratamientos/podologia2.jpg",
             href: "/contacto"
         }
     ];
