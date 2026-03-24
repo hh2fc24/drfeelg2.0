@@ -11,6 +11,7 @@ interface ServiceModalProps {
         imageUrl?: string;
         modalImageUrl?: string;
         videoUrl?: string;
+        galleryUrls?: string[];
     } | null;
 }
 
@@ -47,22 +48,35 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
 
                 <div className={styles.modalContent}>
                     <div className={styles.imageColumn}>
-                        {service.videoUrl ? (
-                            <div className={styles.modalImage} style={{ backgroundColor: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                                <video 
-                                    src={service.videoUrl} 
-                                    autoPlay 
-                                    muted 
-                                    loop 
-                                    playsInline 
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                />
-                            </div>
-                        ) : (
-                            <div
-                                className={styles.modalImage}
-                                style={{ backgroundImage: `url(${service.modalImageUrl || service.imageUrl || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'})` }}
-                            >
+                        <div className={styles.mainMedia}>
+                            {service.videoUrl ? (
+                                <div className={styles.modalImage} style={{ backgroundColor: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                                    <video 
+                                        src={service.videoUrl} 
+                                        autoPlay 
+                                        muted 
+                                        loop 
+                                        playsInline 
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                </div>
+                            ) : (
+                                <div
+                                    className={styles.modalImage}
+                                    style={{ backgroundImage: `url(${service.modalImageUrl || service.imageUrl || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'})` }}
+                                >
+                                </div>
+                            )}
+                        </div>
+                        {service.galleryUrls && service.galleryUrls.length > 0 && (
+                            <div className={styles.gallery}>
+                                {service.galleryUrls.map((url, i) => (
+                                    <div 
+                                        key={i} 
+                                        className={styles.galleryItem} 
+                                        style={{ backgroundImage: `url(${url})` }}
+                                    ></div>
+                                ))}
                             </div>
                         )}
                     </div>

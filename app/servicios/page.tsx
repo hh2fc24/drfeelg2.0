@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Servicios() {
-    type ServiceType = { title: string; description: string; category: string; imageUrl?: string; modalImageUrl?: string; videoUrl?: string; href?: string; };
+    type ServiceType = { title: string; description: string; category: string; imageUrl?: string; modalImageUrl?: string; videoUrl?: string; galleryUrls?: string[]; href?: string; };
     const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -45,6 +45,13 @@ export default function Servicios() {
             imageUrl: "/images/tratamientos/hydromax.jpg",
             modalImageUrl: "/images/tratamientos/hydromax2.jpg",
             videoUrl: "/videos/hidromax.MOV",
+            galleryUrls: [
+                "/images/tratamientos/hydromax.jpg",
+                "/images/tratamientos/hydromax2.jpg",
+                "/images/tratamientos/hydromax3.jpg",
+                "/images/tratamientos/hydromax4.jpg",
+                "/images/tratamientos/hydromax5.jpg"
+            ],
         }
     ];
 
