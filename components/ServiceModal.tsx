@@ -17,6 +17,7 @@ interface ServiceModalProps {
 
 export default function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
     const [isAnimating, setIsAnimating] = useState(false);
+    const [activeMedia, setActiveMedia] = useState<{type: 'video' | 'image', url: string} | null>(null);
 
     useEffect(() => {
         let t: NodeJS.Timeout;
@@ -24,6 +25,15 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
             document.body.style.overflow = 'hidden';
             // Use timeout to bypass synchronous setState in effect warning and allow CSS transition
             t = setTimeout(() => setIsAnimating(true), 10);
+            
+            // Set initial active media
+            if (service) {
+                if (service.videoUrl) {
+                    setActiveMedia({ type: 'video', url: service.videoUrl });
+                } else if (service.modalImageUrl || service.imageUrl) {
+                    setActiveMedia({ type: 'image', url: service.modalImageUrl || service.imageUrl || '' });
+                }
+            }
         } else {
             document.body.style.overflow = 'auto';
             t = setTimeout(() => setIsAnimating(false), 10);
@@ -32,7 +42,7 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
             document.body.style.overflow = 'auto';
             if (t) clearTimeout(t);
         };
-    }, [isOpen]);
+    }, [isOpen, service]);
 
     if (!isOpen || !service) return null;
 
@@ -49,10 +59,10 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                 <div className={styles.modalContent}>
                     <div className={styles.imageColumn}>
                         <div className={styles.mainMedia}>
-                            {service.videoUrl ? (
+                            {activeMedia?.type === 'video' ? (
                                 <div className={styles.modalImage} style={{ backgroundColor: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
                                     <video 
-                                        src={service.videoUrl} 
+                                        src={activeMedia.url} 
                                         autoPlay 
                                         muted 
                                         loop 
@@ -63,18 +73,36 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                             ) : (
                                 <div
                                     className={styles.modalImage}
-                                    style={{ backgroundImage: `url(${service.modalImageUrl || service.imageUrl || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'})` }}
+                                    style={{ backgroundImage: `url(${activeMedia?.url || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'})` }}
                                 >
                                 </div>
                             )}
                         </div>
                         {service.galleryUrls && service.galleryUrls.length > 0 && (
                             <div className={styles.gallery}>
+                                {service.videoUrl && (
+                                    <div 
+                                        className={styles.galleryItem} 
+                                        style={{ 
+                                            backgroundColor: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', 
+                                            cursor: 'pointer', 
+                                            border: activeMedia?.url === service.videoUrl ? '2px solid var(--color-primary-gold-dark)' : '2px solid rgba(255, 255, 255, 0.8)' 
+                                        }}
+                                        onClick={() => setActiveMedia({ type: 'video', url: service.videoUrl! })}
+                                    >
+                                        <span style={{color: '#fff', fontSize: '10px', letterSpacing: '0.1em'}}>VIDEO</span>
+                                    </div>
+                                )}
                                 {service.galleryUrls.map((url, i) => (
                                     <div 
                                         key={i} 
                                         className={styles.galleryItem} 
-                                        style={{ backgroundImage: `url(${url})` }}
+                                        style={{ 
+                                            backgroundImage: `url(${url})`,
+                                            cursor: 'pointer',
+                                            border: activeMedia?.url === url ? '2px solid var(--color-primary-gold-dark)' : '2px solid rgba(255, 255, 255, 0.8)'
+                                        }}
+                                        onClick={() => setActiveMedia({ type: 'image', url })}
                                     ></div>
                                 ))}
                             </div>
