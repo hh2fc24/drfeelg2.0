@@ -187,13 +187,22 @@ export default function QuienesSomos() {
                             <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/marca.jpg')" }}></div>
                         </div>
                         <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.3s' }}>
-                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica2.jpg')" }}></div>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/equipo/doc_1.jpg')" }}></div>
                         </div>
                         <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.4s' }}>
-                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica4.jpg')" }}></div>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/productos.jpg')" }}></div>
                         </div>
                         <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.5s' }}>
                             <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica1.jpg')" }}></div>
+                        </div>
+                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.6s' }}>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/instalacion_0075.jpg')" }}></div>
+                        </div>
+                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.7s' }}>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica4.jpg')" }}></div>
+                        </div>
+                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.8s' }}>
+                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/instalacion_0072.jpg')" }}></div>
                         </div>
                     </div>
                 </div>
