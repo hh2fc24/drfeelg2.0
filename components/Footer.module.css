@@ -62,7 +62,7 @@
     height: 110px;
     width: auto;
     object-fit: contain;
-    filter: grayscale(1) brightness(0.2) contrast(1.2);
+    filter: saturate(0.85) brightness(0.9) contrast(0.95); /* Dorado plano y elegante */
 }
 
 .tagline {
