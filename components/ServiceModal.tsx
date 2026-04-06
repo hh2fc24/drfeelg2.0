@@ -6,8 +6,11 @@ interface ServiceModalProps {
     onClose: () => void;
     service: {
         title: string;
-        description: string;
+        description: string | string[];
         category: string;
+        benefitsTitle?: string;
+        benefits?: string[];
+        prices?: string[];
         imageUrl?: string;
         modalImageUrl?: string;
         videoUrl?: string;
@@ -112,16 +115,36 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                     <div className={styles.textColumn}>
                         <span className={styles.category}>{service.category}</span>
                         <h2 className={styles.title}>{service.title}</h2>
-                        <p className={styles.description}>{service.description}</p>
+                        
+                        {Array.isArray(service.description) ? (
+                            service.description.map((desc, idx) => (
+                                <p key={idx} className={styles.description} style={{ marginBottom: '1rem' }}>{desc}</p>
+                            ))
+                        ) : (
+                            <p className={styles.description}>{service.description}</p>
+                        )}
 
                         <div className={styles.benefits}>
-                            <h4 className={styles.benefitsTitle}>Experiencia Sensorial</h4>
-                            <ul>
-                                <li>Sensación de bienestar y relajación profunda.</li>
-                                <li>Tecnología clínica no invasiva de confort absoluto.</li>
-                                <li>Reestructuración visible desde la primera sesión.</li>
-                            </ul>
+                            {service.benefitsTitle && <h4 className={styles.benefitsTitle}>{service.benefitsTitle}</h4>}
+                            {service.benefits && service.benefits.length > 0 ? (
+                                <ul>
+                                    {service.benefits.map((benefit, idx) => (
+                                        <li key={idx}>{benefit}</li>
+                                    ))}
+                                </ul>
+                            ) : null}
                         </div>
+
+                        {service.prices && service.prices.length > 0 && (
+                            <div className={styles.benefits} style={{ marginTop: '1.5rem' }}>
+                                <h4 className={styles.benefitsTitle}>Valores de Inversión</h4>
+                                <ul>
+                                    {service.prices.map((price, idx) => (
+                                        <li key={idx} style={{ fontWeight: 500 }}>{price}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
 
                         <a href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer" className={`btn btn-primary ${styles.ctaBtn}`}>
                             Coordinar Cita Vía WhatsApp

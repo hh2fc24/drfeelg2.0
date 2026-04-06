@@ -3,7 +3,7 @@ import styles from './ServiceCard.module.css';
 
 interface ServiceCardProps {
     title: string;
-    description: string;
+    description: string | string[];
     category: string;
     imageUrl?: string;
     href?: string;
@@ -12,6 +12,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, category, imageUrl, href, onClick }: ServiceCardProps) {
     const bgImage = imageUrl || 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    const previewDesc = Array.isArray(description) ? description[0] : description;
 
     if (onClick) {
         return (
@@ -22,7 +23,7 @@ export default function ServiceCard({ title, description, category, imageUrl, hr
                 </div>
                 <div className={styles.content}>
                     <h3 className={styles.title}>{title}</h3>
-                    <p className={styles.description}>{description}</p>
+                    <p className={styles.description}>{previewDesc}</p>
                     <div className={styles.linkWrapper}>
                         <span className={styles.link}>
                             Descubrir Detalles <span className={styles.arrow}>→</span>
@@ -42,7 +43,7 @@ export default function ServiceCard({ title, description, category, imageUrl, hr
             </div>
             <div className={styles.content}>
                 <h3 className={styles.title}>{title}</h3>
-                <p className={styles.description}>{description}</p>
+                <p className={styles.description}>{previewDesc}</p>
                 <div className={styles.linkWrapper}>
                     <span className={styles.link}>
                         Descubrir <span className={styles.arrow}>→</span>
