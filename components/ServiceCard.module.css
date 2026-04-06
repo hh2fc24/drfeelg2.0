@@ -155,3 +155,22 @@
     font-weight: 500;
     color: var(--color-text-dark);
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .priceValue {
+        font-size: 1.15rem;
+    }
+
+    .imageWrapper {
+        margin-bottom: 1.25rem;
+    }
+
+    .discountBadge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
