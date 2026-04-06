@@ -114,3 +114,44 @@
 .card:hover .arrow {
     transform: translateX(5px);
 }
+
+/* E-commerce Badges & Pricing */
+.discountBadge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-primary-gold);
+    color: var(--color-bg-white);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.05em;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.priceWrapper {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    border-top: 1px solid rgba(44, 42, 41, 0.05);
+    padding-top: 1rem;
+}
+
+.basePriceLabel {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.05em;
+}
+
+.priceValue {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+}

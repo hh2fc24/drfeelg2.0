@@ -118,6 +118,41 @@
     justify-content: center;
 }
 
+/* Catalog Filter Bar */
+.filterBar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    background: transparent;
+    border: 1px solid rgba(44, 42, 41, 0.1);
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-full);
+    transition: all 0.3s var(--ease-editorial);
+    cursor: pointer;
+}
+
+.filterBtn:hover {
+    border-color: var(--color-text-dark);
+    color: var(--color-text-dark);
+}
+
+.filterBtnActive {
+    background: var(--color-text-dark);
+    color: var(--color-bg-white) !important;
+    border-color: var(--color-text-dark);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 .ctaSection {
     position: relative;
     padding: 12rem 0;
