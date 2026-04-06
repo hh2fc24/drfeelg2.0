@@ -41,7 +41,7 @@
     width: auto;
     object-fit: contain;
     transition: transform 0.4s var(--ease-editorial);
-    filter: brightness(1.25) contrast(1.15);
+    filter: grayscale(1) brightness(0.2) contrast(1.2);
 }
 
 .scrolled .logoImage {
