@@ -1,195 +1,159 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.6s var(--ease-editorial);
-    padding: 1.4rem 0;
-    background: #ffffff;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: 0.3s ease;
 }
 
 .scrolled {
-    padding: 0.9rem 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: rgba(247, 251, 250, 0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(18, 54, 51, 0.08);
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1120px;
-    margin: 0 auto;
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.brandTop {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 0.95;
+}
+
+.brandBottom {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  position: relative;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.cta {
+  margin-left: 0.5rem;
+}
+
+.toggle {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.92);
+  align-items: center;
+  justify-content: center;
+}
+
+.line,
+.line::before,
+.line::after {
+  display: block;
+  width: 1.15rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-ink);
+  transition: 0.25s ease;
+}
+
+.line {
+  position: relative;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.line::before {
+  top: -0.35rem;
+}
+
+.line::after {
+  top: 0.35rem;
+}
+
+.lineOpen {
+  background: transparent;
+}
+
+.lineOpen::before {
+  transform: translateY(0.35rem) rotate(45deg);
+}
+
+.lineOpen::after {
+  transform: translateY(-0.35rem) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 5.3rem 1rem auto;
+    padding: 1.2rem;
+    border-radius: 24px;
+    border: 1px solid var(--color-line);
+    background: rgba(247, 251, 250, 0.98);
+    box-shadow: var(--shadow-lg);
+    display: grid;
+    gap: 1rem;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .cta {
+    margin-left: 0;
     width: 100%;
-}
-
-.logo {
-    font-family: var(--font-serif);
-    font-size: 1.75rem;
-    font-weight: 400;
-    /* Lighter weight for serif logo */
-    color: var(--color-text-dark);
-    letter-spacing: -0.02em;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.logoImage {
-    height: 70px;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.4s var(--ease-editorial);
-    filter: saturate(0.85) brightness(0.9) contrast(0.95); /* Dorado plano y elegante */
-}
-
-.scrolled .logoImage {
-    height: 58px;
-}
-
-.logo:hover .logoImage {
-    transform: scale(1.02);
-}
-
-.navLinks {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-.navLink {
-    font-family: var(--font-sans);
-    font-weight: 400;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-text-dark);
-    position: relative;
-    padding-bottom: 4px;
-}
-
-/* Redefined hover logic for luxury feel */
-.navLink::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-primary-gold);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.4s var(--ease-editorial);
-}
-
-.navLink:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.ctaBtn {
-    margin-left: 1.5rem;
-}
-
-/* Custom Hamburger */
-.menuToggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1001;
-    /* Keep above menu */
-}
-
-.hamburger {
-    display: block;
-    width: 28px;
-    height: 1px;
-    background-color: var(--color-text-dark);
-    position: relative;
-    transition: all 0.4s var(--ease-editorial);
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-text-dark);
-    transition: all 0.4s var(--ease-editorial);
-    left: 0;
-}
-
-.hamburger::before {
-    top: -8px;
-}
-
-.hamburger::after {
-    bottom: -8px;
-}
-
-.hamburgerOpen {
-    background-color: transparent;
-}
-
-.hamburgerOpen::before {
-    top: 0;
-    transform: rotate(45deg);
-}
-
-.hamburgerOpen::after {
-    bottom: 0;
-    transform: rotate(-45deg);
-}
-
-@media (max-width: 768px) {
-    .header {
-        padding: 1rem 0;
-    }
-
-    .scrolled {
-        padding: 0.8rem 0;
-    }
-
-    .logoImage {
-        height: 58px;
-    }
-
-    .menuToggle {
-        display: block;
-    }
-
-    .navLinks {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: #ffffff;
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        gap: 2.5rem;
-        clip-path: circle(0px at calc(100% - 2.5rem) 2.5rem);
-        transition: clip-path 0.7s var(--ease-editorial);
-    }
-
-    .navOpen {
-        clip-path: circle(150vh at calc(100% - 2.5rem) 2.5rem);
-    }
-
-    .navLink {
-        font-size: 1.5rem;
-    }
-
-    .ctaBtn {
-        margin-left: 0;
-        margin-top: 2rem;
-        width: 100%;
-        max-width: 300px;
-        padding: 1.5rem;
-    }
+  }
 }

@@ -1,164 +1,90 @@
 .footer {
-    position: relative;
-    overflow: hidden;
-    background: var(--color-bg-white);
-    padding: 5.5rem 0 0;
+  margin-top: 3rem;
+  padding-top: 4rem;
+  background: #0f2e2b;
+  color: white;
 }
 
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 200%;
-    height: 1px;
-    background: linear-gradient(90deg,
-            rgba(194, 167, 125, 0),
-            rgba(194, 167, 125, 0.28),
-            rgba(230, 211, 166, 0.9),
-            rgba(194, 167, 125, 0.28),
-            rgba(194, 167, 125, 0));
-    animation: goldLineShift 7s linear infinite;
-    pointer-events: none;
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
-@keyframes goldLineShift {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(25%);
-    }
+.brandBlock h2 {
+  margin-bottom: 1rem;
+  color: white;
+  font-size: clamp(2rem, 4vw, 3.2rem);
 }
 
-.footerGrid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 4rem;
-    margin: 0 auto 4.5rem;
-    max-width: 1120px;
+.copy {
+  max-width: 470px;
+  margin-bottom: 1.4rem;
+  color: rgba(255, 255, 255, 0.78);
 }
 
-.footerBrand {
-    padding-right: 4rem;
+.linksBlock {
+  display: grid;
+  gap: 1.5rem;
 }
 
-.logo {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--color-text-dark);
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
+.linksBlock h3,
+.mapBlock h3 {
+  margin-bottom: 0.75rem;
+  color: white;
+  font-size: 1.25rem;
 }
 
-.logoLink {
-    text-decoration: none;
-    display: inline-block;
+.linksBlock ul {
+  display: grid;
+  gap: 0.55rem;
 }
 
-.logoImage {
-    height: 110px;
-    width: auto;
-    object-fit: contain;
-    filter: saturate(0.85) brightness(0.9) contrast(0.95); /* Dorado plano y elegante */
-}
-
-.tagline {
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--color-primary-gold-dark);
-    margin-bottom: 2rem;
-}
-
-.description {
-    color: var(--color-text-muted);
-    line-height: 1.8;
-    font-weight: 300;
-    max-width: 400px;
-}
-
-.footerTitle {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 2.5rem;
-    color: var(--color-text-dark);
-}
-
-.footerLinks ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.footerLinks a {
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    color: var(--color-text-muted);
-    transition: color 0.4s var(--ease-editorial);
-}
-
-.footerLinks a:hover {
-    color: var(--color-text-dark);
+.linksBlock a,
+.address p {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .address {
-    font-style: normal;
-}
-
-.address p {
-    color: var(--color-text-muted);
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-    font-weight: 300;
-}
-
-.address strong {
-    font-weight: 500;
-    color: var(--color-text-dark);
+  font-style: normal;
+  display: grid;
+  gap: 0.35rem;
 }
 
 .phone {
-    font-family: var(--font-serif);
-    font-size: 1.25rem;
-    color: var(--color-text-dark) !important;
-    margin: 2rem 0 1rem !important;
+  margin-top: 0.25rem;
+  color: white !important;
+  font-weight: 700;
 }
 
-.footerBottom {
-    background: var(--color-bg-white);
-    /* Off-white bottom */
-    padding: 2rem 0;
-    text-align: center;
-    color: var(--color-text-muted);
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+.mapFrame {
+  overflow: hidden;
+  min-height: 260px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-@media (max-width: 1024px) {
-    .footerBrand {
-        padding-right: 0;
-    }
+.mapFrame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  border: 0;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        padding-top: 4rem;
-    }
+.bottom {
+  margin-top: 2rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-    .footerGrid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        margin-bottom: 4rem;
-    }
+.bottom p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+}
 
-    .logoImage {
-        height: 86px;
-    }
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

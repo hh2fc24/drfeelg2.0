@@ -1,25 +1,26 @@
 import type { Metadata } from "next";
-import { Outfit, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Dr. Feelgood - Upgrade Yourself",
-  description: "Centro de estética y bienestar integral. Tratamientos no invasivos con tecnología avanzada.",
-};
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatbotWidget from "@/components/ChatbotWidget";
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+export const metadata: Metadata = {
+  title: "Laura Llamanos | Podologia Clinica y Estetica Facial",
+  description:
+    "Sitio medico-premium orientado a evaluaciones gratuitas, podologia clinica, estetica facial, camara hiperbarica y Laser Fox.",
+};
 
 export default function RootLayout({
   children,
@@ -28,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${outfit.variable} ${playfair.variable} antialiased`}>
+      <body className={`${manrope.variable} ${cormorant.variable}`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

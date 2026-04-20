@@ -26,20 +26,23 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
         let t: NodeJS.Timeout;
         if (isOpen) {
             document.body.style.overflow = 'hidden';
-            // Use timeout to bypass synchronous setState in effect warning and allow CSS transition
-            t = setTimeout(() => setIsAnimating(true), 10);
-            
-            // Set initial active media
-            if (service) {
-                if (service.videoUrl) {
-                    setActiveMedia({ type: 'video', url: service.videoUrl });
-                } else if (service.modalImageUrl || service.imageUrl) {
-                    setActiveMedia({ type: 'image', url: service.modalImageUrl || service.imageUrl || '' });
-                }
-            }
+            const nextMedia = service?.videoUrl
+                ? { type: 'video' as const, url: service.videoUrl }
+                : service?.modalImageUrl || service?.imageUrl
+                    ? { type: 'image' as const, url: service.modalImageUrl || service.imageUrl || '' }
+                    : null;
+
+            // Delay state updates slightly so the modal can transition in without a synchronous effect update.
+            t = setTimeout(() => {
+                setIsAnimating(true);
+                setActiveMedia(nextMedia);
+            }, 10);
         } else {
             document.body.style.overflow = 'auto';
-            t = setTimeout(() => setIsAnimating(false), 10);
+            t = setTimeout(() => {
+                setIsAnimating(false);
+                setActiveMedia(null);
+            }, 10);
         }
         return () => {
             document.body.style.overflow = 'auto';

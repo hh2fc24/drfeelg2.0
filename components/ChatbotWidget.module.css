@@ -1,96 +1,57 @@
-.widgetContainer {
-    position: fixed;
-    bottom: 2.5rem;
-    right: 2.5rem;
-    z-index: 5000;
-    opacity: 0;
-    transform: translateY(20px) scale(0.9);
-    transition: all 0.8s var(--ease-editorial);
-    pointer-events: none;
+.wrapper {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: 0.3s ease;
 }
 
-.widgetContainer.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.widgetBtn {
-    position: relative;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.4) inset;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-dark);
-    text-decoration: none;
-    z-index: 2;
-    transition: transform 0.4s var(--ease-editorial), background 0.4s;
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 999px;
+  padding: 0.7rem 0.85rem 0.7rem 1rem;
+  background: #1a7b70;
+  color: white;
+  box-shadow: 0 24px 40px rgba(26, 123, 112, 0.25);
 }
 
-.widgetBtn:hover {
-    transform: scale(1.05) translateY(-5px);
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+.badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primary-gold-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
 }
 
-.pulseRing {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: var(--color-primary-gold);
-    z-index: 1;
-    animation: pulse 2.5s infinite var(--ease-editorial);
-    opacity: 0;
+.icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
 }
 
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(0.95);
-        opacity: 0.5;
-    }
+@media (max-width: 720px) {
+  .badge {
+    display: none;
+  }
 
-    70% {
-        transform: translate(-50%, -50%) scale(1.6);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(-50%, -50%) scale(0.95);
-        opacity: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .widgetContainer {
-        bottom: 1.5rem;
-        right: 1.5rem;
-    }
-
-    .widgetBtn {
-        width: 55px;
-        height: 55px;
-    }
-
-    .icon svg {
-        width: 24px;
-        height: 24px;
-    }
+  .button {
+    padding-left: 0.8rem;
+  }
 }
