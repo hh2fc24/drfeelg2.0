@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
     max-width: 1120px;
     margin: 0 auto;
     width: 100%;
@@ -28,24 +29,24 @@
     font-family: var(--font-serif);
     font-size: 1.75rem;
     font-weight: 400;
-    /* Lighter weight for serif logo */
     color: var(--color-text-dark);
     letter-spacing: -0.02em;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    flex-shrink: 0;
+    width: clamp(220px, 23vw, 320px);
 }
 
 .logoImage {
-    height: 70px;
-    width: auto;
+    width: 100%;
+    height: auto;
     object-fit: contain;
     transition: transform 0.4s var(--ease-editorial);
-    filter: saturate(0.85) brightness(0.9) contrast(0.95); /* Dorado plano y elegante */
+    filter: saturate(0.92) brightness(0.98) contrast(1);
 }
 
 .scrolled .logoImage {
-    height: 58px;
+    width: clamp(200px, 20vw, 280px);
 }
 
 .logo:hover .logoImage {
@@ -55,7 +56,8 @@
 .navLinks {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2.4rem;
+    margin-left: auto;
 }
 
 .navLink {
@@ -155,7 +157,7 @@
     }
 
     .logoImage {
-        height: 58px;
+        width: min(230px, 58vw);
     }
 
     .menuToggle {
@@ -173,6 +175,7 @@
         justify-content: center;
         padding: 2rem;
         gap: 2.5rem;
+        margin-left: 0;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
