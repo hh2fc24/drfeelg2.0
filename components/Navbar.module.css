@@ -173,12 +173,21 @@
         justify-content: center;
         padding: 2rem;
         gap: 2.5rem;
-        clip-path: circle(0px at calc(100% - 2.5rem) 2.5rem);
-        transition: clip-path 0.7s var(--ease-editorial);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-12px);
+        transition:
+            opacity 0.35s var(--ease-editorial),
+            transform 0.35s var(--ease-editorial),
+            visibility 0.35s var(--ease-editorial);
     }
 
     .navOpen {
-        clip-path: circle(150vh at calc(100% - 2.5rem) 2.5rem);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
     }
 
     .navLink {
