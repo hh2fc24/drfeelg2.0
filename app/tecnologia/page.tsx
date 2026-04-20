@@ -10,8 +10,8 @@ const technologySections = [
             "La cámara hiperbárica combina presión controlada y oxigenación para favorecer procesos naturales de recuperación. Es una tecnología de apoyo clínico orientada a tejidos, inflamación y bienestar general, siempre indicada según evaluación.",
             "En la web la presentamos desde el beneficio real para el paciente: más oxigenación a nivel celular, recuperación acelerada y una experiencia cómoda dentro de un entorno clínico seguro."
         ],
-        imageUrl: "/images/sourced/st801-exterior-reference.jpg",
-        imageAlt: "Referencia visual del modelo ST801 de cámara hiperbárica",
+        imageUrl: "/images/tratamientos/tratamiento1.jpg",
+        imageAlt: "Box clínico real del proyecto asociado a recuperación y tecnología de apoyo",
         imageFit: "cover",
         specs: [
             { label: "Línea", value: "O2Life ST801" },
