@@ -9,7 +9,16 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Home() {
-  type ServiceType = { title: string; description: string; category: string; imageUrl?: string; modalImageUrl?: string; href?: string; };
+  type ServiceType = {
+    title: string;
+    description: string;
+    category: string;
+    imageUrl?: string;
+    modalImageUrl?: string;
+    imageFit?: "cover" | "contain";
+    imageBackground?: string;
+    href?: string;
+  };
   const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -22,29 +31,33 @@ export default function Home() {
     setIsModalOpen(false);
     setTimeout(() => setSelectedService(null), 500);
   };
-  const featuredServices = [
+  const featuredServices: ServiceType[] = [
     {
       title: "Evaluación Clínica",
-      description: "Una primera consulta para revisar tu caso, resolver dudas y orientar el tratamiento más adecuado.",
+      description: "Una primera consulta para revisar tu caso, resolver dudas y definir una indicación responsable.",
       category: "Primera Consulta",
-      imageUrl: "https://images.unsplash.com/photo-1584292181255-43ff30735fbc?auto=format&fit=crop&q=80&w=1200", // Aspirational feminine shape
-      modalImageUrl: "https://alisa.shop/cdn/shop/products/smart-lipo-laser-machine-weight-loss-diode-lipo-lase-lipolysisslimming-machine-635nm-650nm-body-sculpting-beauty-spa-5120-73599054-3f6166c1674e47784ab63739eb85369a_1024x.jpg?v=1700312432",
+      imageUrl: "/images/instalaciones/instalacion_0075.jpg",
+      modalImageUrl: "/images/instalaciones/instalacion_0075.jpg",
       href: "/servicios"
     },
     {
-      title: "Sistema A.R.C. Láser Alemán",
-      description: "Tratamiento clínico para onicomicosis con tecnología láser y una experiencia cómoda para el paciente.",
+      title: "Láser Fox para Onicomicosis",
+      description: "Tecnología A.R.C. Laser para tratar onicomicosis de forma precisa, cómoda e indolora.",
       category: "Podología Clínica Láser",
-      imageUrl: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=80&w=1200", // Aesthetic clean healthy foot spa
-      modalImageUrl: "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/3673496/settings_images/bgSYyJY1RsSBZjKIZpnX_imagen_aplied.jpg",
+      imageUrl: "/images/sourced/fox-980-official.png",
+      modalImageUrl: "/images/sourced/fox-980-official.png",
+      imageFit: "contain",
+      imageBackground: "#f9f7f5",
       href: "/servicios"
     },
     {
-      title: "Botox y Ácido Hialurónico",
-      description: "Procedimientos faciales indicados según evaluación médica, con foco en resultados armónicos y naturales.",
+      title: "Botox (Dysport)",
+      description: "Toxina botulínica indicada según evaluación médica para líneas de expresión y prevención.",
       category: "Estética Facial",
-      imageUrl: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200", // Glowing facial skin
-      modalImageUrl: "https://www.elitelaser.es/media/ELITE-LASER-45-scaled.jpg",
+      imageUrl: "/images/sourced/dysport-official.png",
+      modalImageUrl: "/images/sourced/dysport-official.png",
+      imageFit: "contain",
+      imageBackground: "#f9f7f5",
       href: "/servicios"
     }
   ];
@@ -98,9 +111,9 @@ export default function Home() {
       {/* Featured Services Preview */}
       <section className={`section ${styles.servicesSection}`}>
         <div className="container">
-          <div className={`${styles.servicesHeader} animate-fade-up`}>
+            <div className={`${styles.servicesHeader} animate-fade-up`}>
             <div>
-              <span className={styles.eyebrow}>Obras Maestras</span>
+              <span className={styles.eyebrow}>Áreas destacadas</span>
               <h2 className={styles.sectionTitle}>Tratamientos <span className={styles.highlight}>destacados</span></h2>
             </div>
             <Link href="/servicios" className="link-anim">
@@ -134,7 +147,7 @@ export default function Home() {
                 Cuéntanos tu motivo de consulta y te orientaremos con información clara para definir el tratamiento más adecuado.
               </p>
               <Link href="/contacto" className="btn btn-primary">
-                Solicitar Evaluación
+                Evaluación Gratuita
               </Link>
             </div>
           </div>

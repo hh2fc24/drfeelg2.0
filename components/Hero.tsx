@@ -82,7 +82,7 @@ export default function Hero() {
 
                     <div className={`animate-fade-up delay-4 ${styles.ctaGroup}`}>
                         <Link href="/contacto" className="btn btn-primary">
-                            Solicitar Evaluación
+                            Evaluación Gratuita
                         </Link>
                         <Link href="/servicios" className="link-anim">
                             Ver Tratamientos

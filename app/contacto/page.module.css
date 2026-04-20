@@ -197,6 +197,41 @@
     margin-top: 1rem;
 }
 
+.serviceNote {
+    margin: -0.5rem 0 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(44, 42, 41, 0.08);
+    background: rgba(194, 167, 125, 0.08);
+    border-radius: var(--radius-md);
+}
+
+.serviceNote strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-dark);
+}
+
+.serviceNote p,
+.formHint,
+.feedback {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.formHint {
+    margin-top: -0.5rem;
+}
+
+.feedback {
+    margin-top: 1rem;
+    color: var(--color-text-dark);
+}
+
 @media (max-width: 1024px) {
     .title {
         font-size: 3.5rem;

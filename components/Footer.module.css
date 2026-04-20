@@ -44,6 +44,11 @@
     padding-right: 4rem;
 }
 
+.footerLinks,
+.footerContact {
+    min-width: 0;
+}
+
 .logo {
     font-family: var(--font-serif);
     font-size: 2.5rem;
@@ -141,6 +146,34 @@
     text-transform: uppercase;
 }
 
+.mapSection {
+    border-top: 1px solid rgba(44, 42, 41, 0.08);
+    padding: 0 0 4rem;
+}
+
+.mapHeader {
+    margin-bottom: 1.5rem;
+}
+
+.mapText {
+    max-width: 520px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.mapFrame {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.mapFrame iframe {
+    width: 100%;
+    height: 340px;
+    border: 0;
+    display: block;
+}
+
 @media (max-width: 1024px) {
     .footerBrand {
         padding-right: 0;
@@ -156,6 +189,14 @@
         grid-template-columns: 1fr;
         gap: 3rem;
         margin-bottom: 4rem;
+    }
+
+    .mapSection {
+        padding-bottom: 3rem;
+    }
+
+    .mapFrame iframe {
+        height: 280px;
     }
 
     .logoImage {

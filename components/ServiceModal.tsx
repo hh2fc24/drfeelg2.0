@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { clinicContact } from '@/lib/clinic';
 import styles from './ServiceModal.module.css';
 
 interface ServiceModalProps {
@@ -13,6 +14,9 @@ interface ServiceModalProps {
         prices?: string[];
         imageUrl?: string;
         modalImageUrl?: string;
+        imageFit?: 'cover' | 'contain';
+        imagePosition?: string;
+        imageBackground?: string;
         videoUrl?: string;
         galleryUrls?: string[];
     } | null;
@@ -79,7 +83,12 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                             ) : (
                                 <div
                                     className={styles.modalImage}
-                                    style={{ backgroundImage: `url(${activeMedia?.url || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'})` }}
+                                    style={{
+                                        backgroundImage: `url(${activeMedia?.url || '/images/instalaciones/clinica5.jpg'})`,
+                                        backgroundSize: service.imageFit || 'cover',
+                                        backgroundPosition: service.imagePosition || 'center',
+                                        backgroundColor: service.imageBackground || 'var(--color-bg-white)',
+                                    }}
                                 >
                                 </div>
                             )}
@@ -149,8 +158,8 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                             </div>
                         )}
 
-                        <a href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer" className={`btn btn-primary ${styles.ctaBtn}`}>
-                            Coordinar Cita Vía WhatsApp
+                        <a href={`https://wa.me/${clinicContact.whatsappLeadNumber}`} target="_blank" rel="noopener noreferrer" className={`btn btn-primary ${styles.ctaBtn}`}>
+                            Solicitar Evaluación por WhatsApp
                         </a>
                     </div>
                 </div>

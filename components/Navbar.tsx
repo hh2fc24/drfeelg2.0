@@ -36,11 +36,12 @@ export default function Navbar() {
                 <nav className={`${styles.navLinks} ${menuOpen ? styles.navOpen : ''}`}>
                     <Link href="/" className={styles.navLink} onClick={() => setMenuOpen(false)}>Inicio</Link>
                     <Link href="/servicios" className={styles.navLink} onClick={() => setMenuOpen(false)}>Tratamientos</Link>
+                    <Link href="/tecnologia" className={styles.navLink} onClick={() => setMenuOpen(false)}>Tecnología</Link>
                     <Link href="/quienes-somos" className={styles.navLink} onClick={() => setMenuOpen(false)}>Nosotros</Link>
                     <Link href="/contacto" className={styles.navLink} onClick={() => setMenuOpen(false)}>Contacto</Link>
 
                     <Link href="/contacto" className={`btn btn-primary ${styles.ctaBtn}`} onClick={() => setMenuOpen(false)}>
-                        Reservar Hora
+                        Evaluación Gratuita
                     </Link>
                 </nav>
 

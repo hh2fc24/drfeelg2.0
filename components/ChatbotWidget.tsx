@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { clinicContact } from '@/lib/clinic';
 import styles from './ChatbotWidget.module.css';
 
 export default function ChatbotWidget() {
@@ -18,11 +19,11 @@ export default function ChatbotWidget() {
         <div className={`${styles.widgetContainer} ${isVisible ? styles.visible : ''}`}>
             <div className={styles.pulseRing}></div>
             <a
-                href="https://wa.me/56900000000"
+                href={`https://wa.me/${clinicContact.whatsappLeadNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.widgetBtn}
-                aria-label="Chat con Clínica Dr. Feelgood"
+                aria-label="Conversar por WhatsApp con Dr. Feelgood"
             >
                 <span className={styles.icon}>
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

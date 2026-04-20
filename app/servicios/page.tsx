@@ -7,7 +7,25 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Servicios() {
-    type ServiceType = { title: string; description: string | string[]; category: string; filterCategory: string; benefitsTitle?: string; benefits?: string[]; prices?: string[]; imageUrl?: string; modalImageUrl?: string; videoUrl?: string; galleryUrls?: string[]; href?: string; basePrice?: string; discountBadge?: string; };
+    type ServiceType = {
+        title: string;
+        description: string | string[];
+        category: string;
+        filterCategory: string;
+        benefitsTitle?: string;
+        benefits?: string[];
+        prices?: string[];
+        imageUrl?: string;
+        modalImageUrl?: string;
+        imageFit?: "cover" | "contain";
+        imagePosition?: string;
+        imageBackground?: string;
+        videoUrl?: string;
+        galleryUrls?: string[];
+        href?: string;
+        basePrice?: string;
+        discountBadge?: string;
+    };
     const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [activeFilter, setActiveFilter] = useState("Todos");
@@ -30,8 +48,8 @@ export default function Servicios() {
             description: "¿No sabes por dónde empezar? Reserva una evaluación clínica con nuestros médicos especialistas. Analizaremos tu caso de forma personalizada, recomendando los tratamientos exactos para lograr tus objetivos con resultados armónicos y naturales.",
             category: "Primera Visita",
             filterCategory: "Evaluación Clínica",
-            imageUrl: "/images/instalaciones/clinica1.jpg",
-            modalImageUrl: "/images/instalaciones/clinica1.jpg",
+            imageUrl: "/images/instalaciones/instalacion_0075.jpg",
+            modalImageUrl: "/images/instalaciones/instalacion_0075.jpg",
             basePrice: "$25.000",
             discountBadge: "Abonable",
             benefitsTitle: "¿Qué incluye nuestra evaluación?",
@@ -52,8 +70,10 @@ export default function Servicios() {
             ],
             category: "Rostro Completo",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/tratamientos/tratamiento2.jpg",
-            modalImageUrl: "/images/tratamientos/tratamiento2.jpg",
+            imageUrl: "/images/sourced/dysport-official.png",
+            modalImageUrl: "/images/sourced/dysport-official.png",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             basePrice: "$150.000",
             discountBadge: "DCTO. TERCIO",
             benefitsTitle: "¿Por qué elegir Dysport?",
@@ -80,8 +100,10 @@ export default function Servicios() {
             ],
             category: "Labios, Ojeras y Pómulos",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/tratamientos/hydromax2.jpg",
-            modalImageUrl: "/images/tratamientos/hydromax2.jpg",
+            imageUrl: "/images/sourced/restylane-fillers-official.png",
+            modalImageUrl: "/images/sourced/restylane-fillers-official.png",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             basePrice: "$180.000",
             discountBadge: "PROMO JERINGA",
             benefitsTitle: "Zonas de Aplicación y Valores",
@@ -98,12 +120,13 @@ export default function Servicios() {
             ]
         },
         {
-            title: "Cámaras Hiperbáricas",
+            title: "Cámara Hiperbárica O2Life ST801",
             description: "Tratamiento que combina el aumento de la presión atmosférica junto con una alta concentración de oxígeno. Gracias a esto, el organismo logra una mayor oxigenación a nivel celular, favoreciendo distintos procesos naturales del cuerpo.",
             category: "Cuerpo Entero",
             filterCategory: "Bienestar Integral",
-            imageUrl: "/images/tratamientos/tratamiento1.jpg", 
-            modalImageUrl: "/images/tratamientos/tratamiento1.jpg", 
+            imageUrl: "/images/sourced/st801-exterior-reference.jpg",
+            modalImageUrl: "/images/sourced/st801-exterior-reference.jpg",
+            imagePosition: "center",
             basePrice: "$20.000",
             benefitsTitle: "Beneficios",
             benefits: [
@@ -163,8 +186,10 @@ export default function Servicios() {
             ],
             category: "Pies y Manos",
             filterCategory: "Bienestar Integral",
-            imageUrl: "/images/isolated_laser_onicomicosis_1772368508245.png",
-            modalImageUrl: "/images/isolated_laser_onicomicosis_1772368508245.png",
+            imageUrl: "/images/sourced/fox-980-official.png",
+            modalImageUrl: "/images/sourced/fox-980-official.png",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             basePrice: "$199.000",
             discountBadge: "PACK LÁSER",
             benefitsTitle: "Beneficios",
@@ -249,7 +274,7 @@ export default function Servicios() {
                 <div className={`container ${styles.ctaContainer} animate-fade-up`}>
                     <h2 className={styles.ctaTitle}>¿Tienes dudas sobre qué tratamiento necesitas?</h2>
                     <p className={styles.ctaSubtitle}>Solicita una evaluación y te orientaremos de acuerdo con tu caso.</p>
-                    <Link href="/contacto" className="btn" style={{ backgroundColor: 'var(--color-primary-gold)', color: '#fff', border: 'none', padding: '1.2rem 3rem' }}>Solicitar Evaluación</Link>
+                    <Link href="/contacto" className="btn" style={{ backgroundColor: 'var(--color-primary-gold)', color: '#fff', border: 'none', padding: '1.2rem 3rem' }}>Evaluación Gratuita</Link>
                 </div>
             </section>
 

@@ -6,20 +6,43 @@ interface ServiceCardProps {
     description: string | string[];
     category: string;
     imageUrl?: string;
+    imageFit?: "cover" | "contain";
+    imagePosition?: string;
+    imageBackground?: string;
     href?: string;
     onClick?: () => void;
     discountBadge?: string;
     basePrice?: string;
 }
 
-export default function ServiceCard({ title, description, category, imageUrl, href, onClick, discountBadge, basePrice }: ServiceCardProps) {
-    const bgImage = imageUrl || 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+export default function ServiceCard({
+    title,
+    description,
+    category,
+    imageUrl,
+    imageFit = "cover",
+    imagePosition = "center",
+    imageBackground = "var(--color-bg-white)",
+    href,
+    onClick,
+    discountBadge,
+    basePrice
+}: ServiceCardProps) {
+    const bgImage = imageUrl || '/images/instalaciones/clinica5.jpg';
     const previewDesc = Array.isArray(description) ? description[0] : description;
 
     const renderCardContent = () => (
         <>
             <div className={styles.imageWrapper}>
-                <div className={styles.imageContainer} style={{ backgroundImage: `url(${bgImage})` }}></div>
+                <div
+                    className={styles.imageContainer}
+                    style={{
+                        backgroundImage: `url(${bgImage})`,
+                        backgroundSize: imageFit,
+                        backgroundPosition: imagePosition,
+                        backgroundColor: imageBackground,
+                    }}
+                ></div>
                 <div className={styles.categoryBadge}>{category}</div>
                 {discountBadge && <div className={styles.discountBadge}>{discountBadge}</div>}
             </div>

@@ -35,7 +35,7 @@ export default function QuienesSomos() {
                     </div>
 
                     <div className={`${styles.imageWrapper} animate-fade-up delay-2 mask-arch`}>
-                        <div className={styles.imagePlaceholder} style={{ backgroundImage: "url('https://images.unsplash.com/photo-1512413914488-dc1e102f9e41?auto=format&fit=crop&q=80&w=800')" }}></div>
+                        <div className={styles.imagePlaceholder} style={{ backgroundImage: "url('/images/instalaciones/clinica5.jpg')" }}></div>
                     </div>
                 </div>
             </section>

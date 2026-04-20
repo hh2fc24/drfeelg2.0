@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { clinicContact } from '@/lib/clinic';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -30,6 +31,7 @@ export default function Footer() {
                     <ul>
                         <li><Link href="/">Inicio</Link></li>
                         <li><Link href="/servicios">Tratamientos</Link></li>
+                        <li><Link href="/tecnologia">Tecnología</Link></li>
                         <li><Link href="/quienes-somos">Nosotros</Link></li>
                         <li><Link href="/contacto">Contacto</Link></li>
                     </ul>
@@ -39,12 +41,30 @@ export default function Footer() {
                     <h3 className={styles.footerTitle}>Contacto</h3>
                     <address className={styles.address}>
                         <p><strong>Sucursal Apoquindo:</strong></p>
-                        <p>Avda Apoquindo 6410 Of 504.</p>
-                        <p>Ingreso Estacionamiento por calle Linneo 6393.</p>
-                        <p className={styles.phone}>+56 2 3223 8587</p>
-                        <p>apoquindo@drfeelgood.cl</p>
-                        <p>Lun - Vie: 08:00 - 18:00</p>
+                        <p>{clinicContact.addressLine1}</p>
+                        <p>{clinicContact.addressLine2}</p>
+                        <p>{clinicContact.city}</p>
+                        <p className={styles.phone}>{clinicContact.phoneDisplay}</p>
+                        <p>{clinicContact.email}</p>
+                        <p>{clinicContact.hoursLabel}: {clinicContact.hoursValue}</p>
                     </address>
+                </div>
+            </div>
+
+            <div className="container">
+                <div className={styles.mapSection}>
+                    <div className={styles.mapHeader}>
+                        <h3 className={styles.footerTitle}>Ubicación</h3>
+                        <p className={styles.mapText}>Encuéntranos en Apoquindo con acceso y dirección clara para el paciente.</p>
+                    </div>
+                    <div className={styles.mapFrame}>
+                        <iframe
+                            src={clinicContact.mapsEmbedUrl}
+                            title="Mapa Dr. Feelgood Apoquindo"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
+                    </div>
                 </div>
             </div>
 
