@@ -1,73 +1,58 @@
-import Link from "next/link";
-import styles from "./Footer.module.css";
-
-const mapUrl =
-  "https://www.google.com/maps?q=Av.+Apoquindo+6410+Oficina+504,+Las+Condes,+Santiago&output=embed";
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './Footer.module.css';
 
 export default function Footer() {
-  return (
-    <footer className={styles.footer}>
-      <div className={`container ${styles.grid}`}>
-        <div className={styles.brandBlock}>
-          <p className="eyebrow">Laura Llamanos</p>
-          <h2>Atencion profesional con foco medico, cercano y claro.</h2>
-          <p className={styles.copy}>
-            Evaluaciones gratuitas, podologia clinica y tecnologia aplicada
-            para recuperacion de tejidos y salud del pie.
-          </p>
-          <Link href="/contacto#evaluacion" className="btn btn-primary">
-            Evaluacion Gratuita
-          </Link>
-        </div>
+    return (
+        <footer className={styles.footer}>
+            <div className={`container ${styles.footerGrid}`}>
+                <div className={styles.footerBrand}>
+                    <Link href="/" className={styles.logoLink}>
+                        <div className={styles.logo}>
+                            <Image
+                                src="/ll2.png?v=20260305"
+                                alt="Dr. Feelgood"
+                                width={320}
+                                height={160}
+                                className={styles.logoImage}
+                                unoptimized
+                            />
+                        </div>
+                    </Link>
+                    <p className={styles.tagline}>Clínica estética y podología</p>
+                    <p className={styles.description}>
+                        Atención profesional, tecnología certificada y acompañamiento personalizado para cada paciente.
+                    </p>
+                </div>
 
-        <div className={styles.linksBlock}>
-          <div>
-            <h3>Navegacion</h3>
-            <ul>
-              <li>
-                <Link href="/">Inicio</Link>
-              </li>
-              <li>
-                <Link href="/servicios">Servicios</Link>
-              </li>
-              <li>
-                <Link href="/tecnologia">Tecnologia</Link>
-              </li>
-              <li>
-                <Link href="/contacto">Contacto</Link>
-              </li>
-            </ul>
-          </div>
+                <div className={styles.footerLinks}>
+                    <h3 className={styles.footerTitle}>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><Link href="/">Inicio</Link></li>
+                        <li><Link href="/servicios">Tratamientos</Link></li>
+                        <li><Link href="/quienes-somos">Nosotros</Link></li>
+                        <li><Link href="/contacto">Contacto</Link></li>
+                    </ul>
+                </div>
 
-          <div>
-            <h3>Direccion</h3>
-            <address className={styles.address}>
-              <p>Av. Apoquindo 6410, Oficina 504</p>
-              <p>Ingreso por Linneo 6393</p>
-              <p>Las Condes, Santiago</p>
-              <p className={styles.phone}>+56 2 3223 8587</p>
-            </address>
-          </div>
-        </div>
+                <div className={styles.footerContact}>
+                    <h3 className={styles.footerTitle}>Contacto</h3>
+                    <address className={styles.address}>
+                        <p><strong>Sucursal Apoquindo:</strong></p>
+                        <p>Avda Apoquindo 6410 Of 504.</p>
+                        <p>Ingreso Estacionamiento por calle Linneo 6393.</p>
+                        <p className={styles.phone}>+56 2 3223 8587</p>
+                        <p>apoquindo@drfeelgood.cl</p>
+                        <p>Lun - Vie: 08:00 - 18:00</p>
+                    </address>
+                </div>
+            </div>
 
-        <div className={styles.mapBlock}>
-          <h3>Como llegar</h3>
-          <div className={styles.mapFrame}>
-            <iframe
-              title="Mapa Laura Llamanos"
-              src={mapUrl}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.bottom}>
-        <div className="container">
-          <p>Laura Llamanos. Sitio orientado a evaluacion gratuita y contacto por WhatsApp.</p>
-        </div>
-      </div>
-    </footer>
-  );
+            <div className={styles.footerBottom}>
+                <div className="container">
+                    <p>&copy; {new Date().getFullYear()} Dr. Feelgood - Upgrade Yourself. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    );
 }

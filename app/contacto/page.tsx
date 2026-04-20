@@ -1,72 +1,93 @@
-import EvaluationForm from "@/components/EvaluationForm";
 import styles from "./page.module.css";
 
-const mapUrl =
-  "https://www.google.com/maps?q=Av.+Apoquindo+6410+Oficina+504,+Las+Condes,+Santiago&output=embed";
+export default function Contacto() {
+    return (
+        <div className={styles.contactPage}>
+            <div className={styles.splitLayout}>
 
-export default function ContactoPage() {
-  return (
-    <div className={styles.page}>
-      <section className={styles.hero}>
-        <div className={`container ${styles.heroGrid}`}>
-          <div>
-            <p className="eyebrow">Contacto</p>
-            <h1>El formulario de evaluacion es el corazon de la conversion.</h1>
-            <p className={styles.lead}>
-              Capturamos el WhatsApp del lead, explicamos que incluye la
-              evaluacion gratuita y llevamos al paciente directo a WhatsApp para
-              continuar la coordinacion.
-            </p>
+                {/* Left Side: Information */}
+                <div className={styles.infoSide}>
+                    <div className={styles.infoContent}>
+                        <div className="animate-fade-up">
+                            <span className={styles.eyebrow}>Consultas Clínicas</span>
+                        </div>
+                        <h1 className={`${styles.title} animate-fade-up delay-1`}>
+                            Agenda tu <br />
+                            <span className={styles.highlight}>evaluación.</span>
+                        </h1>
+                        <p className={`${styles.subtitle} animate-fade-up delay-2`}>
+                            Cuéntanos tu motivo de consulta y nuestro equipo te orientará con información clara y atención profesional.
+                        </p>
 
-            <div className={styles.infoGrid}>
-              <article className={styles.infoCard}>
-                <h2>Direccion</h2>
-                <p>Av. Apoquindo 6410, Oficina 504</p>
-                <p>Ingreso por Linneo 6393</p>
-                <p>Las Condes, Santiago</p>
-              </article>
+                        <div className={`${styles.dataGrid} animate-fade-up delay-3`}>
+                            <div className={styles.infoBlock}>
+                                <h3 className={styles.infoTitle}>La Clínica</h3>
+                                <p>Apoquindo 6410. Oficina 504.</p>
+                                <p className={styles.mutedText}>Estacionamiento por Linneo 6393.</p>
+                                <p className={styles.mutedText}>Las Condes, Santiago.</p>
+                            </div>
 
-              <article className={styles.infoCard}>
-                <h2>Contacto directo</h2>
-                <p>+56 2 3223 8587</p>
-                <p>Respuesta por WhatsApp y seguimiento de evaluaciones.</p>
-              </article>
+                            <div className={styles.infoBlock}>
+                                <h3 className={styles.infoTitle}>Contacto Directo</h3>
+                                <a href="tel:+56232238587" className={styles.phoneLink}>+56 2 3223 8587</a>
+                                <p className={styles.mutedText}>apoquindo@drfeelgood.cl</p>
+                            </div>
 
-              <article className={styles.infoCard}>
-                <h2>Horario</h2>
-                <p>Lunes a Viernes</p>
-                <p>08:00 a 18:00 hrs</p>
-              </article>
+                            <div className={styles.infoBlock}>
+                                <h3 className={styles.infoTitle}>Atención al Paciente</h3>
+                                <p>Lunes a Viernes</p>
+                                <p className={styles.mutedText}>08:00 hrs – 18:00 hrs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Right Side: Form */}
+                <div className={styles.formSide}>
+                    <div className={`${styles.formContainer} animate-fade-up delay-2`}>
+                        <h2 className={styles.formLegend}>Solicitud de evaluación</h2>
+                        <form className={styles.form} action="#">
+                            <div className={styles.formGroup}>
+                                <input type="text" id="name" className={styles.input} placeholder=" " required />
+                                <label htmlFor="name" className={styles.label}>Nombre completo *</label>
+                            </div>
+
+                            <div className={styles.formGroup}>
+                                <input type="email" id="email" className={styles.input} placeholder=" " required />
+                                <label htmlFor="email" className={styles.label}>Correo electrónico *</label>
+                            </div>
+
+                            <div className={styles.formGroup}>
+                                <input type="tel" id="phone" className={styles.input} placeholder=" " required />
+                                <label htmlFor="phone" className={styles.label}>Teléfono móvil *</label>
+                            </div>
+
+                            <div className={styles.formGroup}>
+                                <select id="service" className={styles.select} required defaultValue="">
+                                    <option value="" disabled hidden>Motivo de consulta *</option>
+                                    <option value="botox">Botox (Dysport)</option>
+                                    <option value="hialuronico">Ácido Hialurónico</option>
+                                    <option value="podologia">Podología Clínica</option>
+                                    <option value="hiperbarica">Cámara Hiperbárica</option>
+                                    <option value="laser">Láser Fox / Onicomicosis</option>
+                                    <option value="taping">Taping Neuromuscular</option>
+                                    <option value="otros">Consultar con especialista</option>
+                                </select>
+                            </div>
+
+                            <div className={styles.formGroup}>
+                                <textarea id="message" className={styles.textarea} placeholder=" " rows={3} required></textarea>
+                                <label htmlFor="message" className={styles.label}>Acerca de tu consulta</label>
+                            </div>
+
+                            <button type="button" className={`btn btn-primary ${styles.submitBtn}`}>
+                                Enviar Solicitud
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
-          </div>
-
-          <div id="evaluacion">
-            <EvaluationForm />
-          </div>
         </div>
-      </section>
-
-      <section className="section">
-        <div className={`container ${styles.mapLayout}`}>
-          <div className={styles.mapCopy}>
-            <p className="eyebrow">Ubicacion</p>
-            <h2>Mapa visible y direccion clara en el cierre de conversion.</h2>
-            <p>
-              El objetivo es que el usuario encuentre rapido como llegar y no
-              abandone la decision despues de completar la evaluacion.
-            </p>
-          </div>
-
-          <div className={styles.mapFrame}>
-            <iframe
-              title="Mapa de Laura Llamanos"
-              src={mapUrl}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+    );
 }

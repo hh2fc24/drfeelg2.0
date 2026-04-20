@@ -1,238 +1,152 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
+import Hero from "@/components/Hero";
+import ServiceCard from "@/components/ServiceCard";
+import ServiceModal from "@/components/ServiceModal";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import styles from "./page.module.css";
-
-const serviceCards = [
-  {
-    title: "Podologia Clinica",
-    price: "Consultar",
-    text: "Salud del pie con evaluacion, corte tecnico preventivo y enfoque clinico serio.",
-  },
-  {
-    title: "Botox (Dysport)",
-    price: "Desde $150.000",
-    text: "Frente, entrecejo y patas de gallo con protocolo claro y resultados armónicos.",
-  },
-  {
-    title: "Acido Hialuronico",
-    price: "Desde $180.000",
-    text: "Labios, rinomodelacion, ojeras y menton con relleno premium y plan individual.",
-  },
-  {
-    title: "Taping Neuromuscular",
-    price: "Consultar",
-    text: "Soporte terapeutico para recuperacion muscular y descarga funcional.",
-  },
-];
-
-const differentiators = [
-  "Evaluacion Gratuita como CTA principal del sitio.",
-  "Podologia presentada como salud seria, no como servicio cosmetico.",
-  "Camara Hiperbarica O2Life para oxigenacion profunda y recuperacion de tejidos.",
-  "Laser Fox aleman e indoloro como highlight tecnologico.",
-];
-
-const testimonials = [
-  "La explicacion fue clara, profesional y sin tecnicismos que asusten.",
-  "Se nota un enfoque medico real, especialmente en podologia clinica.",
-  "La evaluacion gratuita orienta muy bien antes de decidir cualquier tratamiento.",
-];
-
-const visualProof = [
-  {
-    src: "/images/tratamientos/podologia2.jpg",
-    alt: "Atencion podologica clinica en procedimiento real",
-    title: "Podologia como salud seria",
-    text: "Imagen real de atencion clinica para sostener el tono medico y cercano pedido por cliente.",
-    fit: "cover" as const,
-  },
-  {
-    src: "/images/tratamientos/tratamiento1.jpg",
-    alt: "Box clinico minimalista con sillon ergonomico",
-    title: "Entorno medico-premium",
-    text: "Box limpio, iluminacion funcional y mobiliario blanco con lectura profesional y acogedora.",
-    fit: "cover" as const,
-  },
-  {
-    src: "/images/sourced/fox-980-official.png",
-    alt: "Equipo FOX 980 de A.R.C. Laser",
-    title: "Highlight tecnologico",
-    text: "El Laser Fox queda visibilizado como tecnologia de precision para onicomicosis y podologia avanzada.",
-    fit: "contain" as const,
-  },
-];
+import Link from "next/link";
 
 export default function Home() {
+  type ServiceType = { title: string; description: string; category: string; imageUrl?: string; modalImageUrl?: string; href?: string; };
+  const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = (service: ServiceType) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedService(null), 500);
+  };
+  const featuredServices = [
+    {
+      title: "Evaluación Clínica",
+      description: "Una primera consulta para revisar tu caso, resolver dudas y orientar el tratamiento más adecuado.",
+      category: "Primera Consulta",
+      imageUrl: "https://images.unsplash.com/photo-1584292181255-43ff30735fbc?auto=format&fit=crop&q=80&w=1200", // Aspirational feminine shape
+      modalImageUrl: "https://alisa.shop/cdn/shop/products/smart-lipo-laser-machine-weight-loss-diode-lipo-lase-lipolysisslimming-machine-635nm-650nm-body-sculpting-beauty-spa-5120-73599054-3f6166c1674e47784ab63739eb85369a_1024x.jpg?v=1700312432",
+      href: "/servicios"
+    },
+    {
+      title: "Sistema A.R.C. Láser Alemán",
+      description: "Tratamiento clínico para onicomicosis con tecnología láser y una experiencia cómoda para el paciente.",
+      category: "Podología Clínica Láser",
+      imageUrl: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=80&w=1200", // Aesthetic clean healthy foot spa
+      modalImageUrl: "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/3673496/settings_images/bgSYyJY1RsSBZjKIZpnX_imagen_aplied.jpg",
+      href: "/servicios"
+    },
+    {
+      title: "Botox y Ácido Hialurónico",
+      description: "Procedimientos faciales indicados según evaluación médica, con foco en resultados armónicos y naturales.",
+      category: "Estética Facial",
+      imageUrl: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200", // Glowing facial skin
+      modalImageUrl: "https://www.elitelaser.es/media/ELITE-LASER-45-scaled.jpg",
+      href: "/servicios"
+    }
+  ];
+
   return (
-    <div className={styles.page}>
-      <section className={styles.hero}>
-        <div className={`container ${styles.heroGrid}`}>
-          <div className={styles.heroCopy}>
-            <p className="eyebrow">Laura Llamanos</p>
-            <h1>
-              Podologia clinica y estetica facial con mirada medica, humana y
-              cercana.
-            </h1>
-            <p className={styles.lead}>
-              Sitio orientado a convertir con evaluacion gratuita, autoridad
-              profesional y una experiencia medico-premium pensada para mobile.
-            </p>
+    <div className={styles.homeContainer}>
+      <Hero />
 
-            <div className={styles.heroActions}>
-              <Link href="/contacto#evaluacion" className="btn btn-primary">
-                Evaluacion Gratuita
-              </Link>
-              <Link href="/tecnologia" className="btn btn-secondary">
-                Ver Tecnologia
-              </Link>
-            </div>
+      {/* Philosophy Section - Editorial Layout */}
+      <section className={`section ${styles.philosophySection}`}>
+        <div className={`container ${styles.philosophyGrid}`}>
+          {/* Image first in DOM for asymmetrical layout but styled differently */}
+          <div className={`${styles.philosophyImageWrapper} animate-fade-up`}>
+            <div className={styles.philosophyImage}></div>
+          </div>
 
-            <div className={styles.highlightBox}>
-              <strong>Laser Fox + Camara Hiperbarica</strong>
-              <p>
-                Tecnologia de precision para onicomicosis, recuperacion de
-                tejidos y soporte clinico especializado.
+          <div className={`${styles.philosophyContent} animate-fade-up delay-2`}>
+            <span className={styles.eyebrow}>Atención profesional</span>
+            <h2 className={styles.sectionTitle}>
+              Cuidado estético con <span className={styles.highlight}>criterio clínico</span>
+            </h2>
+            <div className={styles.textBlock}>
+              <p className={styles.text}>
+                En Dr. Feelgood cada tratamiento parte con una evaluación responsable y una indicación clara.
+              </p>
+              <p className={styles.text}>
+                Nuestro equipo trabaja con tecnología certificada y un enfoque personalizado para acompañarte de forma segura en cada etapa.
               </p>
             </div>
-          </div>
-
-          <div className={styles.heroVisual}>
-            <div className={styles.heroImageCard}>
-              <Image
-                src="/images/tratamientos/podologia.jpg"
-                alt="Atencion podologica clinica"
-                fill
-                priority
-                className={styles.image}
-              />
-            </div>
-            <div className={styles.floatingStat}>
-              <span className={styles.statLabel}>Tecnologia destacada</span>
-              <p>O2Life ST801 y Laser Fox</p>
-            </div>
+            <Link href="/quienes-somos" className="link-anim">
+              Conoce la clínica
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className={styles.sectionIntro}>
-            <p className="eyebrow">Diferenciadores</p>
-            <h2>Diseno limpio, medico y acogedor.</h2>
-          </div>
-          <div className={styles.diffGrid}>
-            {differentiators.map((item) => (
-              <article key={item} className={styles.diffCard}>
-                <p>{item}</p>
-              </article>
-            ))}
+      {/* Disruptive Parallax Break */}
+      <section className={styles.parallaxSection}>
+        <div className={styles.parallaxOverlay}>
+          <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+            <h2 className={`${styles.parallaxTitle} animate-fade-up`}>
+              Tecnología y experiencia <br />para tu <span className={styles.highlight}>bienestar.</span>
+            </h2>
+            <p className={`${styles.parallaxDesc} animate-fade-up delay-1`}>
+              Atención clínica, procedimientos indicados según evaluación y acompañamiento profesional.
+            </p>
           </div>
         </div>
       </section>
 
-      <section className={`${styles.servicesSection} section`}>
+      {/* Featured Services Preview */}
+      <section className={`section ${styles.servicesSection}`}>
         <div className="container">
-          <div className={styles.sectionIntro}>
-            <p className="eyebrow">Servicios</p>
-            <h2>Catalogo claro para decidir mas rapido.</h2>
+          <div className={`${styles.servicesHeader} animate-fade-up`}>
+            <div>
+              <span className={styles.eyebrow}>Obras Maestras</span>
+              <h2 className={styles.sectionTitle}>Tratamientos <span className={styles.highlight}>destacados</span></h2>
+            </div>
+            <Link href="/servicios" className="link-anim">
+              Ver todos
+            </Link>
           </div>
 
           <div className={styles.servicesGrid}>
-            {serviceCards.map((service) => (
-              <article key={service.title} className={styles.serviceCard}>
-                <span className={styles.servicePrice}>{service.price}</span>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-              </article>
+            {featuredServices.map((service, idx) => (
+              <div key={idx} className={`animate-fade-up delay-${idx + 1}`}>
+                <ServiceCard {...service} onClick={() => handleOpenModal(service)} />
+              </div>
             ))}
           </div>
-
-          <div className={styles.serviceActions}>
-            <Link href="/servicios" className="btn btn-primary">
-              Ver Servicios
-            </Link>
-            <Link href="/contacto#evaluacion" className="btn btn-secondary">
-              Solicitar Evaluacion
-            </Link>
-          </div>
         </div>
       </section>
 
-      <section className={`${styles.technologyStrip} section`}>
-        <div className={`container ${styles.technologyGrid}`}>
-          <div>
-            <p className="eyebrow">Tecnologia</p>
-            <h2>Laser Fox indoloro y Camara Hiperbarica para recuperacion acelerada.</h2>
-          </div>
-          <div className={styles.techCopy}>
-            <p>
-              El Laser Fox se comunica como tecnologia de punta alemana para
-              onicomicosis y podologia avanzada. La camara hiperbarica refuerza
-              el mensaje de oxigenacion celular profunda y apoyo a la
-              cicatrizacion.
-            </p>
-            <Link href="/tecnologia" className="btn btn-secondary">
-              Detalle Tecnico
-            </Link>
-          </div>
-        </div>
+      {/* Testimonials */}
+      <section className={styles.testimonialsSection}>
+        <TestimonialSlider />
       </section>
 
-      <section className="section">
+      {/* Final CTA - Editorial Aesthetic */}
+      <section className={`section ${styles.ctaSection}`}>
         <div className="container">
-          <div className={styles.sectionIntro}>
-            <p className="eyebrow">Material visual</p>
-            <h2>Las imagenes reales del proyecto ahora sostienen la promesa del sitio.</h2>
-          </div>
-          <div className={styles.visualGrid}>
-            {visualProof.map((item) => (
-              <article key={item.title} className={styles.visualCard}>
-                <div className={styles.visualImageWrap}>
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    className={styles.image}
-                    style={{ objectFit: item.fit }}
-                  />
-                </div>
-                <div className={styles.visualContent}>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              </article>
-            ))}
+          <div className={`${styles.ctaBox} animate-fade-up`}>
+            <div className={styles.ctaContent}>
+              <span className={styles.eyebrowDark}>Empieza hoy</span>
+              <h2 className={styles.ctaTitle}>Agenda tu evaluación.</h2>
+              <p className={styles.ctaText}>
+                Cuéntanos tu motivo de consulta y te orientaremos con información clara para definir el tratamiento más adecuado.
+              </p>
+              <Link href="/contacto" className="btn btn-primary">
+                Solicitar Evaluación
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className={styles.sectionIntro}>
-            <p className="eyebrow">Testimonios</p>
-            <h2>Un tono profesional y empatico tambien se siente en la experiencia.</h2>
-          </div>
-          <div className={styles.testimonialGrid}>
-            {testimonials.map((item) => (
-              <article key={item} className={styles.testimonialCard}>
-                <p>{item}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.finalCta}>
-        <div className={`container ${styles.finalCtaInner}`}>
-          <div>
-            <p className="eyebrow">CTA principal</p>
-            <h2>La evaluacion gratuita debe estar siempre a un clic.</h2>
-          </div>
-          <Link href="/contacto#evaluacion" className="btn btn-primary">
-            Evaluacion Gratuita
-          </Link>
-        </div>
-      </section>
+      {/* Premium Glassmorphism Modal */}
+      <ServiceModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        service={selectedService}
+      />
     </div>
   );
 }

@@ -64,28 +64,28 @@ export default function Hero() {
                 {/* Left Side: Dramatic Typography */}
                 <div className={styles.heroContent}>
                     <div className="animate-fade-up">
-                        <span className={styles.eyebrow}>Excelencia Clínica en Estética</span>
+                        <span className={styles.eyebrow}>Clínica estética y podología</span>
                     </div>
 
                     <h1 className={styles.title}>
-                        <span className={`animate-fade-up delay-1 ${styles.titleLine}`}>Eleva tu</span>
+                        <span className={`animate-fade-up delay-1 ${styles.titleLine}`}>Atención</span>
                         <span className={`animate-fade-up delay-2 ${styles.titleLine}`}>
-                            <span className={styles.highlight}>Naturaleza</span>
+                            <span className={styles.highlight}>profesional</span>
                         </span>
-                        <span className={`animate-fade-up delay-3 ${styles.titleLine}`}>Al Máximo Nivel.</span>
+                        <span className={`animate-fade-up delay-3 ${styles.titleLine}`}>para tu bienestar.</span>
                     </h1>
 
                     <p className={`animate-fade-up delay-4 ${styles.subtitle}`}>
-                        Tecnología médica avanzada para esculpir, rejuvenecer y sanar.
-                        Resultados clínicamente comprobados sin perder tu esencia natural. Descubre tu mejor versión hoy.
+                        Evaluación personalizada, tecnología certificada y tratamientos indicados según tus necesidades.
+                        Te orientamos con información clara y un enfoque clínico responsable.
                     </p>
 
                     <div className={`animate-fade-up delay-4 ${styles.ctaGroup}`}>
                         <Link href="/contacto" className="btn btn-primary">
-                            Iniciar mi Transformación
+                            Solicitar Evaluación
                         </Link>
                         <Link href="/servicios" className="link-anim">
-                            Ver Resultados y Tratamientos
+                            Ver Tratamientos
                         </Link>
                     </div>
                 </div>

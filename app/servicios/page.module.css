@@ -1,141 +1,302 @@
-.page {
-  background: linear-gradient(180deg, #f7fbfa 0%, #eef5f2 100%);
+.servicesPage {
+    background-color: var(--color-bg-light);
 }
 
-.hero {
-  padding: 2rem 0 1rem;
+.header {
+    padding: 12rem 0 6rem;
+    background-color: var(--color-bg-white);
+    border-bottom: 1px solid rgba(44, 42, 41, 0.05);
+    position: relative;
 }
 
-.hero h1 {
-  max-width: 900px;
-  margin-bottom: 1rem;
-  font-size: clamp(3rem, 6vw, 5.5rem);
+.headerContainer {
+    max-width: 900px;
 }
 
-.lead {
-  max-width: 720px;
-  color: var(--color-muted);
-  font-size: 1.1rem;
+.eyebrow {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--color-primary-gold-dark);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 3rem;
 }
 
-.sectionHeader {
-  max-width: 740px;
-  margin-bottom: 1.75rem;
+.eyebrow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 1px;
+    background-color: var(--color-primary-gold-dark);
 }
 
-.sectionHeader h2 {
-  font-size: clamp(2.1rem, 4vw, 3.6rem);
+.titleLine {
+    display: block;
+    font-size: 4.5rem;
+    color: var(--color-text-dark);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
-.dualGrid,
+.highlight {
+    font-style: italic;
+    font-family: var(--font-serif);
+    color: var(--color-primary-gold-dark);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    margin-top: 2rem;
+    line-height: 1.8;
+    max-width: 700px;
+}
+
+.divider hr {
+    border: none;
+    border-top: 1px solid rgba(44, 42, 41, 0.05);
+    margin: 0;
+}
+
+.categoryHeader {
+    margin-bottom: 4rem;
+    position: relative;
+    padding-left: 4rem;
+    max-width: 800px;
+}
+
+.categoryNumber {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    /* color: var(--color-primary-gold); */
+    color: rgba(44, 42, 41, 0.3);
+}
+
+.categoryNumber::after {
+    content: '';
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    width: 1rem;
+    height: 1px;
+    background-color: rgba(44, 42, 41, 0.3);
+}
+
+.categoryTitle {
+    font-size: 3rem;
+    color: var(--color-text-dark);
+    margin-bottom: 1rem;
+}
+
+.categoryDesc {
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 4rem;
 }
 
-.grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.gridCompact {
+    grid-template-columns: repeat(2, minmax(280px, 420px));
+    justify-content: center;
 }
 
-.card,
-.darkCard {
-  padding: 1.5rem;
-  border-radius: 28px;
+/* Catalog Filter Bar */
+.filterBar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
 }
 
-.imageWrap {
-  position: relative;
-  min-height: 230px;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.96);
+.filterBtn {
+    background: transparent;
+    border: 1px solid rgba(44, 42, 41, 0.1);
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-full);
+    transition: all 0.3s var(--ease-editorial);
+    cursor: pointer;
 }
 
-.cardImage {
-  object-fit: cover;
+.filterBtn:hover {
+    border-color: var(--color-text-dark);
+    color: var(--color-text-dark);
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--color-line);
-  box-shadow: var(--shadow-md);
+.filterBtnActive {
+    background: var(--color-text-dark);
+    color: var(--color-bg-white) !important;
+    border-color: var(--color-text-dark);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.card p,
-.darkCard p {
-  color: var(--color-muted);
+.ctaSection {
+    position: relative;
+    padding: 12rem 0;
+    /* Vibrant, happy aesthetic cinematic spa/nature woman */
+    background-image: url('https://images.unsplash.com/photo-1689888252298-efdcf0be8caf?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax Magic */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card h3,
-.darkCard h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.7rem;
+.ctaSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Softer, elegant dark overlay to let the nature colors shine while keeping text readable */
+    background: linear-gradient(to bottom, rgba(20, 30, 20, 0.3), rgba(20, 30, 20, 0.7));
+    z-index: 1;
 }
 
-.darkSection {
-  background: #0f2e2b;
+.ctaContainer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 5rem 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.darkSection .sectionHeader h2 {
-  color: white;
+.ctaTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-family: var(--font-serif);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.01em;
 }
 
-.darkCard {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.ctaSubtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 3.5rem;
+    font-weight: 300;
+    line-height: 1.6;
 }
 
-.darkCard h3,
-.darkCard p,
-.darkCard .price {
-  color: white;
+@media (max-width: 1024px) {
+    .titleLine {
+        font-size: 3.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .ctaTitle {
+        font-size: 2.8rem;
+    }
 }
 
-.darkCard .imageWrap {
-  background: rgba(255, 255, 255, 0.9);
+@media (max-width: 768px) {
+    .header {
+        padding: 8rem 0 4rem;
+    }
+
+    .titleLine {
+        font-size: 2.8rem;
+    }
+
+    .categoryHeader {
+        padding-left: 0;
+    }
+
+    .categoryNumber {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .categoryNumber::after {
+        display: none;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .gridCompact {
+        grid-template-columns: 1fr;
+    }
+
+    .ctaTitle {
+        font-size: 2.2rem;
+    }
+
+    .ctaSubtitle {
+        font-size: 1.1rem;
+    }
 }
 
-.price {
-  display: inline-block;
-  margin-bottom: 0.8rem;
-  color: var(--color-gold);
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.quoteSection {
+    padding: 6rem 0;
+    background-color: var(--color-bg-white);
 }
 
-.meta {
-  margin-bottom: 0.75rem;
+.quoteGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.cta {
-  margin-top: 1.75rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-  padding: 1.8rem;
-  border-radius: 30px;
-  border: 1px solid var(--color-line);
-  background: rgba(255, 255, 255, 0.92);
+.quoteCard {
+    background: var(--color-bg-light);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgba(44, 42, 41, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease;
 }
 
-.cta h2 {
-  max-width: 760px;
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+.quoteCard p {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    font-style: italic;
 }
 
-@media (max-width: 980px) {
-  .dualGrid,
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.quoteCard:hover {
+    transform: translateY(-5px);
 }
