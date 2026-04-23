@@ -56,6 +56,13 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
 
     if (!isOpen || !service) return null;
 
+    const whatsappMessage = [
+        "Hola, quiero solicitar una evaluacion en Dr. Feelgood.",
+        `Tratamiento de interes: ${service.title}`,
+        "Me gustaria recibir orientacion para agendar."
+    ].join("\n");
+    const whatsappHref = `https://wa.me/${clinicContact.whatsappLeadNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
     return (
         <div className={`${styles.overlay} ${isAnimating ? styles.fadeIn : ''}`} onClick={onClose}>
             <div
@@ -158,7 +165,7 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                             </div>
                         )}
 
-                        <a href={`https://wa.me/${clinicContact.whatsappLeadNumber}`} target="_blank" rel="noopener noreferrer" className={`btn btn-primary ${styles.ctaBtn}`}>
+                        <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className={`btn btn-primary ${styles.ctaBtn}`}>
                             Solicitar Evaluación por WhatsApp
                         </a>
                     </div>

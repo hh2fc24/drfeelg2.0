@@ -7,7 +7,7 @@ const technologySections = [
         title: "Oxigenación profunda para apoyar recuperación y reparación de tejidos.",
         highlight: "O2Life ST801",
         description: [
-            "La cámara hiperbárica combina presión controlada y oxigenación para favorecer procesos naturales de recuperación. Es una tecnología de apoyo clínico orientada a tejidos, inflamación y bienestar general, siempre indicada según evaluación.",
+            "La cámara hiperbárica combina presión controlada y oxigenación para favorecer procesos naturales de recuperación. Es una tecnología de apoyo clínico orientada a tejidos, inflamación y bienestar general, siempre indicada según evaluación profesional.",
             "En la web la presentamos desde el beneficio real para el paciente: más oxigenación a nivel celular, recuperación acelerada y una experiencia cómoda dentro de un entorno clínico seguro."
         ],
         imageUrl: "/images/tratamientos/tratamiento1.jpg",
@@ -47,7 +47,7 @@ const technologySections = [
             "Alternativa clínica para onicomicosis.",
             "Aplicación precisa en podología especializada.",
             "Procedimiento cómodo, sin necesidad de un relato exagerado.",
-            "Debe comunicarse con foco médico y no solo comercial."
+            "Debe comunicarse con foco clínico y no solo comercial."
         ]
     }
 ];
@@ -180,7 +180,7 @@ export default function Tecnologia() {
             <section className={styles.noteSection}>
                 <div className={`container ${styles.noteBox} animate-fade-up`}>
                     <span className={styles.noteEyebrow}>Criterio Clínico</span>
-                    <h2 className={styles.noteTitle}>La tecnología no reemplaza la evaluación médica.</h2>
+                    <h2 className={styles.noteTitle}>La tecnología no reemplaza la evaluación profesional.</h2>
                     <p className={styles.noteText}>
                         Cada equipo se comunica como apoyo diagnóstico o terapéutico dentro de una atención profesional.
                         La indicación siempre debe responder al motivo de consulta del paciente y no a una promesa genérica.

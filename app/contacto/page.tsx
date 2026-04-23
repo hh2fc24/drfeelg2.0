@@ -7,11 +7,27 @@ import styles from "./page.module.css";
 const serviceGuidance = {
     botox: {
         label: "Botox (Dysport)",
-        includes: "Evaluación de zonas a tratar, indicación clínica, explicación de duración y cuidados posteriores.",
+        includes: "Evaluación de zonas a tratar, indicación profesional, explicación de duración y cuidados posteriores.",
     },
     hialuronico: {
         label: "Ácido Hialurónico",
-        includes: "Revisión de proporciones faciales, objetivo del tratamiento y zonas como labios, ojeras, mentón o rinomodelación.",
+        includes: "Revisión de proporciones faciales, objetivo del tratamiento y zonas como labios, ojeras, rinomodelación, pómulos, código de barras o perfilado mandibular.",
+    },
+    mesoterapia: {
+        label: "Mesoterapia / Microneedling",
+        includes: "Orientación sobre PRP, Pink Glow, exosomas con dermapen, Sculptra, vitamina C, Dermastabilon o protocolos corporales según evaluación.",
+    },
+    hydromax: {
+        label: "Limpieza Facial Hydromax",
+        includes: "Revisión de tipo de piel, objetivo de limpieza, hidratación y posibles combinaciones con otros protocolos faciales.",
+    },
+    lipolaser: {
+        label: "Lipoláser Corporal",
+        includes: "Evaluación de zona, objetivo corporal, número estimado de sesiones y pertinencia del protocolo reductivo.",
+    },
+    sueroterapia: {
+        label: "Sueroterapia",
+        includes: "Revisión de antecedentes y orientación sobre vitamina C, complejo B, glutathion u otros protocolos disponibles.",
     },
     podologia: {
         label: "Podología Clínica",
@@ -23,7 +39,7 @@ const serviceGuidance = {
     },
     laser: {
         label: "Láser Fox / Onicomicosis",
-        includes: "Revisión clínica del caso y explicación del tratamiento láser para onicomicosis u otras indicaciones podológicas.",
+        includes: "Revisión del caso y explicación del tratamiento láser para onicomicosis u otras indicaciones podológicas.",
     },
     taping: {
         label: "Taping Neuromuscular",
@@ -64,7 +80,7 @@ export default function Contacto() {
 
         const serviceInfo = serviceGuidance[form.service as ServiceKey];
         const lines = [
-            "Hola, quiero solicitar una evaluacion gratuita en Dr. Feelgood.",
+            "Hola, quiero solicitar una evaluacion en Dr. Feelgood.",
             `Nombre: ${form.name}`,
             `Correo: ${form.email}`,
             `WhatsApp: ${form.phone}`,
@@ -177,6 +193,10 @@ export default function Contacto() {
                                     <option value="" disabled hidden>Motivo de consulta *</option>
                                     <option value="botox">Botox (Dysport)</option>
                                     <option value="hialuronico">Ácido Hialurónico</option>
+                                    <option value="mesoterapia">Mesoterapia / Microneedling</option>
+                                    <option value="hydromax">Limpieza Facial Hydromax</option>
+                                    <option value="lipolaser">Lipoláser Corporal</option>
+                                    <option value="sueroterapia">Sueroterapia</option>
                                     <option value="podologia">Podología Clínica</option>
                                     <option value="hiperbarica">Cámara Hiperbárica</option>
                                     <option value="laser">Láser Fox / Onicomicosis</option>

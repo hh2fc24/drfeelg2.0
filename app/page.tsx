@@ -34,7 +34,7 @@ export default function Home() {
   const featuredServices: ServiceType[] = [
     {
       title: "Evaluación Clínica",
-      description: "Una primera consulta para revisar tu caso, resolver dudas y definir una indicación responsable.",
+      description: "Una primera consulta con profesionales especialistas para revisar tu caso, resolver dudas y definir una indicación responsable.",
       category: "Primera Consulta",
       imageUrl: "/images/instalaciones/instalacion_0075.jpg",
       modalImageUrl: "/images/instalaciones/instalacion_0075.jpg",
@@ -52,10 +52,10 @@ export default function Home() {
     },
     {
       title: "Botox (Dysport)",
-      description: "Toxina botulínica indicada según evaluación médica para líneas de expresión y prevención.",
+      description: "Toxina botulínica Dysport indicada según evaluación profesional para líneas de expresión y prevención.",
       category: "Estética Facial",
-      imageUrl: "/images/sourced/dysport-official.png",
-      modalImageUrl: "/images/sourced/dysport-official.png",
+      imageUrl: "/images/sourced/dysport-500-package-official.png",
+      modalImageUrl: "/images/sourced/dysport-500-package-official.png",
       imageFit: "contain",
       imageBackground: "#f9f7f5",
       href: "/servicios"
@@ -81,7 +81,7 @@ export default function Home() {
             </h2>
             <div className={styles.textBlock}>
               <p className={styles.text}>
-                En Dr. Feelgood cada tratamiento parte con una evaluación responsable y una indicación clara.
+                En Dr. Feelgood cada tratamiento parte con una evaluación responsable, realizada por profesionales, y una indicación clara.
               </p>
               <p className={styles.text}>
                 Nuestro equipo trabaja con tecnología certificada y un enfoque personalizado para acompañarte de forma segura en cada etapa.

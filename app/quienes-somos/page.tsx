@@ -90,7 +90,7 @@ export default function QuienesSomos() {
                             <div className={styles.featureLine}></div>
                             <h3 className={styles.featureTitle}>Excelencia Humana</h3>
                             <p className={styles.featureText}>
-                                Staff compuesto íntegramente por profesionales sanitarios homologados, cuyo criterio médico prioriza siempre la seguridad y armonía por sobre excesos estéticos.
+                                Staff compuesto íntegramente por profesionales sanitarios homologados, cuyo criterio clínico prioriza siempre la seguridad y armonía por sobre excesos estéticos.
                             </p>
                         </div>
 
