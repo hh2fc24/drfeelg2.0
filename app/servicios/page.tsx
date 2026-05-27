@@ -25,6 +25,7 @@ export default function Servicios() {
         href?: string;
         basePrice?: string;
         discountBadge?: string;
+        priceSuffix?: string;
     };
     const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,8 +45,8 @@ export default function Servicios() {
 
     const allTreatments: ServiceType[] = [
         {
-            title: "Evaluación Diagnóstica Integral",
-            description: "¿No sabes por dónde empezar? Reserva una evaluación diagnóstica con médicos, enfermeras y profesionales especialistas según tu caso. Revisaremos tu motivo de consulta de forma personalizada para orientar el tratamiento más adecuado, con resultados armónicos, naturales y seguros.",
+            title: "Evaluación Nutricional con Inbody y Plan Personalizado",
+            description: "Análisis clínico avanzado de composición corporal diseñado para evaluar de forma precisa tu porcentaje de grasa, masa muscular y agua corporal. Junto a nuestros profesionales de salud, diseñaremos una pauta alimentaria y un plan nutricional personalizado que se adapte de verdad a tus objetivos, salud y estilo de vida.",
             category: "Primera Visita",
             filterCategory: "Evaluación Clínica",
             imageUrl: "/images/instalaciones/instalacion_0075.jpg",
@@ -54,12 +55,12 @@ export default function Servicios() {
             discountBadge: "Abonable",
             benefitsTitle: "¿Qué incluye nuestra evaluación?",
             benefits: [
-                "Entrevista inicial y ficha clínica completa.",
-                "Análisis profesional de objetivos, antecedentes y zonas a tratar.",
-                "Resolución de dudas sin compromiso.",
-                "Orientación clara sobre alternativas, tiempos y cuidados.",
-                "Elaboración de plan de tratamiento personalizado.",
-                "Valor de la consulta abonable a tu primer tratamiento."
+                "Medición de composición corporal avanzada con Inbody.",
+                "Análisis detallado de porcentaje de grasa, masa muscular y agua corporal.",
+                "Entrevista clínica y revisión de hábitos y antecedentes de salud.",
+                "Elaboración de pauta alimentaria y metas de forma personalizada.",
+                "Orientación profesional sin compromiso para resolver todas tus dudas.",
+                "Valor de la consulta abonable a tu plan de tratamiento."
             ]
         },
         {
@@ -149,18 +150,18 @@ export default function Servicios() {
         },
         {
             title: "Limpieza Facial Hydromax",
-            description: "Limpieza facial tecnológica orientada a higiene profunda, extracción controlada, hidratación y luminosidad. Ideal para preparar la piel antes de otros tratamientos o mantener una rutina profesional de cuidado facial.",
+            description: "Higiene facial tecnológica que entrega una limpieza profunda, extracción controlada y una hidratación intensa. Incluye limpieza profunda integral y aplicación de nutrientes y activos seleccionados según los requerimientos específicos de cada tipo de piel para devolverle luminosidad y lozanía.",
             category: "Higiene Profunda e Hidratación",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/tratamientos/hydromax2.jpg",
-            modalImageUrl: "/images/tratamientos/hydromax2.jpg",
-            imagePosition: "center",
+            imageUrl: "/images/sourced/hydromax_real.png",
+            modalImageUrl: "/images/sourced/hydromax_real.png",
+            imageFit: "cover",
             benefitsTitle: "Objetivos del tratamiento",
             benefits: [
-                "Limpieza profunda y retiro de impurezas.",
-                "Apoyo a pieles opacas, congestionadas o deshidratadas.",
-                "Hidratación y sensación de piel más fresca.",
-                "Puede combinarse con protocolos faciales indicados por el equipo."
+                "Limpieza profunda y retiro de impurezas acumuladas.",
+                "Aplicación personalizada de nutrientes según el requerimiento de tu piel.",
+                "Apoyo y renovación para pieles deshidratadas o congestionadas.",
+                "Sensación inmediata de frescura, suavidad y luminosidad profesional."
             ],
             prices: [
                 "Valor definido según evaluación y protocolo facial."
@@ -169,22 +170,21 @@ export default function Servicios() {
         {
             title: "Lipoláser Corporal",
             description: [
-                "Tratamiento corporal no invasivo orientado a grasa localizada, modelación y reducción de medidas sin cirugía.",
-                "El protocolo combina tecnología y acompañamiento profesional para trabajar zonas específicas de acuerdo con el diagnóstico corporal."
+                "Tratamiento corporal no invasivo con nuestro equipo i-lipo real, diseñado para trabajar grasa localizada, modelación de contornos y reducción de medidas de forma segura y sin cirugía.",
+                "El protocolo combina tecnología láser avanzada con acompañamiento profesional para tratar zonas específicas con un alto nivel de eficacia."
             ],
             category: "Reductivo sin Cirugía",
             filterCategory: "Corporal y Bienestar",
-            imageUrl: "/images/isolated_liposculpt_machine_1772368543072.png",
-            modalImageUrl: "/images/isolated_liposculpt_machine_1772368543072.png",
-            imageFit: "contain",
-            imageBackground: "#f9f7f5",
+            imageUrl: "/images/sourced/ilipo_real.png",
+            modalImageUrl: "/images/sourced/ilipo_real.png",
+            imageFit: "cover",
             benefitsTitle: "Enfoque Dr. Feelgood",
             benefits: [
-                "Reduce medidas y modela zonas localizadas.",
-                "Apoya el manejo de celulitis y flacidez según caso.",
-                "Puede complementarse con radiofrecuencia, vacuum o ejercicio en plataforma según protocolo.",
-                "Sin cirugía, sin cicatrices y sin tiempo de recuperación.",
-                "Serás evaluado por profesionales para confirmar si eres candidata o candidato."
+                "Reduce medidas y modela zonas localizadas de forma no invasiva.",
+                "Apoya el manejo de celulitis y flacidez según tu caso clínico.",
+                "Protocolos personalizados con i-lipo real para asegurar resultados.",
+                "Sin cirugía, sin cicatrices, permitiendo retomar tus actividades al instante.",
+                "Evaluación diagnóstica previa por profesionales para confirmar idoneidad."
             ],
             prices: [
                 "Valor definido según zona, número de sesiones y evaluación profesional."
@@ -211,19 +211,19 @@ export default function Servicios() {
         },
         {
             title: "Cámara Hiperbárica O2Life ST801",
-            description: "Tratamiento que combina el aumento de la presión atmosférica junto con una alta concentración de oxígeno. Gracias a esto, el organismo logra una mayor oxigenación a nivel celular, favoreciendo distintos procesos naturales del cuerpo.",
+            description: "Sesión de oxigenoterapia en nuestra cámara hiperbárica real. Combina el aumento controlado de la presión atmosférica con un flujo de alta concentración de oxígeno, logrando una profunda oxigenación celular que favorece la desinflamación y estimula los procesos de reparación naturales del cuerpo.",
             category: "Cuerpo Entero",
             filterCategory: "Corporal y Bienestar",
-            imageUrl: "/images/tratamientos/tratamiento1.jpg",
-            modalImageUrl: "/images/tratamientos/tratamiento1.jpg",
-            imagePosition: "center",
+            imageUrl: "/images/sourced/camara_hiperbarica_real.png",
+            modalImageUrl: "/images/sourced/camara_hiperbarica_real.png",
+            imageFit: "cover",
             basePrice: "$20.000",
             benefitsTitle: "Beneficios",
             benefits: [
-                "Disminución de la inflamación y apoyo al sistema vascular.",
-                "Aceleración de la recuperación y reparación de tejidos.",
-                "Estimulación de la energía celular y mejor cicatrización.",
-                "Recuperación muscular más rápida y apoyo en lesiones deportivas."
+                "Favorece la oxigenación celular profunda en todo el cuerpo.",
+                "Disminución de inflamación generalizada y apoyo vascular.",
+                "Aceleración en la recuperación muscular y de lesiones deportivas.",
+                "Estimulación celular que mejora la cicatrización y reparación de tejidos."
             ],
             prices: [
                 "1 sesión de 60 minutos: $20.000",
@@ -281,6 +281,7 @@ export default function Servicios() {
             imageFit: "contain",
             imageBackground: "#f9f7f5",
             basePrice: "$199.000",
+            priceSuffix: "pack 6 sesiones",
             discountBadge: "PACK LÁSER",
             benefitsTitle: "Beneficios",
             benefits: [
@@ -337,6 +338,74 @@ export default function Servicios() {
                                 <ServiceCard {...s} onClick={() => handleOpenModal(s)} />
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            <div className={styles.divider}><div className="container"><hr /></div></div>
+
+            {/* Casos Clínicos - Antes y Después Section */}
+            <section className={styles.resultsSection} id="resultados">
+                <div className="container">
+                    <div className={styles.resultsHeader}>
+                        <span className={styles.resultsEyebrow}>Casos Clínicos</span>
+                        <h2 className={styles.resultsTitle}>Resultados Reales</h2>
+                        <p className={styles.resultsSubtitle}>
+                            Antes y después de tratamientos realizados en nuestro centro. Cada proceso responde a un plan integral diseñado por profesionales para lograr armonía, simetría y naturalidad.
+                        </p>
+                    </div>
+
+                    <div className={styles.resultsGrid}>
+                        {/* Caso 1 */}
+                        <div className={`${styles.resultCard} animate-fade-up`}>
+                            <div className={styles.resultImageWrapper}>
+                                <div 
+                                    className={styles.resultImage} 
+                                    style={{ backgroundImage: "url('/images/sourced/before_after_nose_1.png')" }}
+                                ></div>
+                            </div>
+                            <div className={styles.resultContent}>
+                                <h3 className={styles.resultCardTitle}>Rinomodelación - Caso 1</h3>
+                                <span className={styles.resultCardSubtitle}>Definición y Proyección</span>
+                                <p className={styles.resultCardDesc}>
+                                    Armonización nasal clínica sin cirugía mediante inyección precisa de ácido hialurónico, logrando una rectificación del dorso y elevación sutil de la punta nasal con un perfil equilibrado.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Caso 2 */}
+                        <div className={`${styles.resultCard} animate-fade-up delay-1`}>
+                            <div className={styles.resultImageWrapper}>
+                                <div 
+                                    className={styles.resultImage} 
+                                    style={{ backgroundImage: "url('/images/sourced/before_after_nose_2.png')" }}
+                                ></div>
+                            </div>
+                            <div className={styles.resultContent}>
+                                <h3 className={styles.resultCardTitle}>Rinomodelación - Caso 2</h3>
+                                <span className={styles.resultCardSubtitle}>Suavizado de Caballete</span>
+                                <p className={styles.resultCardDesc}>
+                                    Alineación estética del puente y dorso nasal en paciente. Se suaviza la curvatura del caballete de forma sutil y proporcionada, mejorando la armonía general de los rasgos faciales.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Caso 3 */}
+                        <div className={`${styles.resultCard} animate-fade-up delay-2`}>
+                            <div className={styles.resultImageWrapper}>
+                                <div 
+                                    className={styles.resultImage} 
+                                    style={{ backgroundImage: "url('/images/sourced/before_after_wrinkles.png')" }}
+                                ></div>
+                            </div>
+                            <div className={styles.resultContent}>
+                                <h3 className={styles.resultCardTitle}>Rejuvenecimiento Facial</h3>
+                                <span className={styles.resultCardSubtitle}>Líneas de Expresión</span>
+                                <p className={styles.resultCardDesc}>
+                                    Tratamiento enfocado en la relajación muscular y soporte cutáneo para suavizar líneas dinámicas y arrugas de expresión profundas, devolviendo frescura y lozanía al rostro.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

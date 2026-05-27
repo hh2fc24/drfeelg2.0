@@ -13,6 +13,7 @@ interface ServiceCardProps {
     onClick?: () => void;
     discountBadge?: string;
     basePrice?: string;
+    priceSuffix?: string;
 }
 
 export default function ServiceCard({
@@ -26,7 +27,8 @@ export default function ServiceCard({
     href,
     onClick,
     discountBadge,
-    basePrice
+    basePrice,
+    priceSuffix
 }: ServiceCardProps) {
     const bgImage = imageUrl || '/images/instalaciones/clinica5.jpg';
     const previewDesc = Array.isArray(description) ? description[0] : description;
@@ -53,6 +55,7 @@ export default function ServiceCard({
                     <div className={styles.priceWrapper}>
                         <span className={styles.basePriceLabel}>Desde</span>
                         <span className={styles.priceValue}>{basePrice}</span>
+                        {priceSuffix && <span className={styles.priceSuffix}>({priceSuffix})</span>}
                     </div>
                 )}
                 
