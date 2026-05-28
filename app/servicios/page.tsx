@@ -216,7 +216,8 @@ export default function Servicios() {
             filterCategory: "Corporal y Bienestar",
             imageUrl: "/images/sourced/camara_hiperbarica_real.png",
             modalImageUrl: "/images/sourced/camara_hiperbarica_real.png",
-            imageFit: "cover",
+            imageFit: "contain",
+            imageBackground: "#ffffff",
             basePrice: "$20.000",
             benefitsTitle: "Beneficios",
             benefits: [
