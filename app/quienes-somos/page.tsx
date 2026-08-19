@@ -123,23 +123,8 @@ export default function QuienesSomos() {
                     </div>
 
                     <div className={styles.teamGrid}>
+                        {/* Miriam */}
                         <article className={`${styles.teamCard} animate-fade-up delay-1`}>
-                            <div className={styles.teamImageWrapper}>
-                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/monica_leon.jpg')" }}></div>
-                            </div>
-                            <h3 className={styles.teamName}>Dra. Mónica León</h3>
-                            <span className={styles.teamRole}>Medicina Integrativa</span>
-                        </article>
-
-                        <article className={`${styles.teamCard} animate-fade-up delay-2`}>
-                            <div className={styles.teamImageWrapper}>
-                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/maria_paz.jpg')" }}></div>
-                            </div>
-                            <h3 className={styles.teamName}>María Paz</h3>
-                            <span className={styles.teamRole}>Podóloga</span>
-                        </article>
-
-                        <article className={`${styles.teamCard} animate-fade-up delay-3`}>
                             <div className={styles.teamImageWrapper}>
                                 <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/miriam_roman.jpg')" }}></div>
                             </div>
@@ -147,7 +132,8 @@ export default function QuienesSomos() {
                             <span className={styles.teamRole}>Enfermera</span>
                         </article>
 
-                        <article className={`${styles.teamCard} animate-fade-up delay-1`}>
+                        {/* Nicole */}
+                        <article className={`${styles.teamCard} animate-fade-up delay-2`}>
                             <div className={styles.teamImageWrapper}>
                                 <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/nicole.jpg')" }}></div>
                             </div>
@@ -155,20 +141,28 @@ export default function QuienesSomos() {
                             <span className={styles.teamRole}>Enfermera y Administradora</span>
                         </article>
 
+                        {/* Medicina Integrativa */}
+                        <article className={`${styles.teamCard} animate-fade-up delay-3`}>
+                            <h3 className={styles.teamName}>Medicina Integrativa</h3>
+                            <span className={styles.teamRole}>Médico Especialista</span>
+                        </article>
+
+                        {/* Podología */}
+                        <article className={`${styles.teamCard} animate-fade-up delay-1`}>
+                            <h3 className={styles.teamName}>Podología Clínica</h3>
+                            <span className={styles.teamRole}>Podóloga Universitaria</span>
+                        </article>
+
+                        {/* Nutrición */}
                         <article className={`${styles.teamCard} animate-fade-up delay-2`}>
-                            <div className={styles.teamImageWrapper}>
-                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/almendra_villesca.jpg')" }}></div>
-                            </div>
-                            <h3 className={styles.teamName}>Almendra Villesca</h3>
+                            <h3 className={styles.teamName}>Nutrición</h3>
                             <span className={styles.teamRole}>Nutricionista</span>
                         </article>
 
+                        {/* Enfermería */}
                         <article className={`${styles.teamCard} animate-fade-up delay-3`}>
-                            <div className={styles.teamImageWrapper}>
-                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/paulina_munoz.jpg')" }}></div>
-                            </div>
-                            <h3 className={styles.teamName}>Paulina Muñoz</h3>
-                            <span className={styles.teamRole}>Enfermera</span>
+                            <h3 className={styles.teamName}>Enfermería Clínica</h3>
+                            <span className={styles.teamRole}>Enfermera Universitaria</span>
                         </article>
                     </div>
                 </div>
@@ -187,22 +181,7 @@ export default function QuienesSomos() {
                             <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/marca.jpg')" }}></div>
                         </div>
                         <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.3s' }}>
-                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/equipo/doc_1.jpg')" }}></div>
-                        </div>
-                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.4s' }}>
                             <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/productos.jpg')" }}></div>
-                        </div>
-                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.5s' }}>
-                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica1.jpg')" }}></div>
-                        </div>
-                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.6s' }}>
-                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/instalacion_0075.jpg')" }}></div>
-                        </div>
-                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.7s' }}>
-                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/clinica4.jpg')" }}></div>
-                        </div>
-                        <div className={`${styles.facilitiesGrid_item} animate-fade-up`} style={{ animationDelay: '0.8s' }}>
-                            <div className={styles.facilitiesImage} style={{ backgroundImage: "url('/images/instalaciones/instalacion_0072.jpg')" }}></div>
                         </div>
                     </div>
                 </div>

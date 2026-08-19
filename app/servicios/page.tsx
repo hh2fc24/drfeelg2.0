@@ -45,17 +45,17 @@ export default function Servicios() {
 
     const allTreatments: ServiceType[] = [
         {
-            title: "Evaluación Nutricional con Inbody y Plan Personalizado",
+            title: "Evaluación Nutricional con BodyPro y Plan Personalizado",
             description: "Análisis clínico avanzado de composición corporal diseñado para evaluar de forma precisa tu porcentaje de grasa, masa muscular y agua corporal. Junto a nuestros profesionales de salud, diseñaremos una pauta alimentaria y un plan nutricional personalizado que se adapte de verdad a tus objetivos, salud y estilo de vida.",
             category: "Primera Visita",
             filterCategory: "Evaluación Clínica",
             imageUrl: "/images/instalaciones/instalacion_0075.jpg",
             modalImageUrl: "/images/instalaciones/instalacion_0075.jpg",
-            basePrice: "$25.000",
+            basePrice: "$35.000",
             discountBadge: "Abonable",
             benefitsTitle: "¿Qué incluye nuestra evaluación?",
             benefits: [
-                "Medición de composición corporal avanzada con Inbody.",
+                "Medición de composición corporal avanzada con BodyPro.",
                 "Análisis detallado de porcentaje de grasa, masa muscular y agua corporal.",
                 "Entrevista clínica y revisión de hábitos y antecedentes de salud.",
                 "Elaboración de pauta alimentaria y metas de forma personalizada.",
@@ -156,15 +156,13 @@ export default function Servicios() {
             imageUrl: "/images/sourced/hydromax_real.png",
             modalImageUrl: "/images/sourced/hydromax_real.png",
             imageFit: "cover",
+            basePrice: "$40.000",
             benefitsTitle: "Objetivos del tratamiento",
             benefits: [
                 "Limpieza profunda y retiro de impurezas acumuladas.",
                 "Aplicación personalizada de nutrientes según el requerimiento de tu piel.",
                 "Apoyo y renovación para pieles deshidratadas o congestionadas.",
                 "Sensación inmediata de frescura, suavidad y luminosidad profesional."
-            ],
-            prices: [
-                "Valor definido según evaluación y protocolo facial."
             ]
         },
         {
@@ -359,6 +357,9 @@ export default function Servicios() {
                     <div className={styles.resultsGrid}>
                         {/* Caso 1 */}
                         <div className={`${styles.resultCard} animate-fade-up`}>
+                            <div className={styles.resultTopBox}>
+                                DEFINICIÓN Y PROYECCIÓN CON ÁCIDO HIALURÓNICO
+                            </div>
                             <div className={styles.resultImageWrapper}>
                                 <div 
                                     className={styles.resultImage} 
@@ -366,8 +367,7 @@ export default function Servicios() {
                                 ></div>
                             </div>
                             <div className={styles.resultContent}>
-                                <h3 className={styles.resultCardTitle}>Rinomodelación - Caso 1</h3>
-                                <span className={styles.resultCardSubtitle}>Definición y Proyección</span>
+                                <h3 className={styles.resultCardTitle}>Rinomodelación</h3>
                                 <p className={styles.resultCardDesc}>
                                     Armonización nasal clínica sin cirugía mediante inyección precisa de ácido hialurónico, logrando una rectificación del dorso y elevación sutil de la punta nasal con un perfil equilibrado.
                                 </p>
@@ -376,6 +376,9 @@ export default function Servicios() {
 
                         {/* Caso 2 */}
                         <div className={`${styles.resultCard} animate-fade-up delay-1`}>
+                            <div className={styles.resultTopBox}>
+                                SUAVIZADO DE CABALLETE CON ÁCIDO HIALURÓNICO
+                            </div>
                             <div className={styles.resultImageWrapper}>
                                 <div 
                                     className={styles.resultImage} 
@@ -383,8 +386,7 @@ export default function Servicios() {
                                 ></div>
                             </div>
                             <div className={styles.resultContent}>
-                                <h3 className={styles.resultCardTitle}>Rinomodelación - Caso 2</h3>
-                                <span className={styles.resultCardSubtitle}>Suavizado de Caballete</span>
+                                <h3 className={styles.resultCardTitle}>Rinomodelación</h3>
                                 <p className={styles.resultCardDesc}>
                                     Alineación estética del puente y dorso nasal en paciente. Se suaviza la curvatura del caballete de forma sutil y proporcionada, mejorando la armonía general de los rasgos faciales.
                                 </p>
@@ -393,6 +395,9 @@ export default function Servicios() {
 
                         {/* Caso 3 */}
                         <div className={`${styles.resultCard} animate-fade-up delay-2`}>
+                            <div className={styles.resultTopBox}>
+                                LÍNEAS DE EXPRESIÓN CON BOTOX DYSPORT
+                            </div>
                             <div className={styles.resultImageWrapper}>
                                 <div 
                                     className={styles.resultImage} 
@@ -401,7 +406,6 @@ export default function Servicios() {
                             </div>
                             <div className={styles.resultContent}>
                                 <h3 className={styles.resultCardTitle}>Rejuvenecimiento Facial</h3>
-                                <span className={styles.resultCardSubtitle}>Líneas de Expresión</span>
                                 <p className={styles.resultCardDesc}>
                                     Tratamiento enfocado en la relajación muscular y soporte cutáneo para suavizar líneas dinámicas y arrugas de expresión profundas, devolviendo frescura y lozanía al rostro.
                                 </p>

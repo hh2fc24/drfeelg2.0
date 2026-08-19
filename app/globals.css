@@ -1,37 +1,19 @@
 /* Ultra-Premium Design System */
 
 :root {
-  /* Color Palette - Refined & Muted */
-  --color-primary-pink: #fdf5f7;
-  /* Very pale rose */
-  --color-primary-pink-dark: #f5e4e8;
-  --color-primary-pink-text: #b67d8f;
-  /* Muted elegant rose for text */
-  --color-primary-pink-accent: #d8a5b5;
+  /* Color Palette - Updated to Client Specs */
+  --color-bg-light: #d4a5a5; /* Fondo */
+  --color-bg-white: #f2e4e1; /* Fondo de texto */
+  --color-primary-pink-accent: #bf5959; /* Destacados */
+  --color-primary-gold: #c9a96e; /* Boton y precios */
+  --color-text-dark: #2d2d2d; /* Texto principal */
+  
+  --color-primary-gold-dark: #b5955a; /* Slightly darker for hover */
 
-  --color-primary-gold: #c2a77d;
-  /* Champagne gold, not gaudy yellow */
-  --color-primary-gold-dark: #9c835c;
-  --color-primary-gold-light: #e5dccb;
-
-  --color-bg-light: #f6eaee;
-  /* Soft palo rosa for the global site background */
-  --color-bg-white: #fdf7f9;
-
-  --color-brand-bg: #d5d5cd;
-  /* Exact background color of logoclinica.jpeg */
-  --color-brand-bg-trans: rgba(213, 213, 205, 0.95);
-
-  --gradient-brand: linear-gradient(110deg, #d5d5cd 0%, #b8b1ab 50%, #998e88 100%);
-  --gradient-brand-trans: linear-gradient(110deg, rgba(213, 213, 205, 0.95) 0%, rgba(184, 177, 171, 0.95) 50%, rgba(153, 142, 136, 0.95) 100%);
-  --gradient-nav-light: linear-gradient(110deg, rgba(250, 249, 247, 0.95) 0%, rgba(237, 234, 231, 0.95) 50%, rgba(224, 218, 213, 0.95) 100%);
-
-  --color-text-dark: #2c2a29;
-  /* Charcoal, not pure black (softer on the eyes) */
-  --color-text-muted: #73706c;
-
-  --font-sans: var(--font-outfit), system-ui, sans-serif;
-  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-lato), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+  --font-subtitle: var(--font-montserrat), sans-serif;
+  --font-data: var(--font-montserrat), sans-serif;
 
   --radius-sm: 2px;
   /* Sharper edges are generally more "high fashion" */
@@ -141,7 +123,7 @@ img {
   justify-content: center;
   padding: 1rem 2.5rem;
   border-radius: var(--radius-sm);
-  font-family: var(--font-sans);
+  font-family: var(--font-subtitle); /* Montserrat for buttons */
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.75rem;
@@ -154,16 +136,16 @@ img {
 }
 
 .btn-primary {
-  background-color: var(--color-text-dark);
+  background-color: var(--color-primary-gold);
   color: var(--color-bg-white);
-  border: 1px solid var(--color-text-dark);
+  border: 1px solid var(--color-primary-gold);
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-gold-dark);
   color: var(--color-bg-white);
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(194, 167, 125, 0.45);
+  box-shadow: 0 15px 35px rgba(201, 169, 110, 0.45);
   /* Elegant gold glow */
 }
 

@@ -22,7 +22,7 @@ export default function Navbar() {
             <div className={`container ${styles.navbar}`}>
                 <Link href="/" className={styles.logo}>
                     <Image
-                        src="/ll2.png?v=20260305"
+                        src="/logo-new.png"
                         alt="Dr. Feelgood"
                         width={220}
                         height={110}
