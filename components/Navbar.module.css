@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    width: clamp(148px, 15.6vw, 216px);
+    width: 120px;
 }
 
 .logoImage {
@@ -42,11 +42,6 @@
     height: auto;
     object-fit: contain;
     transition: transform 0.4s var(--ease-editorial);
-    filter: saturate(0.92) brightness(0.98) contrast(1);
-}
-
-.scrolled .logoImage {
-    width: clamp(136px, 14.2vw, 184px);
 }
 
 .logo:hover .logoImage {
@@ -156,8 +151,8 @@
         padding: 0.8rem 0;
     }
 
-    .logoImage {
-        width: min(148px, 38vw);
+    .logo {
+        width: 104px;
     }
 
     .menuToggle {

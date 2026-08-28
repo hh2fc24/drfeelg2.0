@@ -22,13 +22,13 @@ export default function Navbar() {
             <div className={`container ${styles.navbar}`}>
                 <Link href="/" className={styles.logo}>
                     <Image
-                        src="/logo-new.png"
+                        src="/logo-dr-original.png"
                         alt="Dr. Feelgood"
-                        width={220}
-                        height={110}
+                        width={2000}
+                        height={2000}
+                        sizes="(max-width: 768px) 104px, 120px"
                         className={styles.logoImage}
                         priority
-                        unoptimized
                     />
                 </Link>
 

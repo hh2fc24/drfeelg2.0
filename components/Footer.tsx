@@ -11,12 +11,12 @@ export default function Footer() {
                     <Link href="/" className={styles.logoLink}>
                         <div className={styles.logo}>
                             <Image
-                                src="/logo-new.png"
+                                src="/logo-dr-original.png"
                                 alt="Dr. Feelgood"
-                                width={320}
-                                height={160}
+                                width={2000}
+                                height={2000}
+                                sizes="(max-width: 768px) 160px, 192px"
                                 className={styles.logoImage}
-                                unoptimized
                             />
                         </div>
                     </Link>

@@ -64,10 +64,9 @@
 }
 
 .logoImage {
-    height: 110px;
-    width: auto;
+    width: 192px;
+    height: auto;
     object-fit: contain;
-    filter: saturate(0.85) brightness(0.9) contrast(0.95); /* Dorado plano y elegante */
 }
 
 .tagline {
@@ -200,6 +199,6 @@
     }
 
     .logoImage {
-        height: 86px;
+        width: 160px;
     }
 }
