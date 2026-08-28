@@ -7,13 +7,11 @@
   --color-primary-pink-accent: #bf5959; /* Destacados */
   --color-primary-gold: #c9a96e; /* Boton y precios */
   --color-text-dark: #2d2d2d; /* Texto principal */
+  --color-text-muted: #705f5b;
   
   --color-primary-gold-dark: #b5955a; /* Slightly darker for hover */
-
-  --font-sans: var(--font-lato), sans-serif;
-  --font-serif: var(--font-playfair), serif;
-  --font-subtitle: var(--font-montserrat), sans-serif;
-  --font-data: var(--font-montserrat), sans-serif;
+  --color-primary-gold-light: #e6d3a6;
+  --color-brand-bg-trans: rgba(242, 228, 225, 0.94);
 
   --radius-sm: 2px;
   /* Sharper edges are generally more "high fashion" */
@@ -42,6 +40,11 @@ html {
 }
 
 body {
+  /* next/font defines its variables on body, so resolve the aliases here. */
+  --font-sans: var(--font-lato), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+  --font-subtitle: var(--font-montserrat), sans-serif;
+  --font-data: var(--font-montserrat), sans-serif;
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   font-family: var(--font-sans);
@@ -230,4 +233,16 @@ img {
   border-top-left-radius: 999px;
   border-top-right-radius: 999px;
   overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

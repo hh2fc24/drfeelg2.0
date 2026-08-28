@@ -51,7 +51,7 @@
 .navLinks {
     display: flex;
     align-items: center;
-    gap: 2.4rem;
+    gap: 1.6rem;
     margin-left: auto;
 }
 
@@ -86,7 +86,9 @@
 }
 
 .ctaBtn {
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+    padding-inline: 1.5rem;
 }
 
 /* Custom Hamburger */
@@ -142,7 +144,7 @@
     transform: rotate(-45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .header {
         padding: 1rem 0;
     }
@@ -165,7 +167,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: #ffffff;
+        background: var(--color-bg-white);
         flex-direction: column;
         justify-content: center;
         padding: 2rem;

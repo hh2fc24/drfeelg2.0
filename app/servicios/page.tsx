@@ -3,6 +3,8 @@
 import { useState } from "react";
 import ServiceCard from "@/components/ServiceCard";
 import ServiceModal from "@/components/ServiceModal";
+import ClinicalResults from "@/components/ClinicalResults";
+import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 
@@ -343,77 +345,7 @@ export default function Servicios() {
 
             <div className={styles.divider}><div className="container"><hr /></div></div>
 
-            {/* Casos Clínicos - Antes y Después Section */}
-            <section className={styles.resultsSection} id="resultados">
-                <div className="container">
-                    <div className={styles.resultsHeader}>
-                        <span className={styles.resultsEyebrow}>Casos Clínicos</span>
-                        <h2 className={styles.resultsTitle}>Resultados Reales</h2>
-                        <p className={styles.resultsSubtitle}>
-                            Antes y después de tratamientos realizados en nuestro centro. Cada proceso responde a un plan integral diseñado por profesionales para lograr armonía, simetría y naturalidad.
-                        </p>
-                    </div>
-
-                    <div className={styles.resultsGrid}>
-                        {/* Caso 1 */}
-                        <div className={`${styles.resultCard} animate-fade-up`}>
-                            <div className={styles.resultTopBox}>
-                                DEFINICIÓN Y PROYECCIÓN CON ÁCIDO HIALURÓNICO
-                            </div>
-                            <div className={styles.resultImageWrapper}>
-                                <div 
-                                    className={styles.resultImage} 
-                                    style={{ backgroundImage: "url('/images/sourced/before_after_nose_1.png')" }}
-                                ></div>
-                            </div>
-                            <div className={styles.resultContent}>
-                                <h3 className={styles.resultCardTitle}>Rinomodelación</h3>
-                                <p className={styles.resultCardDesc}>
-                                    Armonización nasal clínica sin cirugía mediante inyección precisa de ácido hialurónico, logrando una rectificación del dorso y elevación sutil de la punta nasal con un perfil equilibrado.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Caso 2 */}
-                        <div className={`${styles.resultCard} animate-fade-up delay-1`}>
-                            <div className={styles.resultTopBox}>
-                                SUAVIZADO DE CABALLETE CON ÁCIDO HIALURÓNICO
-                            </div>
-                            <div className={styles.resultImageWrapper}>
-                                <div 
-                                    className={styles.resultImage} 
-                                    style={{ backgroundImage: "url('/images/sourced/before_after_nose_2.png')" }}
-                                ></div>
-                            </div>
-                            <div className={styles.resultContent}>
-                                <h3 className={styles.resultCardTitle}>Rinomodelación</h3>
-                                <p className={styles.resultCardDesc}>
-                                    Alineación estética del puente y dorso nasal en paciente. Se suaviza la curvatura del caballete de forma sutil y proporcionada, mejorando la armonía general de los rasgos faciales.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Caso 3 */}
-                        <div className={`${styles.resultCard} animate-fade-up delay-2`}>
-                            <div className={styles.resultTopBox}>
-                                LÍNEAS DE EXPRESIÓN CON BOTOX DYSPORT
-                            </div>
-                            <div className={styles.resultImageWrapper}>
-                                <div 
-                                    className={styles.resultImage} 
-                                    style={{ backgroundImage: "url('/images/sourced/before_after_wrinkles.png')" }}
-                                ></div>
-                            </div>
-                            <div className={styles.resultContent}>
-                                <h3 className={styles.resultCardTitle}>Rejuvenecimiento Facial</h3>
-                                <p className={styles.resultCardDesc}>
-                                    Tratamiento enfocado en la relajación muscular y soporte cutáneo para suavizar líneas dinámicas y arrugas de expresión profundas, devolviendo frescura y lozanía al rostro.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <ClinicalResults />
 
             <div className={styles.divider}><div className="container"><hr /></div></div>
 
@@ -434,11 +366,17 @@ export default function Servicios() {
                 </div>
             </section>
 
-            <section className={`section ${styles.ctaSection}`}>
-                <div className={`container ${styles.ctaContainer} animate-fade-up`}>
-                    <h2 className={styles.ctaTitle}>¿Tienes dudas sobre qué tratamiento necesitas?</h2>
-                    <p className={styles.ctaSubtitle}>Solicita una evaluación y te orientaremos de acuerdo con tu caso.</p>
-                    <Link href="/contacto" className="btn" style={{ backgroundColor: 'var(--color-primary-gold)', color: '#fff', border: 'none', padding: '1.2rem 3rem' }}>Evaluación Gratuita</Link>
+            <section className={styles.ctaSection} aria-labelledby="evaluation-title">
+                <div className={`container ${styles.ctaContainer}`}>
+                    <div className={styles.ctaPhoto}>
+                        <Image src="/images/diverse_smiling_people.jpg" alt="Personas de distintas edades compartiendo una sonrisa" width={1376} height={768} sizes="(max-width: 768px) 90vw, 55vw" />
+                    </div>
+                    <div className={styles.ctaContent}>
+                        <span className={styles.ctaEyebrow}>Comienza con una evaluación</span>
+                        <h2 id="evaluation-title" className={styles.ctaTitle}>¿Qué tratamiento es para ti?</h2>
+                        <p className={styles.ctaSubtitle}>Conversemos sobre lo que necesitas. Te orientamos con una evaluación personalizada.</p>
+                        <Link href="/contacto" className={`btn ${styles.ctaButton}`}>Evaluación gratuita</Link>
+                    </div>
                 </div>
             </section>
 

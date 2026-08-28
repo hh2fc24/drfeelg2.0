@@ -26,14 +26,14 @@ export default function Navbar() {
                         alt="Dr. Feelgood"
                         width={2000}
                         height={2000}
-                        sizes="(max-width: 768px) 104px, 120px"
+                        sizes="(max-width: 1100px) 104px, 120px"
                         className={styles.logoImage}
                         priority
                     />
                 </Link>
 
                 {/* Desktop Menu */}
-                <nav className={`${styles.navLinks} ${menuOpen ? styles.navOpen : ''}`}>
+                <nav id="main-navigation" className={`${styles.navLinks} ${menuOpen ? styles.navOpen : ''}`} aria-label="Navegación principal">
                     <Link href="/" className={styles.navLink} onClick={() => setMenuOpen(false)}>Inicio</Link>
                     <Link href="/servicios" className={styles.navLink} onClick={() => setMenuOpen(false)}>Tratamientos</Link>
                     <Link href="/tecnologia" className={styles.navLink} onClick={() => setMenuOpen(false)}>Tecnología</Link>
@@ -49,7 +49,9 @@ export default function Navbar() {
                 <button
                     className={styles.menuToggle}
                     onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Toggle Navigation"
+                    aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+                    aria-expanded={menuOpen}
+                    aria-controls="main-navigation"
                 >
                     <span className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ''}`}></span>
                 </button>

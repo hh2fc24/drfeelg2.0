@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function QuienesSomos() {
     return (
@@ -113,57 +114,47 @@ export default function QuienesSomos() {
                 </div>
             </section>
 
-            <section className={styles.teamSection}>
+            <section className={styles.teamSection} aria-labelledby="team-title">
                 <div className="container">
                     <div className={styles.teamHeader}>
-                        <h2 className={`${styles.sectionTitle} animate-fade-up`}>Nuestro <span className={styles.highlight}>Equipo</span></h2>
+                        <h2 id="team-title" className={styles.sectionTitle}>Nuestro <span className={styles.highlight}>equipo</span></h2>
                         <p className={`${styles.text} animate-fade-up delay-1`}>
-                            Conoce a los profesionales de la salud detrás de cada transformación. 
+                            Atención cercana y acompañamiento en cada visita.
                         </p>
                     </div>
 
                     <div className={styles.teamGrid}>
                         {/* Miriam */}
-                        <article className={`${styles.teamCard} animate-fade-up delay-1`}>
+                        <article className={styles.teamCard}>
                             <div className={styles.teamImageWrapper}>
-                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/miriam_roman.jpg')" }}></div>
+                                <Image src="/images/equipo/miriam_roman.jpg" alt="Miriam Román" width={562} height={1000} sizes="(max-width: 600px) 90vw, 400px" className={styles.teamImage} />
                             </div>
-                            <h3 className={styles.teamName}>Miriam Román</h3>
-                            <span className={styles.teamRole}>Enfermera</span>
+                            <div className={styles.teamInfo}>
+                                <h3 className={styles.teamName}>Miriam Román</h3>
+                                <span className={styles.teamRole}>Enfermera</span>
+                            </div>
                         </article>
 
                         {/* Nicole */}
-                        <article className={`${styles.teamCard} animate-fade-up delay-2`}>
+                        <article className={styles.teamCard}>
                             <div className={styles.teamImageWrapper}>
-                                <div className={styles.teamImagePlaceholder} style={{ backgroundImage: "url('/images/equipo/nicole.jpg')" }}></div>
+                                <Image src="/images/equipo/nicole.jpg" alt="Nicole" width={562} height={1000} sizes="(max-width: 600px) 90vw, 400px" className={styles.teamImage} />
                             </div>
-                            <h3 className={styles.teamName}>Nicole</h3>
-                            <span className={styles.teamRole}>Enfermera y Administradora</span>
+                            <div className={styles.teamInfo}>
+                                <h3 className={styles.teamName}>Nicole</h3>
+                                <span className={styles.teamRole}>Enfermera y administradora</span>
+                            </div>
                         </article>
-
-                        {/* Medicina Integrativa */}
-                        <article className={`${styles.teamCard} animate-fade-up delay-3`}>
-                            <h3 className={styles.teamName}>Medicina Integrativa</h3>
-                            <span className={styles.teamRole}>Médico Especialista</span>
-                        </article>
-
-                        {/* Podología */}
-                        <article className={`${styles.teamCard} animate-fade-up delay-1`}>
-                            <h3 className={styles.teamName}>Podología Clínica</h3>
-                            <span className={styles.teamRole}>Podóloga Universitaria</span>
-                        </article>
-
-                        {/* Nutrición */}
-                        <article className={`${styles.teamCard} animate-fade-up delay-2`}>
-                            <h3 className={styles.teamName}>Nutrición</h3>
-                            <span className={styles.teamRole}>Nutricionista</span>
-                        </article>
-
-                        {/* Enfermería */}
-                        <article className={`${styles.teamCard} animate-fade-up delay-3`}>
-                            <h3 className={styles.teamName}>Enfermería Clínica</h3>
-                            <span className={styles.teamRole}>Enfermera Universitaria</span>
-                        </article>
+                    </div>
+                    {/* Add professional biographies only after the clinic supplies approved experience. */}
+                    <div className={styles.specialties}>
+                        <h3 className={styles.specialtiesTitle}>Áreas de atención</h3>
+                        <ul className={styles.specialtiesGrid}>
+                            <li>Medicina integrativa</li>
+                            <li>Podología clínica</li>
+                            <li>Nutrición</li>
+                            <li>Enfermería clínica</li>
+                        </ul>
                     </div>
                 </div>
             </section>

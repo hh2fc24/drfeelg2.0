@@ -140,6 +140,11 @@
     align-items: center;
 }
 
+.parallaxOverlay > :global(.container) {
+    width: 100%;
+    min-width: 0;
+}
+
 .parallaxTitle {
     font-family: var(--font-serif);
     font-size: 4.5rem;
@@ -254,6 +259,10 @@
 }
 
 @media (max-width: 768px) {
+    .parallaxTitle {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
     .sectionTitle {
         font-size: 2.5rem;
     }

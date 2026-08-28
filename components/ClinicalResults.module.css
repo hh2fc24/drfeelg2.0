@@ -1,0 +1,134 @@
+.section {
+    padding: clamp(4rem, 7vw, 7rem) 0;
+    background: #f8f2ef;
+    scroll-margin-top: 10rem;
+}
+
+.heading {
+    max-width: 640px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.eyebrow,
+.treatment {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #80554e;
+}
+
+.eyebrow {
+    margin-bottom: 1rem;
+}
+
+.heading h2 {
+    font-size: clamp(2.1rem, 4vw, 3.25rem);
+    margin-bottom: 1rem;
+}
+
+.heading p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e6d8d1;
+    border-radius: 12px;
+    background: #fffaf7;
+}
+
+.cardHeading {
+    min-height: 142px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.65rem;
+    background: #edddd5;
+    border-bottom: 1px solid #e0ccc1;
+}
+
+.cardHeading h3 {
+    font-size: clamp(1.45rem, 2.1vw, 1.8rem);
+    line-height: 1.2;
+    color: #46332e;
+    text-wrap: balance;
+}
+
+.comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    aspect-ratio: 1;
+    gap: 4px;
+    padding: 12px;
+}
+
+.stacked {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.frame {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame figcaption {
+    flex: 0 0 auto;
+    padding: 0.3rem 0 0.55rem;
+    color: #705c54;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.photo {
+    display: block;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.note {
+    margin-top: 1.75rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .cardHeading {
+        min-height: 0;
+        padding: 1.5rem;
+    }
+
+    .cardHeading h3 {
+        font-size: 1.75rem;
+    }
+}
