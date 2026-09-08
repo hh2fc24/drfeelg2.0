@@ -20,7 +20,7 @@ export default function Footer() {
                             />
                         </div>
                     </Link>
-                    <p className={styles.tagline}>Clínica estética y podología</p>
+                    <p className={styles.tagline}>Clínica Estética y Bienestar</p>
                     <p className={styles.description}>
                         Atención profesional, tecnología certificada y acompañamiento personalizado para cada paciente.
                     </p>
@@ -47,6 +47,7 @@ export default function Footer() {
                         <p className={styles.phone}>{clinicContact.phoneDisplay}</p>
                         <p>{clinicContact.email}</p>
                         <p>{clinicContact.hoursLabel}: {clinicContact.hoursValue}</p>
+                        <p>{clinicContact.saturdayHoursLabel}: {clinicContact.saturdayHoursValue}</p>
                     </address>
                 </div>
             </div>

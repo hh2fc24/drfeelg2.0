@@ -41,11 +41,11 @@ export default function Home() {
       href: "/servicios"
     },
     {
-      title: "Láser Fox para Onicomicosis",
-      description: "Tecnología A.R.C. Laser para tratar onicomicosis de forma precisa, cómoda e indolora.",
-      category: "Podología Clínica Láser",
-      imageUrl: "/images/sourced/fox-980-official.png",
-      modalImageUrl: "/images/sourced/fox-980-official.png",
+      title: "Láser NEO YAG para Onicomicosis",
+      description: "Tecnología Q-Switched de 1064 nm que actúa de forma localizada sobre la uña afectada.",
+      category: "Láser de 1064 nm",
+      imageUrl: "/images/sourced/neo-yag-q-switched.png",
+      modalImageUrl: "/images/sourced/neo-yag-q-switched.png",
       imageFit: "contain",
       imageBackground: "#f9f7f5",
       href: "/servicios"
@@ -112,7 +112,7 @@ export default function Home() {
       <section className={`section ${styles.servicesSection}`}>
         <div className="container">
             <div className={`${styles.servicesHeader} animate-fade-up`}>
-            <div>
+            <div className={styles.servicesHeaderText}>
               <span className={styles.eyebrow}>Áreas destacadas</span>
               <h2 className={styles.sectionTitle}>Tratamientos <span className={styles.highlight}>destacados</span></h2>
             </div>

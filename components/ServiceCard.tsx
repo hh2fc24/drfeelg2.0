@@ -71,9 +71,9 @@ export default function ServiceCard({
 
     if (onClick) {
         return (
-            <div className={styles.card} onClick={onClick}>
+            <button type="button" className={styles.card} onClick={onClick}>
                 {renderCardContent()}
-            </div>
+            </button>
         );
     }
 

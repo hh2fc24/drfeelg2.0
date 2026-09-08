@@ -10,12 +10,14 @@ export default function QuienesSomos() {
                     <div className="animate-fade-up">
                         <span className={styles.eyebrow}>Nuestra Clínica</span>
                     </div>
-                    <h1 className={`${styles.title} animate-fade-up delay-1`}>
-                        Atención profesional con foco en la <span className={styles.highlight}>seguridad</span>.
-                    </h1>
-                    <p className={`${styles.subtitle} animate-fade-up delay-2`}>
-                        Trabajamos con evaluación clínica, tecnología certificada y un acompañamiento cercano en cada tratamiento.
-                    </p>
+                    <div className={styles.headerTextPanel}>
+                        <h1 className={`${styles.title} animate-fade-up delay-1`}>
+                            Atención profesional con foco en la <span className={styles.highlight}>seguridad</span>.
+                        </h1>
+                        <p className={`${styles.subtitle} animate-fade-up delay-2`}>
+                            Trabajamos con evaluación clínica, tecnología certificada y un acompañamiento cercano en cada tratamiento.
+                        </p>
+                    </div>
                 </div>
             </header>
 
@@ -107,7 +109,7 @@ export default function QuienesSomos() {
                             <div className={styles.featureLine}></div>
                             <h3 className={styles.featureTitle}>Acompañamiento Total</h3>
                             <p className={styles.featureText}>
-                                El bienestar estético no es un evento aislado. Nuestros tratamientos de escultura corporal incluyen apoyo nutricional inteligente y kinesiológico.
+                                El bienestar estético no es un evento aislado. Nuestros tratamientos de escultura corporal incluyen apoyo nutricional inteligente.
                             </p>
                         </div>
                     </div>
@@ -132,6 +134,7 @@ export default function QuienesSomos() {
                             <div className={styles.teamInfo}>
                                 <h3 className={styles.teamName}>Miriam Román</h3>
                                 <span className={styles.teamRole}>Enfermera</span>
+                                <p className={styles.teamCredential}>Diplomada en Estética Injector Expert, Academia Chilena de Enfermería Estética (ACEE).</p>
                             </div>
                         </article>
 
@@ -146,7 +149,6 @@ export default function QuienesSomos() {
                             </div>
                         </article>
                     </div>
-                    {/* Add professional biographies only after the clinic supplies approved experience. */}
                     <div className={styles.specialties}>
                         <h3 className={styles.specialtiesTitle}>Áreas de atención</h3>
                         <ul className={styles.specialtiesGrid}>
@@ -161,7 +163,7 @@ export default function QuienesSomos() {
 
             <section className={styles.facilitiesSection}>
                 <div className="container">
-                    <div className={styles.teamHeader}>
+                    <div className={`${styles.teamHeader} ${styles.facilitiesHeader}`}>
                         <h2 className={`${styles.sectionTitle} animate-fade-up`}>Nuestras <span className={styles.highlight}>Instalaciones</span></h2>
                     </div>
                     <div className={styles.facilitiesGrid}>

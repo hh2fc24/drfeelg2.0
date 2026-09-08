@@ -15,39 +15,27 @@ const technologySections = [
         imageFit: "cover",
         specs: [
             { label: "Línea", value: "O2Life ST801" },
-            { label: "Presión referencial", value: "1.4 ATA y 1.5 ATA" },
             { label: "Atributo clave", value: "Oxigenación celular profunda" },
             { label: "Enfoque web", value: "Recuperación acelerada de tejidos" },
-        ],
-        bullets: [
-            "Apoyo a la recuperación y reparación de tejidos.",
-            "Puede favorecer una mejor respuesta en procesos inflamatorios.",
-            "Tecnología orientada a bienestar, descanso y recuperación.",
-            "Se indica de forma personalizada según motivo de consulta."
         ]
     },
     {
-        eyebrow: "Láser Podológico",
-        title: "Precisión alemana para onicomicosis, verrugas y cirugía menor.",
-        highlight: "FOX de A.R.C. Laser",
+        eyebrow: "Láser NEO YAG Q-Switched",
+        title: "Tecnología de 1064 nm para el tratamiento localizado de la onicomicosis.",
+        highlight: "NEO YAG Q-Switched",
         description: [
-            "El Láser Fox debe verse como un diferencial tecnológico real. Es una plataforma alemana orientada a podología clínica, especialmente relevante para onicomicosis por su precisión y experiencia indolora para el paciente.",
-            "La forma correcta de comunicarlo no es grandilocuente: tecnología clínica de precisión, no invasiva, con una aplicación cómoda y enfocada en indicaciones podológicas concretas."
+            "Efecto térmico selectivo: el láser NEO YAG emite una longitud de onda de 1064 nm. Esta luz atraviesa la placa de la uña afectada y penetra hasta el lecho ungueal.",
+            "Destrucción del hongo: la energía lumínica se convierte en calor concentrado de forma rápida, en nanosegundos. Este incremento térmico degrada y destruye las estructuras de los hongos sin dañar la piel ni los tejidos sanos que rodean la uña.",
+            "Alternativa médica: al ser un método físico y localizado, representa una excelente opción para personas que no pueden o prefieren no tomar medicamentos antifúngicos orales debido a contraindicaciones médicas o riesgos de toxicidad hepática."
         ],
-        imageUrl: "/images/sourced/fox-980-official.png",
-        imageAlt: "Equipo FOX 980 de A.R.C. Laser",
+        imageUrl: "/images/sourced/neo-yag-q-switched.png",
+        imageAlt: "Equipo láser NEO YAG Q-Switched",
         imageFit: "contain",
         specs: [
-            { label: "Equipo", value: "Láser Podología FOX" },
-            { label: "Origen", value: "Tecnología alemana A.R.C. Laser" },
-            { label: "Uso principal", value: "Onicomicosis y podología láser" },
-            { label: "Atributo clave", value: "Precisión clínica e indolora" },
-        ],
-        bullets: [
-            "Alternativa clínica para onicomicosis.",
-            "Aplicación precisa en podología especializada.",
-            "Procedimiento cómodo, sin necesidad de un relato exagerado.",
-            "Debe comunicarse con foco clínico y no solo comercial."
+            { label: "Equipo", value: "Láser NEO YAG Q-Switched" },
+            { label: "Longitud de onda", value: "1064 nm" },
+            { label: "Uso principal", value: "Tratamiento de onicomicosis" },
+            { label: "Atributo clave", value: "Método físico y localizado" },
         ]
     }
 ];
@@ -61,7 +49,7 @@ const clinicalEnvironment = [
     {
         title: "Atención podológica",
         text: "La podología se presenta como salud del pie: evaluación, manejo técnico y prevención dentro de un box real.",
-        imageUrl: "/images/tratamientos/podologia.jpg",
+        imageUrl: "/images/tratamientos/podologia-clinica.png",
     },
     {
         title: "Entorno de espera",
@@ -86,7 +74,7 @@ export default function Tecnologia() {
                     </h1>
                     <p className={`${styles.subtitle} animate-fade-up delay-2`}>
                         Presentamos la tecnología desde su utilidad clínica y la experiencia real del paciente:
-                        Cámara Hiperbárica O2Life ST801, Láser Fox y un entorno de atención preparado para podología clínica y estética facial.
+                        Cámara Hiperbárica O2Life ST801, Láser NEO YAG Q-Switched y un entorno de atención preparado para podología clínica y estética facial.
                     </p>
                 </div>
             </header>
@@ -135,14 +123,6 @@ export default function Tecnologia() {
                                 ))}
                             </div>
 
-                            <div className={styles.bulletBlock}>
-                                <h3 className={styles.bulletTitle}>Lo importante para comunicar en la web</h3>
-                                <ul className={styles.bulletList}>
-                                    {section.bullets.map((bullet) => (
-                                        <li key={bullet}>{bullet}</li>
-                                    ))}
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </section>

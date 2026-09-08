@@ -64,7 +64,7 @@ export default function Hero() {
                 {/* Left Side: Dramatic Typography */}
                 <div className={styles.heroContent}>
                     <div className="animate-fade-up">
-                        <span className={styles.eyebrow}>Clínica estética y podología</span>
+                        <span className={styles.eyebrow}>Clínica Estética y Bienestar</span>
                     </div>
 
                     <h1 className={styles.title}>

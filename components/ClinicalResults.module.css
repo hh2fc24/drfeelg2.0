@@ -109,6 +109,14 @@
     overflow: hidden;
 }
 
+.resultCaption {
+    min-height: 4.75rem;
+    padding: 0.25rem 1.25rem 1.25rem;
+    color: #634c45;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
 .note {
     margin-top: 1.75rem;
     text-align: center;

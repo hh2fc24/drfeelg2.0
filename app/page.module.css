@@ -181,6 +181,26 @@
     gap: 3rem;
 }
 
+.servicesHeaderText .eyebrow,
+.servicesHeaderText .sectionTitle {
+    width: fit-content;
+    background: rgba(242, 228, 225, 0.6);
+}
+
+.servicesHeaderText .eyebrow {
+    margin-bottom: 0.75rem;
+    padding: 0.65rem 0.9rem 0.65rem 2.9rem;
+}
+
+.servicesHeaderText .eyebrow::before {
+    left: 0.9rem;
+}
+
+.servicesHeaderText .sectionTitle {
+    margin-bottom: 0;
+    padding: 0.45rem 0.9rem 0.65rem;
+}
+
 /* Testimonials Section */
 .testimonialsSection {
     background-color: var(--color-bg-light);

@@ -13,6 +13,7 @@ const results = [
         before: '74 35 216 455',
         after: '314 35 216 455',
         stacked: false,
+        caption: 'Mejora de giba, elevación de punta nasal y aumento del ángulo nasolabial.',
     },
     {
         treatment: 'Ácido hialurónico',
@@ -27,11 +28,11 @@ const results = [
     {
         treatment: 'Botox · Dysport',
         title: 'Líneas de expresión',
-        source: '/images/sourced/before_after_wrinkles.png',
-        width: 607,
-        height: 502,
-        before: '0 0 607 234',
-        after: '0 245 607 257',
+        source: '/images/sourced/before-after-botox-dysport.jpg',
+        width: 1080,
+        height: 1078,
+        before: '0 0 1080 525',
+        after: '0 553 1080 525',
         stacked: true,
     },
 ];
@@ -82,6 +83,9 @@ export default function ClinicalResults() {
                                     );
                                 })}
                             </div>
+                            {'caption' in result && result.caption ? (
+                                <p className={styles.resultCaption}>{result.caption}</p>
+                            ) : null}
                         </article>
                     ))}
                 </div>

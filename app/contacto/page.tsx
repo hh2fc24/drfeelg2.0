@@ -17,6 +17,26 @@ const serviceGuidance = {
         label: "Mesoterapia / Microneedling",
         includes: "Orientación sobre PRP, Pink Glow, exosomas con dermapen, Sculptra, vitamina C, Dermastabilon o protocolos corporales según evaluación.",
     },
+    hifu: {
+        label: "HIFU Facial",
+        includes: "Evaluación de flacidez, contorno facial y profundidad de trabajo para definir un protocolo HIFU 25D personalizado.",
+    },
+    exosomas: {
+        label: "Exosomas",
+        includes: "Evaluación de calidad de piel, textura, luminosidad y zonas a tratar para definir el protocolo regenerativo.",
+    },
+    hilos: {
+        label: "Hilos de Tracción",
+        includes: "Evaluación de firmeza, tejidos y contorno facial para definir si los hilos PDO son adecuados para tu caso.",
+    },
+    sculptra: {
+        label: "Bioestimulador Sculptra",
+        includes: "Evaluación de firmeza, volumen y calidad de piel para planificar un tratamiento progresivo con ácido poli-L-láctico.",
+    },
+    ultracool: {
+        label: "Bioestimulador Ultracoolt",
+        includes: "Evaluación de flacidez, arrugas y zonas de aplicación para definir un protocolo de bioestimulación con PDO.",
+    },
     hydromax: {
         label: "Limpieza Facial Hydromax",
         includes: "Revisión de tipo de piel, objetivo de limpieza, hidratación y posibles combinaciones con otros protocolos faciales.",
@@ -38,12 +58,8 @@ const serviceGuidance = {
         includes: "Orientación sobre recuperación de tejidos, número de sesiones y pertinencia según tu motivo de consulta.",
     },
     laser: {
-        label: "Láser Fox / Onicomicosis",
-        includes: "Revisión del caso y explicación del tratamiento láser para onicomicosis u otras indicaciones podológicas.",
-    },
-    taping: {
-        label: "Taping Neuromuscular",
-        includes: "Valoración de dolor, soporte y objetivo terapéutico para definir la indicación del vendaje.",
+        label: "Láser NEO YAG / Onicomicosis",
+        includes: "Revisión del caso y explicación del tratamiento localizado con láser NEO YAG Q-Switched de 1064 nm.",
     },
     otros: {
         label: "Consultar con especialista",
@@ -133,6 +149,8 @@ export default function Contacto() {
                                 <h3 className={styles.infoTitle}>Atención al Paciente</h3>
                                 <p>{clinicContact.hoursLabel}</p>
                                 <p className={styles.mutedText}>{clinicContact.hoursValue}</p>
+                                <p>{clinicContact.saturdayHoursLabel}</p>
+                                <p className={styles.mutedText}>{clinicContact.saturdayHoursValue}</p>
                             </div>
                         </div>
                     </div>
@@ -194,13 +212,17 @@ export default function Contacto() {
                                     <option value="botox">Botox (Dysport)</option>
                                     <option value="hialuronico">Ácido Hialurónico</option>
                                     <option value="mesoterapia">Mesoterapia / Microneedling</option>
+                                    <option value="hifu">HIFU Facial</option>
+                                    <option value="exosomas">Exosomas</option>
+                                    <option value="hilos">Hilos de Tracción</option>
+                                    <option value="sculptra">Bioestimulador Sculptra</option>
+                                    <option value="ultracool">Bioestimulador Ultracoolt</option>
                                     <option value="hydromax">Limpieza Facial Hydromax</option>
                                     <option value="lipolaser">Lipoláser Corporal</option>
                                     <option value="sueroterapia">Sueroterapia</option>
                                     <option value="podologia">Podología Clínica</option>
                                     <option value="hiperbarica">Cámara Hiperbárica</option>
-                                    <option value="laser">Láser Fox / Onicomicosis</option>
-                                    <option value="taping">Taping Neuromuscular</option>
+                                    <option value="laser">Láser NEO YAG / Onicomicosis</option>
                                     <option value="otros">Consultar con especialista</option>
                                 </select>
                             </div>

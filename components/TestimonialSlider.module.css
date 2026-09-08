@@ -9,6 +9,14 @@
     overflow: hidden;
 }
 
+.headingPanel {
+    width: fit-content;
+    max-width: min(900px, 100%);
+    margin: 0 auto 4rem;
+    padding: 1.35rem 1.75rem;
+    background: rgba(242, 228, 225, 0.6);
+}
+
 .title {
     font-size: 3rem;
     /* Larger */
@@ -28,7 +36,7 @@
     color: var(--color-text-muted);
     font-size: 1.1rem;
     font-weight: 300;
-    margin-bottom: 4rem;
+    margin-bottom: 0;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -121,14 +129,46 @@
 
 .dot {
     width: 40px;
-    height: 1px;
-    background-color: rgba(44, 42, 41, 0.1);
+    height: 44px;
+    position: relative;
+    background-color: transparent;
     transition: all 0.4s var(--ease-editorial);
     padding: 0;
 }
 
-.activeDot {
+.dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(44, 42, 41, 0.2);
+    transform: translateY(-50%);
+}
+
+.activeDot::after {
     background-color: var(--color-text-dark);
+}
+
+.pauseButton {
+    min-height: 44px;
+    margin-top: 1.25rem;
+    padding: 0.65rem 1rem;
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+.pauseButton:focus-visible,
+.dot:focus-visible {
+    outline: 3px solid var(--color-text-dark);
+    outline-offset: 4px;
 }
 
 @media (max-width: 768px) {
@@ -138,6 +178,11 @@
 
     .title {
         font-size: 2.2rem;
+    }
+
+    .headingPanel {
+        margin-bottom: 3rem;
+        padding: 1rem;
     }
 
     .text {

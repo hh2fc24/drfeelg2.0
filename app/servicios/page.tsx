@@ -126,6 +126,108 @@ export default function Servicios() {
             ]
         },
         {
+            title: "HIFU Facial",
+            description: [
+                "Si lo que buscas es combatir la flacidez y redefinir tu contorno facial sin pasar por el quirófano, el HIFU 25D es tu mejor aliado. Este sistema de ultrasonido focalizado de alta intensidad trabaja en las capas profundas de la dermis, específicamente en el SMAS, generando microcoagulaciones controladas que estimulan la producción de colágeno nuevo y provocan un efecto tensor inmediato.",
+                "¿Para qué se utiliza? Está especialmente indicado para tratar la flacidez moderada a severa, las mejillas caídas, la papada incipiente, la pérdida de definición en el óvalo facial y las arrugas profundas del surco nasogeniano. También es excelente para levantar las cejas caídas y suavizar el contorno de los ojos.",
+                "La tecnología 25D actúa en múltiples profundidades de forma simultánea para conseguir un levantamiento tridimensional que respeta la anatomía natural del rostro.",
+                "Olvídate de las agujas y los largos posoperatorios: el rejuvenecimiento vertical y definido que estabas esperando ya está aquí, con tecnología avanzada en medicina estética no quirúrgica."
+            ],
+            category: "Lifting no invasivo",
+            filterCategory: "Estética Facial",
+            imageUrl: "/images/instalaciones/clinica4.jpg",
+            modalImageUrl: "/images/instalaciones/clinica4.jpg",
+            benefitsTitle: "Beneficios clave",
+            benefits: [
+                "Efecto lifting visible desde la primera sesión, con mejora progresiva durante 3 a 6 meses.",
+                "Estimulación profunda y duradera del colágeno, con resultados que pueden perdurar entre 12 y 18 meses.",
+                "Tratamiento no invasivo, sin agujas, sin anestesia y sin tiempos de inactividad.",
+                "Rejuvenecimiento natural sin alterar la expresión facial.",
+                "Una sola sesión al año suele ser suficiente para mantener los resultados."
+            ]
+        },
+        {
+            title: "Exosomas",
+            description: [
+                "¿Tu piel ha perdido ese brillo saludable? Si se siente apagada, deshidratada y las cremas convencionales ya no logran revertir el cansancio celular, los Exosomas NXO marcan un antes y un después en tu rutina de rejuvenecimiento.",
+                "Se trata de una terapia celular de última generación que utiliza pequeñas burbujas cargadas con factores de crecimiento, péptidos, lípidos y ARN mensajero que actúan como mensajeros biológicos.",
+                "Su misión es comunicarse directamente con tus células, activando su capacidad intrínseca de reparación, reduciendo la inflamación silenciosa y multiplicando la síntesis de colágeno, elastina y ácido hialurónico.",
+                "¿Para qué se utiliza? Es un tratamiento para pieles fatigadas, con textura irregular, poros dilatados, manchas por estrés oxidativo y pérdida de densidad. También está indicado como coadyuvante tras láseres, radiofrecuencia o peelings para acelerar la recuperación y potenciar los resultados.",
+                "¿Dónde se aplica? Se administra mediante microinyecciones en el rostro, incluyendo el contorno de ojos y labios, además del cuello, escote y dorso de las manos. También se utiliza en el cuero cabelludo para tratar la caída del cabello y estimular nuevos folículos.",
+                "Dale a tu piel el impulso regenerativo que necesita y descubre un rejuvenecimiento desde dentro: no se trata solo de rellenar arrugas, sino de devolverle al rostro vitalidad, luz y salud."
+            ],
+            category: "Regeneración celular",
+            filterCategory: "Estética Facial",
+            imageUrl: "/images/instalaciones/productos.jpg",
+            modalImageUrl: "/images/instalaciones/productos.jpg",
+            benefitsTitle: "Beneficios clave",
+            benefits: [
+                "Regeneración tisular profunda que mejora la densidad, elasticidad y turgencia de la piel.",
+                "Efecto glow inmediato: luminosidad y tersura visibles desde las primeras 48 horas.",
+                "Reducción notable de arrugas finas, líneas de expresión y manchas desiguales.",
+                "Potente acción antiinflamatoria y antioxidante que frena el envejecimiento prematuro.",
+                "Resultados acumulativos: cada sesión potencia la anterior, con mejoras que se extienden hasta los 6 meses.",
+                "Ideal para todo tipo de piel, incluso las más sensibles o reactivas."
+            ]
+        },
+        {
+            title: "Hilos de Tracción",
+            description: [
+                "Si notas que tu piel ha perdido firmeza y ves tu cara caída, los Hilos PDO de tracción son una alternativa para trabajar desde el interior, estimular la producción de colágeno y brindar un efecto de elevación inmediato.",
+                "Con resultados naturales y progresivos, el objetivo es conseguir un rostro más definido, firme y rejuvenecido mediante una técnica rápida, segura y efectiva."
+            ],
+            category: "Efecto tensor",
+            filterCategory: "Estética Facial",
+            imageUrl: "/images/instalaciones/clinica3.jpg",
+            modalImageUrl: "/images/instalaciones/clinica3.jpg",
+            benefitsTitle: "Objetivos del tratamiento",
+            benefits: [
+                "Estimular la producción natural de colágeno.",
+                "Elevar y reposicionar tejidos con un resultado progresivo.",
+                "Redefinir el contorno facial sin cirugía."
+            ]
+        },
+        {
+            title: "Bioestimulador Sculptra",
+            description: [
+                "Sculptra es un tratamiento dermoestético con poder bioregenerador que contiene ácido poli-L-láctico (PLLA). Se aplica cuidadosamente mediante una pequeña cánula y es totalmente biocompatible y reabsorbible por el organismo. Sus micropartículas estimulan los fibroblastos, encargados de producir colágeno y elastina.",
+                "A diferencia de rellenos tradicionales como el ácido hialurónico, su efecto es progresivo y no busca únicamente aportar volumen. Sculptra estimula la producción natural de colágeno en las capas profundas de la piel, mejorando la textura, aportando firmeza y disimulando pequeñas arrugas a largo plazo.",
+                "El procedimiento es mínimamente invasivo, rápido y seguro. Se recomiendan 3 a 4 sesiones para lograr un resultado óptimo, según cada caso. Está indicado para personas jóvenes y adultas que buscan rejuvenecimiento facial, reposicionar tejidos y mejorar la calidad y el aspecto de la piel."
+            ],
+            category: "Ácido poli-L-láctico",
+            filterCategory: "Estética Facial",
+            imageUrl: "/images/instalaciones/productos.jpg",
+            modalImageUrl: "/images/instalaciones/productos.jpg",
+            benefitsTitle: "Beneficios destacados",
+            benefits: [
+                "Redefine el óvalo facial y las facciones.",
+                "Restaura el volumen facial.",
+                "Reduce las arrugas y líneas de expresión.",
+                "Mejora la apariencia de cicatrices y ojeras.",
+                "Aporta luminosidad a la piel.",
+                "Mejora la elasticidad y firmeza."
+            ]
+        },
+        {
+            title: "Bioestimulador Ultracoolt",
+            description: [
+                "Ultracool es un bioestimulador de colágeno inyectable a base de microesferas de polidioxanona (PDO), utilizado para rejuvenecer la piel, combatir la flacidez y mejorar la firmeza desde las capas profundas.",
+                "Los resultados evolucionan con el paso de las semanas a medida que el cuerpo genera su propio colágeno. El organismo reabsorbe el material de forma segura a lo largo de los meses.",
+                "Se usa principalmente en el rostro, el contorno de ojos, el cuello, el escote y también en zonas corporales como el dorso de las manos."
+            ],
+            category: "Bioestimulación con PDO",
+            filterCategory: "Estética Facial",
+            imageUrl: "/images/instalaciones/clinica2.jpg",
+            modalImageUrl: "/images/instalaciones/clinica2.jpg",
+            benefitsTitle: "¿Para qué se utiliza?",
+            benefits: [
+                "Estimular colágeno: un solo vial equivale a los beneficios de más de 1.400 hilos inductores de colágeno tradicionales, aplicados de forma más cómoda.",
+                "Efecto tensor y lifting: ayuda a redensificar el tejido y redefinir el contorno facial sin deformar las facciones.",
+                "Atenuar arrugas: suaviza líneas finas, patas de gallo y arrugas en el párpado inferior u otras zonas del rostro.",
+                "Mejorar la calidad de la piel: devuelve elasticidad, textura y luminosidad perdidas por el envejecimiento."
+            ]
+        },
+        {
             title: "Mesoterapia y Microneedling Facial y Corporal",
             description: [
                 "Tratamientos orientados a mejorar calidad de piel, luminosidad, textura y soporte cutáneo mediante protocolos personalizados.",
@@ -236,8 +338,8 @@ export default function Servicios() {
             description: "Ofrecemos un servicio integral de podología clínica enfocado en salud, prevención y bienestar de tus pies. Aquí la prioridad no es estética: es evaluación técnica, higiene clínica, manejo de molestias y prevención.",
             category: "Pies",
             filterCategory: "Podología Clínica",
-            imageUrl: "/images/tratamientos/podologia.jpg",
-            modalImageUrl: "/images/tratamientos/podologia.jpg",
+            imageUrl: "/images/tratamientos/podologia-clinica.png",
+            modalImageUrl: "/images/tratamientos/podologia-clinica.png",
             basePrice: "$35.000",
             benefitsTitle: "Nuestros Tratamientos",
             benefits: [
@@ -256,29 +358,16 @@ export default function Servicios() {
             ]
         },
         {
-            title: "Taping Neuromuscular",
-            description: "Es una técnica terapéutica que utiliza cintas elásticas adhesivas. Estimulando músculos, mejorando la circulación y disminuyendo el dolor, sin limitar el movimiento natural del pie.",
-            category: "Pies y Tobillos",
-            filterCategory: "Podología Clínica",
-            imageUrl: "/images/tratamientos/tratamiento2.jpg",
-            modalImageUrl: "/images/tratamientos/tratamiento2.jpg",
-            benefitsTitle: "Se utiliza para",
-            benefits: [
-                "Dolor e inflamación de hallux valgus o incipiente",
-                "Fascitis plantar y espolón calcáneo",
-                "Torceduras de tobillo y desgarro muscular"
-            ]
-        },
-        {
-            title: "Uñas con Hongos (Láser Fox)",
+            title: "Uñas con Hongos (Láser NEO YAG)",
             description: [
-                "La Onicomicosis, también conocida como infección por hongos en las uñas, es una afección común. El tratamiento láser ha surgido como una alternativa altamente efectiva para eliminar los hongos, evitando los efectos secundarios indeseables de los tratamientos tradicionales.",
-                "A diferencia de los medicamentos antifúngicos, el láser emite una energía que penetra la uña, eliminando el hongo de raíz. Es no invasivo e indoloro."
+                "Efecto térmico selectivo: el láser NEO YAG emite una longitud de onda de 1064 nm. Esta luz atraviesa la placa de la uña afectada y penetra hasta el lecho ungueal.",
+                "Destrucción del hongo: la energía lumínica se convierte en calor concentrado de forma rápida, en nanosegundos. Este incremento térmico degrada y destruye las estructuras de los hongos sin dañar la piel ni los tejidos sanos que rodean la uña.",
+                "Alternativa médica: al ser un método físico y localizado, representa una excelente opción para personas que no pueden o prefieren no tomar medicamentos antifúngicos orales debido a contraindicaciones médicas o riesgos de toxicidad hepática."
             ],
             category: "Pies y Manos",
             filterCategory: "Podología Clínica",
-            imageUrl: "/images/sourced/fox-980-official.png",
-            modalImageUrl: "/images/sourced/fox-980-official.png",
+            imageUrl: "/images/sourced/neo-yag-q-switched.png",
+            modalImageUrl: "/images/sourced/neo-yag-q-switched.png",
             imageFit: "contain",
             imageBackground: "#f9f7f5",
             basePrice: "$199.000",
@@ -286,10 +375,9 @@ export default function Servicios() {
             discountBadge: "PACK LÁSER",
             benefitsTitle: "Beneficios",
             benefits: [
-                "Procedimiento no invasivo e indoloro.",
-                "Seguro, certificado por la comunidad europea.",
-                "Eficaz en más del 90% de los casos.",
-                "No requiere anestesia ni tiempo de recuperación."
+                "Tratamiento físico y localizado.",
+                "Acción térmica selectiva sobre la zona afectada.",
+                "Alternativa para personas que no pueden o prefieren no tomar antifúngicos orales."
             ],
             prices: [
                 "Pack de 6 sesiones: $199.000"

@@ -7,6 +7,8 @@ export const clinicContact = {
   email: "apoquindo@drfeelgood.cl",
   hoursLabel: "Lunes a Viernes",
   hoursValue: "08:00 hrs - 18:00 hrs",
+  saturdayHoursLabel: "Sábado",
+  saturdayHoursValue: "09:00 hrs - 14:00 hrs",
   whatsappLeadNumber: "56900000000",
   mapsEmbedUrl:
     "https://www.google.com/maps?q=Avda%20Apoquindo%206410%20Of%20504%20Las%20Condes%20Santiago&z=15&output=embed",

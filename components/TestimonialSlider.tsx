@@ -28,13 +28,17 @@ const testimonials = [
 
 export default function TestimonialSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
     useEffect(() => {
+        if (isPaused || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % testimonials.length);
         }, 6000);
         return () => clearInterval(timer);
-    }, []);
+    }, [isPaused]);
 
     const goTo = (index: number) => {
         setCurrentIndex(index);
@@ -42,8 +46,10 @@ export default function TestimonialSlider() {
 
     return (
         <div className={styles.sliderContainer}>
-            <h2 className={styles.title}>Lo que dicen nuestros <span className={styles.highlight}>Clientes</span></h2>
-            <p className={styles.subtitle}>La satisfacción de nuestros clientes nos avala.</p>
+            <div className={styles.headingPanel}>
+                <h2 className={styles.title}>Lo que dicen nuestros <span className={styles.highlight}>Clientes</span></h2>
+                <p className={styles.subtitle}>La satisfacción de nuestros clientes nos avala.</p>
+            </div>
 
             <div className={styles.slider}>
                 {testimonials.map((t, index) => (
@@ -72,6 +78,14 @@ export default function TestimonialSlider() {
                     />
                 ))}
             </div>
+            <button
+                type="button"
+                className={styles.pauseButton}
+                onClick={() => setIsPaused((current) => !current)}
+                aria-pressed={isPaused}
+            >
+                {isPaused ? 'Reanudar testimonios' : 'Pausar testimonios'}
+            </button>
         </div>
     );
 }
