@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { useCart } from '@/components/CartProvider';
 import { clinicContact } from '@/lib/clinic';
+import { formatCLP, type CheckoutItem, type CheckoutItemId } from '@/lib/commerce';
 import styles from './ServiceModal.module.css';
 
 interface ServiceModalProps {
@@ -19,12 +21,15 @@ interface ServiceModalProps {
         imageBackground?: string;
         videoUrl?: string;
         galleryUrls?: string[];
+        purchaseOptions?: CheckoutItem[];
     } | null;
 }
 
 export default function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
+    const { addItem } = useCart();
     const [isAnimating, setIsAnimating] = useState(false);
     const [activeMedia, setActiveMedia] = useState<{type: 'video' | 'image', url: string} | null>(null);
+    const [selectedOptionId, setSelectedOptionId] = useState<CheckoutItemId | null>(null);
 
     useEffect(() => {
         let t: NodeJS.Timeout;
@@ -40,12 +45,14 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
             t = setTimeout(() => {
                 setIsAnimating(true);
                 setActiveMedia(nextMedia);
+                setSelectedOptionId((service?.purchaseOptions?.[0]?.id as CheckoutItemId | undefined) || null);
             }, 10);
         } else {
             document.body.style.overflow = 'auto';
             t = setTimeout(() => {
                 setIsAnimating(false);
                 setActiveMedia(null);
+                setSelectedOptionId(null);
             }, 10);
         }
         return () => {
@@ -63,13 +70,22 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
     ].join("\n");
     const whatsappHref = `https://wa.me/${clinicContact.whatsappLeadNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
+    const handleAddToCart = () => {
+        if (!selectedOptionId) return;
+        onClose();
+        addItem(selectedOptionId);
+    };
+
     return (
         <div className={`${styles.overlay} ${isAnimating ? styles.fadeIn : ''}`} onClick={onClose}>
             <div
                 className={`${styles.modal} ${isAnimating ? styles.slideUp : ''}`}
                 onClick={(e) => e.stopPropagation()}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="service-modal-title"
             >
-                <button className={styles.closeBtn} onClick={onClose}>
+                <button type="button" className={styles.closeBtn} onClick={onClose} aria-label={`Cerrar detalles de ${service.title}`}>
                     — Cerrar
                 </button>
 
@@ -133,7 +149,7 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
 
                     <div className={styles.textColumn}>
                         <span className={styles.category}>{service.category}</span>
-                        <h2 className={styles.title}>{service.title}</h2>
+                        <h2 id="service-modal-title" className={styles.title}>{service.title}</h2>
                         
                         {Array.isArray(service.description) ? (
                             service.description.map((desc, idx) => (
@@ -165,8 +181,43 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                             </div>
                         )}
 
-                        <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className={`btn btn-primary ${styles.ctaBtn}`}>
-                            Solicitar Evaluación por WhatsApp
+                        {service.purchaseOptions?.length ? (
+                            <fieldset className={styles.purchaseBox}>
+                                <legend>Elige una opción</legend>
+                                <div className={styles.optionList}>
+                                    {service.purchaseOptions.map((option) => (
+                                        <label
+                                            key={option.id}
+                                            className={`${styles.option} ${selectedOptionId === option.id ? styles.optionSelected : ''}`}
+                                        >
+                                            <input
+                                                type="radio"
+                                                name="purchase-option"
+                                                value={option.id}
+                                                checked={selectedOptionId === option.id}
+                                                onChange={() => setSelectedOptionId(option.id as CheckoutItemId)}
+                                            />
+                                            <span>
+                                                <strong>{option.optionLabel}</strong>
+                                                <small>{formatCLP(option.unitPrice)}</small>
+                                            </span>
+                                        </label>
+                                    ))}
+                                </div>
+                                <button
+                                    type="button"
+                                    className={`btn btn-primary ${styles.ctaBtn}`}
+                                    disabled={!selectedOptionId}
+                                    onClick={handleAddToCart}
+                                >
+                                    Agregar al carrito
+                                </button>
+                                <p className={styles.secureNote}>El pago se completa de forma segura en Mercado Pago.</p>
+                            </fieldset>
+                        ) : null}
+
+                        <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className={`btn btn-secondary ${styles.whatsappBtn}`}>
+                            {service.purchaseOptions?.length ? "Consultar antes de comprar" : "Solicitar Evaluación por WhatsApp"}
                         </a>
                     </div>
                 </div>

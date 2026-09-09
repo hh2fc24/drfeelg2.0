@@ -91,6 +91,59 @@
     padding-inline: 1.5rem;
 }
 
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+.cartButton {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid rgba(45, 45, 45, 0.14);
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.cartButton:hover,
+.cartButton:focus-visible {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: var(--color-primary-gold-dark);
+}
+
+.cartButton svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.cartCount {
+    min-width: 22px;
+    height: 22px;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 0.35rem;
+    border-radius: var(--radius-full);
+    background: var(--color-text-dark);
+    color: #fffaf7;
+    font-family: var(--font-data);
+    font-size: 0.68rem;
+    letter-spacing: 0;
+}
+
 /* Custom Hamburger */
 .menuToggle {
     display: none;
@@ -159,6 +212,9 @@
 
     .menuToggle {
         display: block;
+        width: 48px;
+        height: 48px;
+        padding: 0 10px;
     }
 
     .navLinks {
@@ -200,5 +256,29 @@
         width: 100%;
         max-width: 300px;
         padding: 1.5rem;
+    }
+
+    .actions {
+        margin-left: auto;
+    }
+
+    .cartLabel {
+        display: none;
+    }
+
+    .cartButton {
+        min-width: 48px;
+        justify-content: center;
+        padding: 0.55rem 0.65rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar {
+        gap: 0.75rem;
+    }
+
+    .logo {
+        width: 92px;
     }
 }

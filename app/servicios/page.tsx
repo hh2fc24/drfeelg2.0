@@ -7,6 +7,7 @@ import ClinicalResults from "@/components/ClinicalResults";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { getCheckoutOptions, type CheckoutItem } from "@/lib/commerce";
 
 export default function Servicios() {
     type ServiceType = {
@@ -28,6 +29,7 @@ export default function Servicios() {
         basePrice?: string;
         discountBadge?: string;
         priceSuffix?: string;
+        purchaseOptions?: CheckoutItem[];
     };
     const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -55,6 +57,7 @@ export default function Servicios() {
             modalImageUrl: "/images/instalaciones/instalacion_0075.jpg",
             basePrice: "$35.000",
             discountBadge: "Abonable",
+            purchaseOptions: getCheckoutOptions(["evaluacion-bodypro"]),
             benefitsTitle: "¿Qué incluye nuestra evaluación?",
             benefits: [
                 "Medición de composición corporal avanzada con BodyPro.",
@@ -80,6 +83,7 @@ export default function Servicios() {
             imageBackground: "#f9f7f5",
             basePrice: "$150.000",
             discountBadge: "DCTO. TERCIO",
+            purchaseOptions: getCheckoutOptions(["botox-2-zonas", "botox-3-zonas"]),
             benefitsTitle: "¿Por qué elegir Dysport?",
             benefits: [
                 "Resultados naturales: Suaviza las arrugas sin congelar la expresión facial.",
@@ -110,6 +114,7 @@ export default function Servicios() {
             imageBackground: "#f9f7f5",
             basePrice: "$180.000",
             discountBadge: "PROMO JERINGA",
+            purchaseOptions: getCheckoutOptions(["acido-hialuronico-labios", "acido-hialuronico-rinomodelacion"]),
             benefitsTitle: "Zonas de Aplicación y Valores",
             benefits: [
                 "Perfilado y relleno de labios.",
@@ -261,6 +266,7 @@ export default function Servicios() {
             modalImageUrl: "/images/sourced/hydromax_real.png",
             imageFit: "cover",
             basePrice: "$40.000",
+            purchaseOptions: getCheckoutOptions(["limpieza-hydromax"]),
             benefitsTitle: "Objetivos del tratamiento",
             benefits: [
                 "Limpieza profunda y retiro de impurezas acumuladas.",
@@ -321,6 +327,7 @@ export default function Servicios() {
             imageFit: "contain",
             imageBackground: "#ffffff",
             basePrice: "$20.000",
+            purchaseOptions: getCheckoutOptions(["camara-hiperbarica-sesion", "camara-hiperbarica-pack-10"]),
             benefitsTitle: "Beneficios",
             benefits: [
                 "Favorece la oxigenación celular profunda en todo el cuerpo.",
@@ -341,6 +348,7 @@ export default function Servicios() {
             imageUrl: "/images/tratamientos/podologia-clinica.png",
             modalImageUrl: "/images/tratamientos/podologia-clinica.png",
             basePrice: "$35.000",
+            purchaseOptions: getCheckoutOptions(["podologia-basica", "podologia-una-encarnada", "podologia-onicomicosis", "podologia-helomas", "podologia-spa"]),
             benefitsTitle: "Nuestros Tratamientos",
             benefits: [
                 "Podología clínica básica: evaluación, onicotomía y pulido de talones.",
@@ -373,6 +381,7 @@ export default function Servicios() {
             basePrice: "$199.000",
             priceSuffix: "pack 6 sesiones",
             discountBadge: "PACK LÁSER",
+            purchaseOptions: getCheckoutOptions(["laser-neo-yag-pack-6"]),
             benefitsTitle: "Beneficios",
             benefits: [
                 "Tratamiento físico y localizado.",

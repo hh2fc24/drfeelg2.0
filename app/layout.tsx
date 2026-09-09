@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatbotWidget from "@/components/ChatbotWidget";
+import { CartProvider } from "@/components/CartProvider";
 
 export default function RootLayout({
   children,
@@ -35,10 +36,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${lato.variable} ${playfair.variable} ${montserrat.variable} antialiased`}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <ChatbotWidget />
+        <CartProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <ChatbotWidget />
+        </CartProvider>
       </body>
     </html>
   );

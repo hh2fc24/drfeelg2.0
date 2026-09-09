@@ -16,6 +16,17 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Pagos con Mercado Pago Chile
+
+El catálogo usa Checkout Pro. Los precios se resuelven en el servidor desde `lib/commerce.ts`; el navegador solo envía identificadores y cantidades.
+
+Variables necesarias:
+
+- `MERCADO_PAGO_ACCESS_TOKEN`: credencial privada, solo del servidor.
+- `NEXT_PUBLIC_SITE_URL`: origen canónico para los retornos, por ejemplo `https://www.drfeelgoodchile.cl`.
+
+La clave pública no se utiliza en este flujo redirigido. Nunca agregues el access token a una variable `NEXT_PUBLIC_*` ni a un archivo versionado.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

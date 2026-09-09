@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { CheckoutItem } from '@/lib/commerce';
 import styles from './ServiceCard.module.css';
 
 interface ServiceCardProps {
@@ -14,6 +15,7 @@ interface ServiceCardProps {
     discountBadge?: string;
     basePrice?: string;
     priceSuffix?: string;
+    purchaseOptions?: CheckoutItem[];
 }
 
 export default function ServiceCard({
@@ -28,7 +30,8 @@ export default function ServiceCard({
     onClick,
     discountBadge,
     basePrice,
-    priceSuffix
+    priceSuffix,
+    purchaseOptions,
 }: ServiceCardProps) {
     const bgImage = imageUrl || '/images/instalaciones/clinica5.jpg';
     const previewDesc = Array.isArray(description) ? description[0] : description;
@@ -62,7 +65,7 @@ export default function ServiceCard({
                 <p className={styles.description}>{previewDesc}</p>
                 <div className={styles.linkWrapper}>
                     <span className={styles.link}>
-                        {basePrice ? "Reservar Evaluación" : "Descubrir Detalles"} <span className={styles.arrow}>→</span>
+                        {purchaseOptions?.length ? "Ver opciones y comprar" : "Descubrir detalles"} <span className={styles.arrow}>→</span>
                     </span>
                 </div>
             </div>
