@@ -127,10 +127,18 @@
 }
 
 .phone {
+    display: block;
     font-family: var(--font-serif);
     font-size: 1.25rem;
     color: var(--color-text-dark) !important;
     margin: 2rem 0 1rem !important;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.phone:hover,
+.phone:focus-visible {
+    color: var(--color-primary-gold-dark) !important;
 }
 
 .footerBottom {

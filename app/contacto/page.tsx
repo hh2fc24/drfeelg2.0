@@ -14,7 +14,7 @@ const serviceGuidance = {
         includes: "Revisión de proporciones faciales, objetivo del tratamiento y zonas como labios, ojeras, rinomodelación, pómulos, código de barras o perfilado mandibular.",
     },
     mesoterapia: {
-        label: "Mesoterapia / Microneedling",
+        label: "Mesoterapia facial y corporal",
         includes: "Orientación sobre PRP, Pink Glow, exosomas con dermapen, Sculptra, vitamina C, Dermastabilon o protocolos corporales según evaluación.",
     },
     hifu: {
@@ -34,8 +34,12 @@ const serviceGuidance = {
         includes: "Evaluación de firmeza, volumen y calidad de piel para planificar un tratamiento progresivo con ácido poli-L-láctico.",
     },
     ultracool: {
-        label: "Bioestimulador Ultracoolt",
+        label: "Bioestimulador Ultracol",
         includes: "Evaluación de flacidez, arrugas y zonas de aplicación para definir un protocolo de bioestimulación con PDO.",
+    },
+    modelacion: {
+        label: "Modelación corporal con ácido hialurónico",
+        includes: "Evaluación de la zona corporal, antecedentes y objetivo para definir si el tratamiento es adecuado y planificarlo de forma personalizada.",
     },
     hydromax: {
         label: "Limpieza Facial Hydromax",
@@ -140,8 +144,8 @@ export default function Contacto() {
                             </div>
 
                             <div className={styles.infoBlock}>
-                                <h3 className={styles.infoTitle}>Contacto Directo</h3>
-                                <a href={clinicContact.phoneHref} className={styles.phoneLink}>{clinicContact.phoneDisplay}</a>
+                                <h3 className={styles.infoTitle}>WhatsApp Directo</h3>
+                                <a href={clinicContact.phoneHref} target="_blank" rel="noopener noreferrer" className={styles.phoneLink}>{clinicContact.phoneDisplay}</a>
                                 <p className={styles.mutedText}>{clinicContact.email}</p>
                             </div>
 
@@ -211,12 +215,13 @@ export default function Contacto() {
                                     <option value="" disabled hidden>Motivo de consulta *</option>
                                     <option value="botox">Botox (Dysport)</option>
                                     <option value="hialuronico">Ácido Hialurónico</option>
-                                    <option value="mesoterapia">Mesoterapia / Microneedling</option>
+                                    <option value="mesoterapia">Mesoterapia facial y corporal</option>
                                     <option value="hifu">HIFU Facial</option>
                                     <option value="exosomas">Exosomas</option>
                                     <option value="hilos">Hilos de Tracción</option>
                                     <option value="sculptra">Bioestimulador Sculptra</option>
-                                    <option value="ultracool">Bioestimulador Ultracoolt</option>
+                                    <option value="ultracool">Bioestimulador Ultracol</option>
+                                    <option value="modelacion">Modelación corporal con ácido hialurónico</option>
                                     <option value="hydromax">Limpieza Facial Hydromax</option>
                                     <option value="lipolaser">Lipoláser Corporal</option>
                                     <option value="sueroterapia">Sueroterapia</option>

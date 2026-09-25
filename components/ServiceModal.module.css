@@ -108,6 +108,7 @@
 .galleryItem {
     width: 80px;
     height: 80px;
+    padding: 0;
     border-radius: 6px;
     background-size: cover;
     background-position: center;
@@ -316,6 +317,17 @@
     .imageColumn {
         min-height: 300px;
         flex-shrink: 0;
+    }
+
+    .gallery {
+        left: 1rem;
+        right: 1rem;
+        gap: 0.5rem;
+    }
+
+    .galleryItem {
+        width: clamp(52px, 16vw, 64px);
+        height: clamp(52px, 16vw, 64px);
     }
 
     .textColumn {

@@ -20,6 +20,7 @@ export default function Servicios() {
         prices?: string[];
         imageUrl?: string;
         modalImageUrl?: string;
+        imageAlt?: string;
         imageFit?: "cover" | "contain";
         imagePosition?: string;
         imageBackground?: string;
@@ -140,8 +141,11 @@ export default function Servicios() {
             ],
             category: "Lifting no invasivo",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/instalaciones/clinica4.jpg",
-            modalImageUrl: "/images/instalaciones/clinica4.jpg",
+            imageUrl: "/images/brief-clinica/hifu-equipo.jpg",
+            modalImageUrl: "/images/brief-clinica/hifu-equipo.jpg",
+            imageAlt: "Equipo HIFU facial utilizado en Dr. Feelgood",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             benefitsTitle: "Beneficios clave",
             benefits: [
                 "Efecto lifting visible desde la primera sesión, con mejora progresiva durante 3 a 6 meses.",
@@ -163,8 +167,11 @@ export default function Servicios() {
             ],
             category: "Regeneración celular",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/instalaciones/productos.jpg",
-            modalImageUrl: "/images/instalaciones/productos.jpg",
+            imageUrl: "/images/brief-clinica/exosomas-nxo.jpg",
+            modalImageUrl: "/images/brief-clinica/exosomas-nxo.jpg",
+            imageAlt: "Cajas de exosomas NXO",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             benefitsTitle: "Beneficios clave",
             benefits: [
                 "Regeneración tisular profunda que mejora la densidad, elasticidad y turgencia de la piel.",
@@ -183,8 +190,11 @@ export default function Servicios() {
             ],
             category: "Efecto tensor",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/instalaciones/clinica3.jpg",
-            modalImageUrl: "/images/instalaciones/clinica3.jpg",
+            imageUrl: "/images/brief-clinica/hilos-traccion-corset.jpg",
+            modalImageUrl: "/images/brief-clinica/hilos-traccion-corset.jpg",
+            imageAlt: "Envase de hilos de tracción CORSET",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             benefitsTitle: "Objetivos del tratamiento",
             benefits: [
                 "Estimular la producción natural de colágeno.",
@@ -201,8 +211,11 @@ export default function Servicios() {
             ],
             category: "Ácido poli-L-láctico",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/instalaciones/productos.jpg",
-            modalImageUrl: "/images/instalaciones/productos.jpg",
+            imageUrl: "/images/brief-clinica/sculptra-producto.jpg",
+            modalImageUrl: "/images/brief-clinica/sculptra-producto.jpg",
+            imageAlt: "Cajas y viales del bioestimulador Sculptra",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             benefitsTitle: "Beneficios destacados",
             benefits: [
                 "Redefine el óvalo facial y las facciones.",
@@ -214,16 +227,19 @@ export default function Servicios() {
             ]
         },
         {
-            title: "Bioestimulador Ultracoolt",
+            title: "Bioestimulador Ultracol",
             description: [
-                "Ultracool es un bioestimulador de colágeno inyectable a base de microesferas de polidioxanona (PDO), utilizado para rejuvenecer la piel, combatir la flacidez y mejorar la firmeza desde las capas profundas.",
+                "Ultracol es un bioestimulador de colágeno inyectable a base de microesferas de polidioxanona (PDO), utilizado para rejuvenecer la piel, combatir la flacidez y mejorar la firmeza desde las capas profundas.",
                 "Los resultados evolucionan con el paso de las semanas a medida que el cuerpo genera su propio colágeno. El organismo reabsorbe el material de forma segura a lo largo de los meses.",
                 "Se usa principalmente en el rostro, el contorno de ojos, el cuello, el escote y también en zonas corporales como el dorso de las manos."
             ],
             category: "Bioestimulación con PDO",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/instalaciones/clinica2.jpg",
-            modalImageUrl: "/images/instalaciones/clinica2.jpg",
+            imageUrl: "/images/brief-clinica/ultracol-200-producto.jpg",
+            modalImageUrl: "/images/brief-clinica/ultracol-200-producto.jpg",
+            imageAlt: "Cajas y viales de Ultracol 200",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             benefitsTitle: "¿Para qué se utiliza?",
             benefits: [
                 "Estimular colágeno: un solo vial equivale a los beneficios de más de 1.400 hilos inductores de colágeno tradicionales, aplicados de forma más cómoda.",
@@ -233,16 +249,25 @@ export default function Servicios() {
             ]
         },
         {
-            title: "Mesoterapia y Microneedling Facial y Corporal",
+            title: "Mesoterapia facial y corporal",
             description: [
                 "Tratamientos orientados a mejorar calidad de piel, luminosidad, textura y soporte cutáneo mediante protocolos personalizados.",
                 "La indicación puede incluir PRP, Pink Glow, exosomas con dermapen, Sculptra, vitamina C, Dermastabilon u otros activos, siempre según evaluación profesional y objetivo del paciente."
             ],
             category: "Piel, Regeneración y Bioestimulación",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/instalaciones/productos.jpg",
-            modalImageUrl: "/images/instalaciones/productos.jpg",
+            imageUrl: "/images/brief-clinica/mesoterapia-dermastabilon.jpg",
+            modalImageUrl: "/images/brief-clinica/mesoterapia-dermastabilon.jpg",
+            imageAlt: "Productos presentados para protocolos de mesoterapia facial y corporal",
+            imageFit: "contain",
             imagePosition: "center",
+            imageBackground: "#f9f7f5",
+            galleryUrls: [
+                "/images/brief-clinica/mesoterapia-dermastabilon.jpg",
+                "/images/brief-clinica/mesoterapia-inbiotec-amber.jpg",
+                "/images/brief-clinica/mesoterapia-restylane.jpg",
+                "/images/brief-clinica/mesoterapia-lipase.jpg"
+            ],
             discountBadge: "Evaluación",
             benefitsTitle: "Protocolos disponibles",
             benefits: [
@@ -255,6 +280,27 @@ export default function Servicios() {
             ],
             prices: [
                 "Valor definido según protocolo y evaluación profesional."
+            ]
+        },
+        {
+            title: "Modelación corporal con ácido hialurónico",
+            description: "Tratamiento de modelación corporal para glúteos, muslos, pantorrillas y otras zonas, indicado de forma personalizada después de una evaluación profesional.",
+            category: "Glúteos, muslos, pantorrillas, etc.",
+            filterCategory: "Corporal y Bienestar",
+            imageUrl: "/images/brief-clinica/modelacion-corporal-celosome.jpg",
+            modalImageUrl: "/images/brief-clinica/modelacion-corporal-celosome.jpg",
+            imageAlt: "Caja de ácido hialurónico corporal Celosome Aqua HA 60",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
+            discountBadge: "Evaluación",
+            benefitsTitle: "Evaluación personalizada",
+            benefits: [
+                "Definición de la zona y el objetivo corporal.",
+                "Revisión profesional de antecedentes y pertinencia del tratamiento.",
+                "Plan ajustado a cada paciente antes de indicar producto o cantidad."
+            ],
+            prices: [
+                "Valor definido según zona y evaluación profesional."
             ]
         },
         {
@@ -303,8 +349,9 @@ export default function Servicios() {
             description: "Protocolos endovenosos de apoyo al bienestar general, indicados de forma responsable según antecedentes, objetivo y evaluación profesional previa.",
             category: "Bienestar y Recuperación",
             filterCategory: "Corporal y Bienestar",
-            imageUrl: "/images/instalaciones/clinica1.jpg",
-            modalImageUrl: "/images/instalaciones/clinica1.jpg",
+            imageUrl: "/images/brief-clinica/sueroterapia-box.jpg",
+            modalImageUrl: "/images/brief-clinica/sueroterapia-box.jpg",
+            imageAlt: "Box preparado para sueroterapia con camilla y soporte intravenoso",
             imagePosition: "center",
             benefitsTitle: "Protocolos destacados",
             benefits: [

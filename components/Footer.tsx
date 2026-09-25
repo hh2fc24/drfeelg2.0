@@ -44,7 +44,9 @@ export default function Footer() {
                         <p>{clinicContact.addressLine1}</p>
                         <p>{clinicContact.addressLine2}</p>
                         <p>{clinicContact.city}</p>
-                        <p className={styles.phone}>{clinicContact.phoneDisplay}</p>
+                        <a className={styles.phone} href={clinicContact.phoneHref} target="_blank" rel="noopener noreferrer">
+                            WhatsApp: {clinicContact.phoneDisplay}
+                        </a>
                         <p>{clinicContact.email}</p>
                         <p>{clinicContact.hoursLabel}: {clinicContact.hoursValue}</p>
                         <p>{clinicContact.saturdayHoursLabel}: {clinicContact.saturdayHoursValue}</p>

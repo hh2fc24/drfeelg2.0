@@ -16,6 +16,7 @@ interface ServiceModalProps {
         prices?: string[];
         imageUrl?: string;
         modalImageUrl?: string;
+        imageAlt?: string;
         imageFit?: 'cover' | 'contain';
         imagePosition?: string;
         imageBackground?: string;
@@ -106,6 +107,8 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                             ) : (
                                 <div
                                     className={styles.modalImage}
+                                    role="img"
+                                    aria-label={service.imageAlt || service.title}
                                     style={{
                                         backgroundImage: `url(${activeMedia?.url || '/images/instalaciones/clinica5.jpg'})`,
                                         backgroundSize: service.imageFit || 'cover',
@@ -119,8 +122,10 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                         {service.galleryUrls && service.galleryUrls.length > 0 && (
                             <div className={styles.gallery}>
                                 {service.videoUrl && (
-                                    <div 
+                                    <button
+                                        type="button"
                                         className={styles.galleryItem} 
+                                        aria-label={`Ver video de ${service.title}`}
                                         style={{ 
                                             backgroundColor: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', 
                                             cursor: 'pointer', 
@@ -129,19 +134,21 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
                                         onClick={() => setActiveMedia({ type: 'video', url: service.videoUrl! })}
                                     >
                                         <span style={{color: '#fff', fontSize: '10px', letterSpacing: '0.1em'}}>VIDEO</span>
-                                    </div>
+                                    </button>
                                 )}
                                 {service.galleryUrls.map((url, i) => (
-                                    <div 
+                                    <button
+                                        type="button"
                                         key={i} 
                                         className={styles.galleryItem} 
+                                        aria-label={`Ver imagen ${i + 1} de ${service.title}`}
                                         style={{ 
                                             backgroundImage: `url(${url})`,
                                             cursor: 'pointer',
                                             border: activeMedia?.url === url ? '2px solid var(--color-primary-gold-dark)' : '2px solid rgba(255, 255, 255, 0.8)'
                                         }}
                                         onClick={() => setActiveMedia({ type: 'image', url })}
-                                    ></div>
+                                    ></button>
                                 ))}
                             </div>
                         )}

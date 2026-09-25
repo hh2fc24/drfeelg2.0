@@ -7,6 +7,7 @@ interface ServiceCardProps {
     description: string | string[];
     category: string;
     imageUrl?: string;
+    imageAlt?: string;
     imageFit?: "cover" | "contain";
     imagePosition?: string;
     imageBackground?: string;
@@ -23,6 +24,7 @@ export default function ServiceCard({
     description,
     category,
     imageUrl,
+    imageAlt,
     imageFit = "cover",
     imagePosition = "center",
     imageBackground = "var(--color-bg-white)",
@@ -41,6 +43,8 @@ export default function ServiceCard({
             <div className={styles.imageWrapper}>
                 <div
                     className={styles.imageContainer}
+                    role="img"
+                    aria-label={imageAlt || title}
                     style={{
                         backgroundImage: `url(${bgImage})`,
                         backgroundSize: imageFit,
