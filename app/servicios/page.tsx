@@ -156,6 +156,29 @@ export default function Servicios() {
             ]
         },
         {
+            title: "Pink Glow",
+            description: [
+                "Tratamiento de mesoterapia facial orientado a devolver luminosidad, hidratación y una apariencia más uniforme a la piel, siempre indicado después de una evaluación profesional.",
+                "El protocolo se personaliza según el estado de la piel, la zona a tratar y los objetivos de cada paciente."
+            ],
+            category: "Luminosidad y calidad de piel",
+            filterCategory: "Estética Facial",
+            imageUrl: "/images/instalaciones/productos.jpg",
+            modalImageUrl: "/images/instalaciones/productos.jpg",
+            imageAlt: "Vial Pink Glow utilizado en Dr. Feelgood",
+            imagePosition: "center",
+            benefitsTitle: "Objetivos del tratamiento",
+            benefits: [
+                "Aportar luminosidad a pieles opacas o con aspecto fatigado.",
+                "Favorecer una hidratación visible y una textura más uniforme.",
+                "Suavizar la apariencia de líneas finas según la condición de la piel.",
+                "Definir un protocolo personalizado mediante evaluación profesional."
+            ],
+            prices: [
+                "Valor definido según protocolo y evaluación profesional."
+            ]
+        },
+        {
             title: "Exosomas",
             description: [
                 "¿Tu piel ha perdido ese brillo saludable? Si se siente apagada, deshidratada y las cremas convencionales ya no logran revertir el cansancio celular, los Exosomas NXO marcan un antes y un después en tu rutina de rejuvenecimiento.",
@@ -283,15 +306,36 @@ export default function Servicios() {
             ]
         },
         {
+            title: "Celosome Aqua",
+            description: [
+                "Celosome Aqua es un skinbooster y biorrevitalizante inyectable de alta gama, diseñado para proporcionar hidratación profunda y bioestimulación sin aportar volumen.",
+                "Se utiliza habitualmente en el rostro, cuello y escote."
+            ],
+            category: "Skinbooster y Biorrevitalización",
+            filterCategory: "Estética Facial",
+            imageUrl: "/images/brief-clinica/modelacion-corporal-celosome.jpg",
+            modalImageUrl: "/images/brief-clinica/modelacion-corporal-celosome.jpg",
+            imageAlt: "Caja de Celosome Aqua HA 60",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
+            benefitsTitle: "Beneficios",
+            benefits: [
+                "Hidratación profunda: restaura el balance hídrico en las capas superficiales y medias de la piel.",
+                "Bioestimulación: reactiva la producción natural de colágeno y elastina, mejorando la firmeza y elasticidad.",
+                "Efecto glow: suaviza líneas de expresión finas, devuelve luminosidad a pieles opacas y mejora la textura general sin alterar los rasgos ni aportar volumen."
+            ],
+            prices: [
+                "Valor definido según evaluación profesional."
+            ]
+        },
+        {
             title: "Modelación corporal con ácido hialurónico",
             description: "Tratamiento de modelación corporal para glúteos, muslos, pantorrillas y otras zonas, indicado de forma personalizada después de una evaluación profesional.",
             category: "Glúteos, muslos, pantorrillas, etc.",
             filterCategory: "Corporal y Bienestar",
-            imageUrl: "/images/brief-clinica/modelacion-corporal-celosome.jpg",
-            modalImageUrl: "/images/brief-clinica/modelacion-corporal-celosome.jpg",
-            imageAlt: "Caja de ácido hialurónico corporal Celosome Aqua HA 60",
-            imageFit: "contain",
-            imageBackground: "#f9f7f5",
+            imageUrl: "/images/tratamientos/tratamiento2.jpg",
+            modalImageUrl: "/images/tratamientos/tratamiento2.jpg",
+            imageAlt: "Box clínico preparado para una evaluación de modelación corporal",
             discountBadge: "Evaluación",
             benefitsTitle: "Evaluación personalizada",
             benefits: [
@@ -394,7 +438,7 @@ export default function Servicios() {
             filterCategory: "Podología Clínica",
             imageUrl: "/images/tratamientos/podologia-clinica.png",
             modalImageUrl: "/images/tratamientos/podologia-clinica.png",
-            basePrice: "$35.000",
+            basePrice: "$30.000",
             purchaseOptions: getCheckoutOptions(["podologia-basica", "podologia-una-encarnada", "podologia-onicomicosis", "podologia-helomas", "podologia-spa"]),
             benefitsTitle: "Nuestros Tratamientos",
             benefits: [
@@ -405,7 +449,7 @@ export default function Servicios() {
                 "Podología clínica spa: hidromasaje infrarrojo, exfoliación e hidratación."
             ],
             prices: [
-                "Podología clínica básica: $35.000",
+                "Podología clínica básica: $30.000",
                 "Uña encarnada o despiculización: $40.000",
                 "Onicomicosis: $40.000",
                 "Helomas o queratosis: $40.000",

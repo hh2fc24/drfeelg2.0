@@ -2,7 +2,7 @@ export const clinicContact = {
   addressLine1: "Avda Apoquindo 6410 Of 504.",
   addressLine2: "Ingreso Estacionamiento por calle Linneo 6393.",
   city: "Las Condes, Santiago.",
-  phoneDisplay: "+56 9 4805 2364",
+  phoneDisplay: "+56948052364",
   phoneHref: "https://wa.me/56948052364",
   email: "apoquindo@drfeelgood.cl",
   hoursLabel: "Lunes a Viernes",

@@ -67,7 +67,7 @@ export const checkoutCatalog = {
     id: "podologia-basica",
     serviceTitle: "Podología Clínica",
     optionLabel: "Podología clínica básica",
-    unitPrice: 35000,
+    unitPrice: 30000,
     imageUrl: "/images/tratamientos/podologia-clinica.png",
   },
   "podologia-una-encarnada": {
