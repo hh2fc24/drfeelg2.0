@@ -460,8 +460,8 @@ export default function Servicios() {
             title: "Uñas con Hongos (Láser NEO YAG)",
             description: [
                 "Efecto térmico selectivo: el láser NEO YAG emite una longitud de onda de 1064 nm. Esta luz atraviesa la placa de la uña afectada y penetra hasta el lecho ungueal.",
-                "Destrucción del hongo: la energía lumínica se convierte en calor concentrado de forma rápida, en nanosegundos. Este incremento térmico degrada y destruye las estructuras de los hongos sin dañar la piel ni los tejidos sanos que rodean la uña.",
-                "Alternativa médica: al ser un método físico y localizado, representa una excelente opción para personas que no pueden o prefieren no tomar medicamentos antifúngicos orales debido a contraindicaciones médicas o riesgos de toxicidad hepática."
+                "Aplicación localizada: la energía del láser produce un efecto térmico en la zona tratada. Su indicación depende de la evaluación profesional; no garantiza la eliminación del hongo y puede requerir otros tratamientos y seguimiento.",
+                "Plan personalizado: los antecedentes y el diagnóstico determinan si corresponde incorporar láser, medicamentos u otras medidas. No suspendas un tratamiento indicado sin consultar con tu profesional."
             ],
             category: "Pies y Manos",
             filterCategory: "Podología Clínica",
@@ -477,7 +477,7 @@ export default function Servicios() {
             benefits: [
                 "Tratamiento físico y localizado.",
                 "Acción térmica selectiva sobre la zona afectada.",
-                "Alternativa para personas que no pueden o prefieren no tomar antifúngicos orales."
+                "Indicación y seguimiento según diagnóstico profesional."
             ],
             prices: [
                 "Pack de 6 sesiones: $199.000"
@@ -501,7 +501,7 @@ export default function Servicios() {
                         <span className={styles.titleLine}><span className={styles.highlight}>atención clínica</span></span>
                     </h1>
                     <p className={`${styles.subtitle} animate-fade-up delay-2`}>
-                        Revisa nuestras áreas de atención y encuentra la opción que mejor se ajuste a tu motivo de consulta.
+                        Tratamientos faciales para arrugas y flacidez, limpieza facial profunda, estética corporal y tratamiento de hongos en uñas en Las Condes. Encuentra la opción que mejor se ajuste a tu motivo de consulta.
                     </p>
                 </div>
             </header>

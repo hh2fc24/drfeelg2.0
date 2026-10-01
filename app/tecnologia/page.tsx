@@ -25,8 +25,8 @@ const technologySections = [
         highlight: "NEO YAG Q-Switched",
         description: [
             "Efecto térmico selectivo: el láser NEO YAG emite una longitud de onda de 1064 nm. Esta luz atraviesa la placa de la uña afectada y penetra hasta el lecho ungueal.",
-            "Destrucción del hongo: la energía lumínica se convierte en calor concentrado de forma rápida, en nanosegundos. Este incremento térmico degrada y destruye las estructuras de los hongos sin dañar la piel ni los tejidos sanos que rodean la uña.",
-            "Alternativa médica: al ser un método físico y localizado, representa una excelente opción para personas que no pueden o prefieren no tomar medicamentos antifúngicos orales debido a contraindicaciones médicas o riesgos de toxicidad hepática."
+            "Aplicación localizada: la energía del láser produce un efecto térmico en la zona tratada. Su indicación depende de la evaluación profesional; no garantiza la eliminación del hongo y puede requerir otros tratamientos y seguimiento.",
+            "Plan personalizado: los antecedentes y el diagnóstico determinan si corresponde incorporar láser, medicamentos u otras medidas. No suspendas un tratamiento indicado sin consultar con tu profesional."
         ],
         imageUrl: "/images/sourced/neo-yag-q-switched.png",
         imageAlt: "Equipo láser NEO YAG Q-Switched",

@@ -31,6 +31,8 @@ export default function Footer() {
                     <ul>
                         <li><Link href="/">Inicio</Link></li>
                         <li><Link href="/servicios">Tratamientos</Link></li>
+                        <li><Link href="/estetica">Estética facial y corporal</Link></li>
+                        <li><Link href="/onicomicosis">Hongos en uñas · Onicomicosis</Link></li>
                         <li><Link href="/tecnologia">Tecnología</Link></li>
                         <li><Link href="/quienes-somos">Nosotros</Link></li>
                         <li><Link href="/contacto">Contacto</Link></li>
