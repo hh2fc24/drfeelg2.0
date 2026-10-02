@@ -272,24 +272,22 @@ export default function Servicios() {
             ]
         },
         {
-            title: "Fosfatidilcolina tópica",
+            title: "Fosfatidilcolina · lipo química",
             description: [
-                "Cuidado corporal profesional con fosfatidilcolina MCCM, orientado a mejorar la apariencia del contorno y la firmeza de la piel en zonas localizadas.",
-                "El producto mostrado se aplica sobre la piel mediante masaje. Es de uso tópico y no se inyecta."
+                "Tratamiento de lipólisis localizada mediante microinyecciones, orientado a abordar pequeños acúmulos de grasa y mejorar el contorno corporal sin cirugía.",
+                "La formulación inyectable, la zona de aplicación y el plan se determinan tras una evaluación profesional. La fotografía muestra el box clínico, no el producto utilizado."
             ],
-            category: "Contorno corporal · aplicación tópica",
+            category: "Grasa localizada · evaluación profesional",
             filterCategory: "Corporal y Bienestar",
-            imageUrl: "/images/brief-clinica/mccm-fosfatidilcolina-topica.png",
-            modalImageUrl: "/images/brief-clinica/mccm-fosfatidilcolina-topica.png",
-            imageAlt: "Caja de fosfatidilcolina MCCM de uso tópico profesional",
-            imageFit: "contain",
-            imageBackground: "#f9f7f5",
+            imageUrl: "/images/tratamientos/tratamiento1.jpg",
+            modalImageUrl: "/images/tratamientos/tratamiento1.jpg",
+            imageAlt: "Box clínico donde se evalúan tratamientos corporales",
             discountBadge: "Evaluación",
-            benefitsTitle: "Enfoque del cuidado",
+            benefitsTitle: "Áreas que pueden evaluarse",
             benefits: [
-                "Aplicación localizada según las necesidades de la piel y la evaluación profesional.",
-                "Complemento cosmético para mejorar la apariencia del contorno corporal.",
-                "Producto de aplicación tópica; no corresponde a una lipo química inyectable."
+                "Abdomen y flancos con grasa localizada.",
+                "Brazos, muslos y papada, según evaluación de cada zona.",
+                "Los resultados y el número de sesiones dependen del caso y de la formulación indicada."
             ],
             prices: [
                 "Valor definido según evaluación profesional."
