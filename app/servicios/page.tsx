@@ -277,7 +277,7 @@ export default function Servicios() {
                 "Tratamiento de lipólisis localizada mediante microinyecciones, orientado a abordar pequeños acúmulos de grasa y mejorar el contorno corporal sin cirugía.",
                 "La formulación inyectable, la zona de aplicación y el plan se determinan tras una evaluación profesional. La fotografía muestra el box clínico, no el producto utilizado."
             ],
-            category: "Grasa localizada · evaluación profesional",
+            category: "Reductor de grasa localizada",
             filterCategory: "Corporal y Bienestar",
             imageUrl: "/images/tratamientos/tratamiento1.jpg",
             modalImageUrl: "/images/tratamientos/tratamiento1.jpg",
