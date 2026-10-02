@@ -272,6 +272,30 @@ export default function Servicios() {
             ]
         },
         {
+            title: "Fosfatidilcolina tópica",
+            description: [
+                "Cuidado corporal profesional con fosfatidilcolina MCCM, orientado a mejorar la apariencia del contorno y la firmeza de la piel en zonas localizadas.",
+                "El producto mostrado se aplica sobre la piel mediante masaje. Es de uso tópico y no se inyecta."
+            ],
+            category: "Contorno corporal · aplicación tópica",
+            filterCategory: "Corporal y Bienestar",
+            imageUrl: "/images/brief-clinica/mccm-fosfatidilcolina-topica.png",
+            modalImageUrl: "/images/brief-clinica/mccm-fosfatidilcolina-topica.png",
+            imageAlt: "Caja de fosfatidilcolina MCCM de uso tópico profesional",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
+            discountBadge: "Evaluación",
+            benefitsTitle: "Enfoque del cuidado",
+            benefits: [
+                "Aplicación localizada según las necesidades de la piel y la evaluación profesional.",
+                "Complemento cosmético para mejorar la apariencia del contorno corporal.",
+                "Producto de aplicación tópica; no corresponde a una lipo química inyectable."
+            ],
+            prices: [
+                "Valor definido según evaluación profesional."
+            ]
+        },
+        {
             title: "Mesoterapia facial y corporal",
             description: [
                 "Tratamientos orientados a mejorar calidad de piel, luminosidad, textura y soporte cutáneo mediante protocolos personalizados.",
@@ -279,9 +303,9 @@ export default function Servicios() {
             ],
             category: "Piel, Regeneración y Bioestimulación",
             filterCategory: "Estética Facial",
-            imageUrl: "/images/brief-clinica/mesoterapia-dermastabilon.jpg",
-            modalImageUrl: "/images/brief-clinica/mesoterapia-dermastabilon.jpg",
-            imageAlt: "Productos presentados para protocolos de mesoterapia facial y corporal",
+            imageUrl: "/images/brief-clinica/mesoterapia-inbiotec-amber.jpg",
+            modalImageUrl: "/images/brief-clinica/mesoterapia-inbiotec-amber.jpg",
+            imageAlt: "Cajas de Inbiotec Amber presentadas entre los protocolos faciales de la clínica",
             imageFit: "contain",
             imagePosition: "center",
             imageBackground: "#f9f7f5",
@@ -333,9 +357,11 @@ export default function Servicios() {
             description: "Tratamiento de modelación corporal para glúteos, muslos, pantorrillas y otras zonas, indicado de forma personalizada después de una evaluación profesional.",
             category: "Glúteos, muslos, pantorrillas, etc.",
             filterCategory: "Corporal y Bienestar",
-            imageUrl: "/images/tratamientos/tratamiento2.jpg",
-            modalImageUrl: "/images/tratamientos/tratamiento2.jpg",
-            imageAlt: "Box clínico preparado para una evaluación de modelación corporal",
+            imageUrl: "/images/brief-clinica/richesse-glam-fill.png",
+            modalImageUrl: "/images/brief-clinica/richesse-glam-fill.png",
+            imageAlt: "Envase y vial de RICHESSE Glam Fill, relleno corporal de ácido hialurónico",
+            imageFit: "contain",
+            imageBackground: "#f9f7f5",
             discountBadge: "Evaluación",
             benefitsTitle: "Evaluación personalizada",
             benefits: [

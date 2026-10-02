@@ -35,6 +35,26 @@ const results = [
         after: '0 553 1080 525',
         stacked: true,
     },
+    {
+        treatment: 'Resultado facial',
+        title: 'Frente y entrecejo',
+        source: '/images/sourced/resultado-frente-entrecejo.jpeg',
+        width: 1600,
+        height: 1517,
+        before: '0 0 750 1517',
+        after: '850 0 750 1517',
+        stacked: false,
+    },
+    {
+        treatment: 'Resultado facial',
+        title: 'Rostro completo',
+        source: '/images/sourced/resultado-rostro.jpeg',
+        width: 1600,
+        height: 1550,
+        before: '0 0 740 1550',
+        after: '840 0 760 1550',
+        stacked: false,
+    },
 ];
 
 export default function ClinicalResults() {
